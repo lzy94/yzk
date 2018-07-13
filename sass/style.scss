@@ -1,6 +1,8 @@
-html,body{
+html,
+body {
     overflow-x: hidden;
 }
+
 .iconfont {
     &.big {
         font-size: 25px !important;
@@ -9,6 +11,7 @@ html,body{
         font-size: 20px !important;
     }
 }
+
 //side-body
 .pull-body {
     margin-left: 60px;
@@ -19,7 +22,7 @@ html,body{
 
 .app-container {
     .content-container {
-        .pull-body{
+        .pull-body {
             padding-top: 70px;
         }
     }
@@ -31,6 +34,7 @@ html,body{
         margin-left: 250px;
     }
 }
+
 .mar-0 {
     margin: 0;
 }
@@ -38,28 +42,57 @@ html,body{
 .pad-0 {
     padding: 0 !important;
 }
-.pt-10{
+
+.pt-10 {
     padding-top: 10px !important;
 }
-.pt-20{
+
+.pt-20 {
     padding-top: 20px !important;
 }
 
-.path-nav{
+.pd-30 {
+    padding: 30px;
+}
+
+.path-nav {
     background: #fff;
-     -webkit-transition: all 0.25s;
+    -webkit-transition: all 0.25s;
     transition: all 0.25s;
     margin-top: 65px;
-        margin-left: 60px;
-        border-radius: 0;
-        >li{
-            font-size: 15px;
-            >a{
-                color: #A4A4A4;
-                
-            }
-            &.active{
-                color: #373737;
-            }
+    margin-left: 60px;
+    border-radius: 0;
+    >li {
+        font-size: 15px;
+        >a {
+            color: #A4A4A4;
         }
+        &.active {
+            color: #373737;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .app-container .content-container .pull-body {
+        margin-left: 10px;
+    }
+    .path-nav {
+        margin-left: 10px;
+        margin-right: 15px;
+    }
+}
+.radius{
+    border-radius: 5px;
+}
+.form-horizontal{
+    .form-group{
+        >label{
+            color: #A4A4A4;
+            font-weight: 500;   
+        }
+    }
+    .row > [class*="col-"] {
+    margin-bottom: 10px;
+}
 }

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<title>唯恩云智库-试卷管理</title>
+		@@include('include/css.html')
+	</head>
+	<!--class="flat-blue"-->
+
+	<body class="theme-black">
+		<div class="app-container expanded">
+			<div class="row content-container">
+				@@include('include/header.html') @@include('include/menu.html')
+				<!-- Main Content -->
+				<div class="container-fluid pad-0">
+					<ol class="breadcrumb path-nav">
+						<li>
+							<a href="#">首页</a>
+						</li>
+						<li>
+							<a href="#">试卷管理</a>
+						</li>
+						<li class="active">创建试卷</li>
+					</ol>
+					<div class="side-body pt-10">
+						<!---->
+						<div class="panel pd-30">
+							<form class="form-horizontal" role="form">
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label for="firstname" class="pull-left control-label">试卷标题:</label>
+											<div class="col-sm-9">
+												<input type="text" class="form-control radius">
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label for="firstname" class="pull-left control-label">试卷编号:</label>
+											<div class="col-sm-9">
+												<input type="text" class="form-control radius">
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label for="firstname" class="pull-left control-label">考试时长:</label>
+											<div class="col-sm-9">
+												<input type="text" class="form-control radius">
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label for="firstname" class="pull-left control-label">虚拟公司:</label>
+											<div class="col-sm-9">
+												<select class="form-control radius">
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label for="firstname" class="pull-left control-label">试卷标识:</label>
+											<div class="col-sm-9">
+												<select class="form-control radius">
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="panel pd-30">
+							<div class="row">
+								<div class="col-sm-12">
+									
+								</div>								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			@@include('include/footer.html')
+		</div>
+
+		@@include('include/js.html')
+	</body>
+
+</html>
