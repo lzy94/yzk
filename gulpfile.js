@@ -34,7 +34,7 @@ gulp.task('serve', function() {
 	gulp.watch('img/**/*', ['images']);
 	gulp.watch('js/**/*', ['js']);
 	gulp.watch("dist/**/*.html").on("change", browserSync.reload);
-	gulp.watch('css/**/*', ['uncss']);
+//	gulp.watch('css/**/*', ['uncss']);
 	//	gulp.watch('dist/**/*', ['publish']);
 });
 

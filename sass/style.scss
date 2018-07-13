@@ -1,9 +1,65 @@
-.iconfont{
-    &.big{
+html,body{
+    overflow-x: hidden;
+}
+.iconfont {
+    &.big {
         font-size: 25px !important;
     }
-    &.small{
+    &.small {
         font-size: 20px !important;
     }
 }
+//side-body
+.pull-body {
+    margin-left: 60px;
+    margin-right: 0;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+}
 
+.app-container {
+    .content-container {
+        .pull-body{
+            padding-top: 70px;
+        }
+    }
+}
+
+.app-container.expanded {
+    .pull-body,
+    .path-nav {
+        margin-left: 250px;
+    }
+}
+.mar-0 {
+    margin: 0;
+}
+
+.pad-0 {
+    padding: 0 !important;
+}
+.pt-10{
+    padding-top: 10px !important;
+}
+.pt-20{
+    padding-top: 20px !important;
+}
+
+.path-nav{
+    background: #fff;
+     -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+    margin-top: 65px;
+        margin-left: 60px;
+        border-radius: 0;
+        >li{
+            font-size: 15px;
+            >a{
+                color: #A4A4A4;
+                
+            }
+            &.active{
+                color: #373737;
+            }
+        }
+}

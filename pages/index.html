@@ -9,15 +9,24 @@
 		<title>唯恩云智库</title>
 		@@include('include/css.html')
 	</head>
-<!--class="flat-blue"-->
+	<!--class="flat-blue"-->
+
 	<body class="theme-black">
 		<div class="app-container expanded">
 			<div class="row content-container">
-				@@include('include/header.html') 
-				@@include('include/menu.html')
+				@@include('include/header.html') @@include('include/menu.html')
 				<!-- Main Content -->
-				<div class="container-fluid">
-					<div class="side-body">
+				<div class="container-fluid pad-0">
+						<ol class="breadcrumb path-nav">
+							<li>
+								<a href="#">首页</a>
+							</li>
+							<li>
+								<a href="#">Library</a>
+							</li>
+							<li class="active">Data</li>
+						</ol>
+					<div class="side-body pt-10">
 						<div class="panel">
 							<div class="page-title">
 								<span class="title">Table</span>
@@ -27,9 +36,9 @@
 					</div>
 				</div>
 			</div>
-			@@include('include/footer.html') 
+			@@include('include/footer.html')
 		</div>
-		
+
 		@@include('include/js.html')
 	</body>
 

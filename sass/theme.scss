@@ -101,3 +101,11 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    .theme-black {
+        .navbar.navbar-default .navbar-right {
+            background-color: #FFF;
+        }
+    }
+}

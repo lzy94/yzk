@@ -317,8 +317,8 @@ a:hover {
   .app-container.expanded .content-container .side-menu .navbar-nav li .panel-collapse.in {
     display: block; }
   .app-container.expanded .content-container .side-menu .navbar-nav li.dropdown > a:after {
-    font-family: FontAwesome;
-    content: "\f107";
+    /*font-family: FontAwesome;*/
+    content: "∨";
     position: absolute;
     right: 1em; }
 
@@ -969,10 +969,6 @@ body.login-page {
 
 .breadcrumb {
   margin-bottom: 0; }
-  .breadcrumb > li + li:before {
-    font-family: FontAwesome;
-    content: '\f105';
-    margin-right: 3px; }
 
 .message-list {
   margin: 0;
