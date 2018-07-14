@@ -6,7 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="format-detection" content="telephone=no" />
-		<title>唯恩云智库-试卷管理</title>
+		<title>唯恩云智库</title>
 		@@include('include/css.html')
 	</head>
 	<!--class="flat-blue"-->
@@ -21,25 +21,15 @@
 						<li>
 							<a href="#">首页</a>
 						</li>
-						<li>
-							<a href="#">试卷管理</a>
-						</li>
-						<li class="active">创建试卷</li>
+						<li class="active">试卷管理</li>
 					</ol>
-					<div class="side-body pt-10">
-						<!---->
-						<div class="panel pd-30">
-							<form class="form-horizontal" role="form">
+					<div class="side-body  pt-10">
+
+						<div class="panel">
+	
+							<form class="form-horizontal pd-15 pb-0" role="form">
 								<div class="row">
-									<div class="col-sm-6">
-										<div class="form-group">
-											<label for="firstname" class="pull-left control-label">试卷标题:</label>
-											<div class="col-sm-9">
-												<input type="text" class="form-control radius">
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-6">
+									<div class="col-sm-4">
 										<div class="form-group">
 											<label for="firstname" class="pull-left control-label">试卷编号:</label>
 											<div class="col-sm-9">
@@ -47,7 +37,16 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-sm-6">
+									<div class="col-sm-4">
+										<div class="form-group">
+											<label for="firstname" class="pull-left control-label">试卷标题:</label>
+											<div class="col-sm-9">
+												<input type="text" class="form-control radius">
+											</div>
+										</div>
+									</div>
+									
+									<div class="col-sm-4 dis">
 										<div class="form-group">
 											<label for="firstname" class="pull-left control-label">考试时长:</label>
 											<div class="col-sm-9">
@@ -55,7 +54,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-sm-6">
+									<div class="col-sm-4 dis">
 										<div class="form-group">
 											<label for="firstname" class="pull-left control-label">虚拟公司:</label>
 											<div class="col-sm-9">
@@ -64,7 +63,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-sm-6">
+									<div class="col-sm-4 dis">
 										<div class="form-group">
 											<label for="firstname" class="pull-left control-label">试卷标识:</label>
 											<div class="col-sm-9">
@@ -73,17 +72,52 @@
 											</div>
 										</div>
 									</div>
+									
+									
+									<div class="col-sm-4">
+										<a href="javascript:void(0)" class="btn btn-add radius">查&nbsp;询</a>&nbsp;&nbsp;<a href="javascript:void(0)" class="btn btn-default radius">重&nbsp;置</a>
+										&nbsp;&nbsp;&nbsp;
+										<a href="javascript:void(0)" class="spread"><span>展开</span><i class="iconfont icon-xiala"></i> </a>
+									</div>
 								</div>
 							</form>
-						</div>
-						<div class="panel pd-30">
-							<div class="row">
-								<div class="col-sm-12">
-									<h3></h3>
-									
-									
-								</div>								
+
+							<!--<div class="button">  <button type="button" class="btn btn-default add"> <span class="iconfont icon-plus"></span> 新建</button><button type="button" class="btn btn-default del">批量删除</button></div>-->
+							<div class="button">
+								<a href="createExaminationPaper.html" class="btn btn-add radius"> <span class="iconfont icon-plus"></span>创建试卷</a>&nbsp;
+								<a href="javascript:void(0)" class="btn btn-default radius">批量删除</a>
 							</div>
+							<div class="table-tip radius mb-20">
+								<i class="iconfont icon-gantanhao3-hei"></i>&nbsp; 已选择3项，共有23132123项 ，<span>清空</span>
+							</div>
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th width="40" class="text-center">
+											<input type="checkbox" id="num" hidden="hidden">
+											<label for="num" class="checkbox_label"></label>
+										</th>
+										<th>序号</th>
+										<th>试题类型</th>
+										<th>说明</th>
+										<th>操作</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="text-center"><input type="checkbox" id="1" hidden="hidden"><label for="1" class="checkbox_label"></label></td>
+										<td>1</td>
+										<td>单选</td>
+										<td>四个选项一个正确答案</td>
+										<td>
+											<a href="">编辑</a> <span>|</span>
+											<a href="">删除</a>
+										</td>
+									</tr>
+									</tr>
+								</tbody>
+							</table>
+
 						</div>
 					</div>
 				</div>
