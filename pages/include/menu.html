@@ -5,7 +5,7 @@
 			<div class="navbar-header">
 				<a class="navbar-brand" href="#">
 					<div class="icon iconfont icon-shuye big"></div>
-					<div class="title">维恩云智库</div>
+					<div class="title">唯恩云智库</div>
 				</a>
 				<button type="button" class="navbar-expand-toggle pull-right visible-xs">
 								<i class="iconfont icon-chacha icon"></i>
@@ -26,13 +26,25 @@
 				</li>
 				<li class="panel panel-default dropdown">
 					<a data-toggle="collapse" href="#dropdown-tkxt">
-						<span class="icon iconfont icon-kaodianqingdan"></span><span class="title">题库系统</span>
+						<span class="icon iconfont icon-kaodianqingdan"></span>
+						<span class="title">题库系统</span>
 					</a>
 					<div id="dropdown-tkxt" class="panel-collapse collapse">
 						<div class="panel-body">
 							<ul class="nav navbar-nav">
 								<li>
-									<a href="jobManagement.html"><span class="icon iconfont icon-kaodianqingdan">&nbsp;&nbsp;题库基础信息管理</a>
+									<a data-toggle="collapse" href="#dropdown-tkjcxxgl"><span class="icon iconfont icon-kaodianqingdan">&nbsp;&nbsp;题库基础信息管理</a>
+									<div id="dropdown-tkjcxxgl" class="panel-collapse collapse">
+											<div class="panel-body">
+												<ul class="nav navbar-nav">
+													<li><a href="#">试题类型管理</a></li>
+													<li><a href="#">题目类型管理</a></li>
+													<li><a href="#">岗位管理</a></li>
+													<li><a href="jobManagement.html">职务管理</a></li>
+													<li><a href="#">实操键值管理</a></li>
+												</ul>
+											</div>
+										</div>
 								</li>
 								<li>
 									<a href="#"><span class="icon iconfont icon-kaodianqingdan">&nbsp;&nbsp;虚拟公司管理</a>
@@ -43,7 +55,7 @@
 											<div class="panel-body">
 												<ul class="nav navbar-nav">
 													<li><a href="#">试题信息管理</a></li>
-													<li><a href="#">选择题管理</a></li>
+													<li><a href="choiceQuestion.html">选择题管理</a></li>
 													<li><a href="#">实操题管理</a></li>
 												</ul>
 											</div>
@@ -57,18 +69,44 @@
 					</div>
 				</li>
 				<li class="panel panel-default dropdown">
-					<a href="/">
+					<a data-toggle="collapse" href="#dropdown-kdxt">
 						<span class="icon iconfont icon-shitiguanli"></span>
-										<span class="title">考点系统</span>
-									</a>
+						<span class="title">考点系统</span>
+					</a>
+					<div id="dropdown-kdxt" class="panel-collapse collapse">
+						<div class="panel-body">
+							<ul class="nav navbar-nav">
+								<li><a data-toggle="collapse" href="#dropdown-kdgl"><span class="icon iconfont icon-shitiguanli"></span>考点管理</a>
+									<div id="dropdown-kdgl" class="panel-collapse collapse">
+											<div class="panel-body">
+												<ul class="nav navbar-nav">
+													<li><a href="#">考点类型管理</a></li>
+													<li><a href="#">个人考点管理</a></li>
+													<li><a href="#">学校考点管理</a></li>
+													<li><a href="#">企业考点管理</a></li>
+													<li><a href="#">机构考点管理</a></li>
+													<li><a href="#">个人考生管理</a></li>
+													<li><a href="#">学校考生管理</a></li>
+													<li><a href="#">企业考生管理</a></li>
+													<li><a href="#">机构考生管理</a></li>
+												</ul>
+											</div>
+										</div>
+									
+									
 								</li>
-								<li class="panel panel-default dropdown">
-									<a href="/">
-										<span class="icon iconfont icon-xitongguanli"></span>
-										<span class="title">系统管理</span>
-									</a>
-								</li>
+								<li><a href="#"><span class="icon iconfont icon-shitiguanli"></span>成绩管理</a></li>
 							</ul>
 						</div>
+					</div>
+				</li>
+				<li class="panel panel-default dropdown">
+					<a href="/">
+						<span class="icon iconfont icon-xitongguanli"></span>
+						<span class="title">系统管理</span>
+					</a>
+				</li>
+			</ul>
+		</div>
 	</nav>
 	</div>
