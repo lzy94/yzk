@@ -170,10 +170,7 @@
 						<li>
 							<a href="#">首页</a>
 						</li>
-						<li>
-							<a href="#">试题基础信息管理</a>
-						</li>
-						<li class="active">职务管理</li>
+						<li class="active">考点类型管理</li>
 					</ol>
 					<div class="side-body pt-10">
 						<div class="panel">
@@ -187,49 +184,38 @@
 								    	序号
 								    </label>
 							      </th>
-							      <th>职务名称</th>
-							      <th>职务说明</th>
+							      <th>考点类型</th>
+							      <th>考点说明</th>
 							      <th>操作</th>
 							    </tr>
 							  </thead>
 							  <tbody>
 							    <tr>
 							      <td><input type="checkbox" id="1" hidden="hidden"><label for="1" class="checkbox_label"> 1</label></td>
-							      <td>总经理</td>
-							      <td>高级</td>
+							      <td>个人考点</td>
+							      <td>针对个人定制的考点</td>
 							      <td><a href="">编辑</a> <span>|</span> <a href="">删除</a></td>
 							    </tr>
 							    <tr>
 							      <td><input type="checkbox" id="2" hidden="hidden"><label for="2" class="checkbox_label"> 2</label></td>
-							      <td>副总经理</td>
-							      <td>高级</td>
+							      <td>学校考点</td>
+							      <td>针对学校定制的考点</td>
 							      <td><a href="">编辑</a> <span>|</span> <a href="">删除</a></td>
 							    </tr>
 							     <tr>
 							      <td><input type="checkbox" id="3" hidden="hidden"><label for="1" class="checkbox_label"> 3</label></td>
-							      <td>人力资源总监</td>
-							      <td>高级</td>
+							      <td>企业考点</td>
+							      <td>针对企业定制的考点</td>
 							      <td><a href="">编辑</a> <span>|</span> <a href="">删除</a></td>
 							    </tr>
 							     <tr>
 							      <td><input type="checkbox" id="4" hidden="hidden"><label for="1" class="checkbox_label"> 4</label></td>
-							      <td>财务经理</td>
-							      <td>中级</td>
-							      <td><a href="">编辑</a> <span>|</span> <a href="">删除</a></td>
-							    </tr>
-							    <tr>
-							      <td><input type="checkbox" id="5" hidden="hidden"><label for="2" class="checkbox_label"> 5</label></td>
-							      <td>收银员</td>
-							      <td>初级</td>
+							      <td>机构考点</td>
+							      <td>针对机构定制的考点</td>
 							      <td><a href="">编辑</a> <span>|</span> <a href="">删除</a></td>
 							    </tr>
 							  </tbody>
 							</table>
-                            
-                            <div class="page" id="page"></div>
-                            
-                            
-                            
                             
 						</div>
 					</div>
@@ -251,23 +237,7 @@
 <script src="scripts/public.min.js"></script>
 <script src="scripts/lib/echarts/echarts.min.js"></script>
 
-		
-		<script>
-		layui.use('laypage', function(){
-		  var laypage = layui.laypage;
-		  //执行一个laypage实例
-             laypage.render({
-			    elem: 'page'
-			    ,count: 100
-			    ,prev:'<'
-			    ,next:'>'
-			    ,layout: [ 'prev', 'page', 'next', 'limit', 'skip']
-			    ,jump: function(obj){
-			      //console.log(obj)
-			    }
-			  });
-		});
-		</script>
+	
 	</body>
 
 </html>

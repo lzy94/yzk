@@ -23,7 +23,7 @@
 
 <link rel="stylesheet" type="text/css" href="styles/theme.css"/>
 <link rel="stylesheet" type="text/css" href="styles/style.css" />
-
+<link rel="stylesheet" type="text/css" href="styles/index.css" />
 	</head>
 <!--class="flat-blue"-->
 	<body class="theme-black">
@@ -149,19 +149,19 @@
 					</div>
 				</li>
 				<li class="panel panel-default dropdown">
+				  <a href="/">
+					<span class="icon iconfont icon-shitiguanli"></span>
+						<span class="title">考点系统</span>
+					</a>
+				</li>
+				<li class="panel panel-default dropdown">
 					<a href="/">
-						<span class="icon iconfont icon-shitiguanli"></span>
-										<span class="title">考点系统</span>
-									</a>
-								</li>
-								<li class="panel panel-default dropdown">
-									<a href="/">
-										<span class="icon iconfont icon-xitongguanli"></span>
-										<span class="title">系统管理</span>
-									</a>
-								</li>
-							</ul>
-						</div>
+						<span class="icon iconfont icon-xitongguanli"></span>
+						<span class="title">系统管理</span>
+					</a>
+				</li>
+			</ul>
+		</div>
 	</nav>
 	</div>
 				<!-- Main Content -->
@@ -227,10 +227,7 @@
 							</table>
                             
                             <div class="page" id="page"></div>
-                            
-                            
-                            
-                            
+                          
 						</div>
 					</div>
 				</div>
@@ -249,6 +246,7 @@
 <script src="scripts/lib/layui-v2.3.0/layui-v2.3.0/layui/layui.js"></script>
 <script src="scripts/lib/artTemplate-4.12.2/artTemplate.js"></script>
 <script src="scripts/public.min.js"></script>
+<script src="scripts/lib/echarts/echarts.min.js"></script>
 
 		
 		<script>
@@ -258,7 +256,9 @@
              laypage.render({
 			    elem: 'page'
 			    ,count: 100
-			    ,layout: [ 'prev', 'page', 'next', 'limit', 'refresh', 'skip']
+			    ,prev:'<'
+			    ,next:'>'
+			    ,layout: [ 'prev', 'page', 'next', 'limit', 'skip']
 			    ,jump: function(obj){
 			      //console.log(obj)
 			    }

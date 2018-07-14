@@ -173,7 +173,7 @@
 						<li>
 							<a href="#">试题基础信息管理</a>
 						</li>
-						<li class="active">职务管理</li>
+						<li class="active">岗位管理</li>
 					</ol>
 					<div class="side-body pt-10">
 						<div class="panel">
@@ -187,40 +187,40 @@
 								    	序号
 								    </label>
 							      </th>
-							      <th>职务名称</th>
-							      <th>职务说明</th>
+							      <th>岗位名称</th>
+							      <th>岗位说明</th>
 							      <th>操作</th>
 							    </tr>
 							  </thead>
 							  <tbody>
 							    <tr>
 							      <td><input type="checkbox" id="1" hidden="hidden"><label for="1" class="checkbox_label"> 1</label></td>
-							      <td>总经理</td>
-							      <td>高级</td>
+							      <td>资金岗位</td>
+							      <td>工作性质</td>
 							      <td><a href="">编辑</a> <span>|</span> <a href="">删除</a></td>
 							    </tr>
 							    <tr>
 							      <td><input type="checkbox" id="2" hidden="hidden"><label for="2" class="checkbox_label"> 2</label></td>
-							      <td>副总经理</td>
-							      <td>高级</td>
+							      <td>高层管理岗位</td>
+							      <td>人力资源管理岗位</td>
 							      <td><a href="">编辑</a> <span>|</span> <a href="">删除</a></td>
 							    </tr>
 							     <tr>
 							      <td><input type="checkbox" id="3" hidden="hidden"><label for="1" class="checkbox_label"> 3</label></td>
-							      <td>人力资源总监</td>
-							      <td>高级</td>
+							      <td>财务与会计管理岗位</td>
+							      <td>工作性质</td>
 							      <td><a href="">编辑</a> <span>|</span> <a href="">删除</a></td>
 							    </tr>
 							     <tr>
 							      <td><input type="checkbox" id="4" hidden="hidden"><label for="1" class="checkbox_label"> 4</label></td>
-							      <td>财务经理</td>
-							      <td>中级</td>
+							      <td>资金岗位</td>
+							      <td>工作性质</td>
 							      <td><a href="">编辑</a> <span>|</span> <a href="">删除</a></td>
 							    </tr>
 							    <tr>
 							      <td><input type="checkbox" id="5" hidden="hidden"><label for="2" class="checkbox_label"> 5</label></td>
-							      <td>收银员</td>
-							      <td>初级</td>
+							      <td>高层管理岗位</td>
+							      <td>工作性质</td>
 							      <td><a href="">编辑</a> <span>|</span> <a href="">删除</a></td>
 							    </tr>
 							  </tbody>
@@ -259,9 +259,7 @@
              laypage.render({
 			    elem: 'page'
 			    ,count: 100
-			    ,prev:'<'
-			    ,next:'>'
-			    ,layout: [ 'prev', 'page', 'next', 'limit', 'skip']
+			    ,layout: [ 'prev', 'page', 'next', 'limit', 'refresh', 'skip']
 			    ,jump: function(obj){
 			      //console.log(obj)
 			    }

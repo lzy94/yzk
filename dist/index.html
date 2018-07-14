@@ -23,7 +23,7 @@
 
 <link rel="stylesheet" type="text/css" href="styles/theme.css"/>
 <link rel="stylesheet" type="text/css" href="styles/style.css" />
-
+<link rel="stylesheet" type="text/css" href="styles/index.css" />
 	</head>
 	<!--class="flat-blue"-->
 
@@ -149,19 +149,19 @@
 					</div>
 				</li>
 				<li class="panel panel-default dropdown">
+				  <a href="/">
+					<span class="icon iconfont icon-shitiguanli"></span>
+						<span class="title">考点系统</span>
+					</a>
+				</li>
+				<li class="panel panel-default dropdown">
 					<a href="/">
-						<span class="icon iconfont icon-shitiguanli"></span>
-										<span class="title">考点系统</span>
-									</a>
-								</li>
-								<li class="panel panel-default dropdown">
-									<a href="/">
-										<span class="icon iconfont icon-xitongguanli"></span>
-										<span class="title">系统管理</span>
-									</a>
-								</li>
-							</ul>
-						</div>
+						<span class="icon iconfont icon-xitongguanli"></span>
+						<span class="title">系统管理</span>
+					</a>
+				</li>
+			</ul>
+		</div>
 	</nav>
 	</div>
 				<!-- Main Content -->
@@ -170,17 +170,64 @@
 							<li>
 								<a href="#">首页</a>
 							</li>
-							<li>
-								<a href="#">Library</a>
-							</li>
-							<li class="active">Data</li>
 						</ol>
-					<div class="side-body pt-10">
-						<div class="panel">
-							<div class="page-title">
-								<span class="title">Table</span>
-								<div class="description">A bootstrap table for display list of data.</div>
+						<div class="user">
+							<div class="img">
+								<div class="header-img">
+									<div class="img">
+										<img src="images/test/profile-1.jpg" />
+									</div>
+								</div>
 							</div>
+							<div class="msg">
+								<h3>早安,张小明,欢迎你登录云智库!</h3>
+								<p>中企云智库 <span>|</span> 超级管理员</p>
+							</div>
+							<div class="time">
+								<h3>星期五</h3>
+								<p>2018年7月14日</p>
+							</div>
+						</div>
+					<div class="side-body pt-10">
+						<div class="panel index">
+							<div class="index_content">
+								<div class="con_left">
+									<div class="left_top">
+										<div class="title">便捷导航</div>
+										<ul>
+											<li><a href="" class="active">权限管理</a></li>
+											<li><a href="">会员管理</a></li>
+											<li><a href="">岗位管理</a></li>
+											<li><a href="">职务管理</a></li>
+											<li><a href="">试卷管理</a></li>
+											<li><a href="">考点管理</a></li>
+											<li><a href="">会员管理</a></li>
+											<li><a href="javascript:;"><span class="iconfont icon-plus"></span> 添加</a></li>
+										</ul>
+									</div>
+									<div class="left_bottom">
+										<div class="title">消息通知 <a href="">更多 >></a></div>
+										
+										<ul>
+											<li><a href=""><span></span>西南财经大学天府学院发起认证申请，等待审核<span>20分钟前</span></a></li>
+											<li><a href=""><span></span>2018年7月14日 14:00:00 发起认证申请<span>1小时前</span></a></li>
+											<li><a href=""><span></span>四川唯恩梦耀公司发起认证<span>2小时前</span></a></li>
+											<li><a href=""><span></span>财经大学天府学院发起认证申请，等待审核<span>2天前</span></a></li>
+											<li><a href=""><span></span>财经大学天府学院发起认证申请，等待审核<span>2天前</span></a></li>
+										</ul>
+										
+										
+									</div>
+								</div>
+								<div class="con_right">
+									<div class="title">用户分析</div>
+									
+									<div class="chart" id="chart"></div>
+									
+									
+								</div>
+							</div>
+							
 						</div>
 					</div>
 				</div>
@@ -199,7 +246,81 @@
 <script src="scripts/lib/layui-v2.3.0/layui-v2.3.0/layui/layui.js"></script>
 <script src="scripts/lib/artTemplate-4.12.2/artTemplate.js"></script>
 <script src="scripts/public.min.js"></script>
+<script src="scripts/lib/echarts/echarts.min.js"></script>
 
+		
+		<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+	        var myChart = echarts.init(document.getElementById('chart'));
+	        var colors = ['#4FCB73', '#F2627B', '#FAD336','#35A2FF'];
+	        // 指定图表的配置项和数据
+	        var option = {
+	        	color:colors,
+			    tooltip: {
+			        trigger: 'item',
+			        formatter: "{a} <br/>{b}: {c} ({d}%)"
+			    },
+			    legend: {
+			        orient: 'vertical',
+			        x: ' ',
+			        bottom:0,
+			        left:'10%',
+			        data:[{
+		                name:'普通用户',
+		                icon : 'circle'
+		                },{
+		                name:'学校用户',
+		                icon : 'circle'
+		                },{
+		                name:'企业用户',
+		                icon : 'circle'
+		                },{
+		                name:'机构用户',
+		                icon : 'circle'
+		                }]
+			    },
+			    series: [
+			        {
+			            name:'用户总数',
+			            type:'pie',
+			            radius: ['50%', '70%'],
+			            avoidLabelOverlap: false,
+			            label: {
+			                normal: {
+			                    show: false,
+			                    position: 'center'
+			                },
+			                emphasis: {
+			                    show: true,
+			                    textStyle: {
+			                        fontSize: '18',
+			                        
+			                    }
+			                }
+			            },
+			            labelLine: {
+			                normal: {
+			                    show: false
+			                }
+			            },
+			            data:[
+			                {value:8005, name:'普通用户'},
+			                {value:4225, name:'学校用户'},
+			                {value:2995, name:'企业用户'},
+			                {value:2995, name:'机构用户'},
+			            ],
+			            itemStyle: {normal: {
+							borderWidth: 6,
+							borderColor: '#ffffff',
+						} } 
+			        }
+			    ]
+			};
+
+	
+	        // 使用刚指定的配置项和数据显示图表。
+	        myChart.setOption(option);
+	    </script>
 	</body>
 
 </html>
