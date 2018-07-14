@@ -2,10 +2,11 @@ $color:#fff;
 $font:#ACACAC;
 $font2:#378790;
 .user{
-    width: 100%;
-    min-height: 80px;
+//  width: 100%;
+//  min-height: 80px;
     background:$color ;
-    margin-left: 250px;
+//  margin-left: 250px;
+    display: -webkit-flex;
     display: flex;
     
     >.img{

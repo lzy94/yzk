@@ -121,8 +121,9 @@
 												<span>关于你。就是因为我的害怕，我亲眼看你走向她。</span>
 											</li>
 										</ul>
-										<a href="javascript:void(0)" class="btn btn-danger radius"> <i class="iconfont icon-chacha1"></i> 移除题目 </a>
+										<a href="javascript:void(0)" class="btn btn-danger radius remove-question"> <i class="iconfont icon-chacha1"></i> 移除题目 </a>
 									</div>
+
 								</div>
 							</div>
 							<div class="question">
@@ -169,7 +170,7 @@
 												<span>关于你。就是因为我的害怕，我亲眼看你走向她。</span>
 											</li>
 										</ul>
-										<a href="javascript:void(0)" class="btn btn-danger radius"> <i class="iconfont icon-chacha1"></i> 移除题目 </a>
+										<a href="javascript:void(0)" class="btn btn-danger radius  remove-question"> <i class="iconfont icon-chacha1"></i> 移除题目 </a>
 									</div>
 
 								</div>
@@ -187,9 +188,13 @@
 					</div>
 				</div>
 			</div>
+			<div class="pull-body">
+				<div class="panel pd-10 text-center">
+					<a href="javascript:void(0)" class="btn btn-add radius">&nbsp;&nbsp;&nbsp; 提交试卷 &nbsp;&nbsp;&nbsp;</a>
+				</div>
+			</div>
 			@@include('include/footer.html')
 		</div>
-
 		<!-- 添加单选题  -->
 		<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			<div class="modal-dialog  modal-lg">
@@ -296,7 +301,7 @@
 				laypage.render({
 					elem: 'page',
 					count: 100,
-					groups:3,
+					groups: 3,
 					layout: ['prev', 'page', 'next', 'limit', 'skip'],
 					jump: function(obj) {
 						//console.log(obj)

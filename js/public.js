@@ -28,4 +28,8 @@ $(function(){
 		}
 		
 	})
+	
+	$('.remove-question').click(function(){
+		$(this).parent().remove();
+	})
 })
