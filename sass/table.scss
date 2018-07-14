@@ -41,9 +41,9 @@ thead tr{
    }
 }
 
-.button{
-    margin: 25px 0 25px 1%;
-}
+//.button{
+//  margin: 25px 0 25px 1%;
+//}
 
 input[type="checkbox"] + label::before {
     content: "\a0"; 
@@ -63,6 +63,24 @@ input[type="checkbox"]:checked + label::before {
     color: #fff;
 }
 .checkbox label{
+    margin-bottom: 0;
     padding: 0 !important;
 }
 
+.table-tip{
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 5px;
+    border: 1px solid #0F99A1;
+    background: #CEEAEB;
+    color: #2D373A;
+    >span{
+        display: inline-block;
+        color: #377C83;
+        margin-left: 15px;
+        cursor: pointer;
+    }
+    >.iconfont{
+        color: #377C83;
+    }
+}

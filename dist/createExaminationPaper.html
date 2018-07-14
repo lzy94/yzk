@@ -6,7 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="format-detection" content="telephone=no" />
-		<title>唯恩云智库</title>
+		<title>唯恩云智库-试卷管理</title>
 		<!--描述：公共css -->
 <link rel="shortcut icon" href="/favicon.ico" />
 <!--<link rel="stylesheet" type="text/css" href="scripts/lib/bootstrap-3.3.7/css/bootstrap.min.css"/>-->
@@ -24,7 +24,8 @@
 <link rel="stylesheet" type="text/css" href="styles/style.css" />
 
 	</head>
-<!--class="flat-blue"-->
+	<!--class="flat-blue"-->
+
 	<body class="theme-black">
 		<div class="app-container expanded">
 			<div class="row content-container">
@@ -88,8 +89,7 @@
 			</li>
 		</ul>
 	</div>
-</nav> 
-				<!--描述：左边导航-->
+</nav> <!--描述：左边导航-->
 <div class="side-menu sidebar-inverse">
 	<nav class="navbar navbar-default" role="navigation">
 		<div class="side-menu-container">
@@ -164,52 +164,72 @@
 	</nav>
 	</div>
 				<!-- Main Content -->
-				<div class="container-fluid">
-					<!--<table class="table table-hover">
-					  
-					</table>-->
-					
-					<div class="side-body">
-						<div class="panel">
-							
-							<div class="button"><button type="button" class="btn btn-default add"> <span class="iconfont icon-plus"></span> 新建</button><button type="button" class="btn btn-default del">批量删除</button></div>
-							
-							<table class="table table-hover">
-							  <thead>
-							    <tr>
-							      <th>
-							      	<input type="checkbox" id="num" hidden="hidden">
-								    <label for="num" class="checkbox_label">
-								    	序号
-								    </label>
-							      </th>
-							      <th>试题类型</th>
-							      <th>说明</th>
-							      <th>操作</th>
-							    </tr>
-							  </thead>
-							  <tbody>
-							    <tr>
-							      <td><input type="checkbox" id="1" hidden="hidden"><label for="1" class="checkbox_label"> 1</label></td>
-							      <td>单选</td>
-							      <td>四个选项一个正确答案</td>
-							      <td><a href="">编辑</a> <span>|</span> <a href="">删除</a></td>
-							    </tr>
-							    <tr>
-							      <td><input type="checkbox" id="2" hidden="hidden"><label for="2" class="checkbox_label"> 2</label></td>
-							      <td>单选</td>
-							      <td>四个选项一个正确答案</td>
-							      <td><a href="">编辑</a> <span>|</span> <a href="">删除</a></td>
-							    </tr>
-							    <tr>
-							      <td><input type="checkbox" id="3" hidden="hidden"><label for="3" class="checkbox_label"> 3</label></td>
-							      <td>实操</td>
-							      <td>实际操作</td>
-							      <td><a href="">编辑</a> <span>|</span> <a href="">删除</a></td>
-							    </tr>
-							  </tbody>
-							</table>
-
+				<div class="container-fluid pad-0">
+					<ol class="breadcrumb path-nav">
+						<li>
+							<a href="#">首页</a>
+						</li>
+						<li>
+							<a href="#">试卷管理</a>
+						</li>
+						<li class="active">创建试卷</li>
+					</ol>
+					<div class="side-body pt-10">
+						<div class="panel  pd-20">
+							<a href="Javascript:history.back()" class="btn btn-add radius mb-10">返回</a>
+							<form class="form-horizontal" role="form">
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label for="firstname" class="pull-left control-label">试卷标题:</label>
+											<div class="col-sm-9">
+												<input type="text" class="form-control radius">
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label for="firstname" class="pull-left control-label">试卷编号:</label>
+											<div class="col-sm-9">
+												<input type="text" class="form-control radius">
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label for="firstname" class="pull-left control-label">考试时长:</label>
+											<div class="col-sm-9">
+												<input type="text" class="form-control radius">
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label for="firstname" class="pull-left control-label">虚拟公司:</label>
+											<div class="col-sm-9">
+												<select class="form-control radius">
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label for="firstname" class="pull-left control-label">试卷标识:</label>
+											<div class="col-sm-9">
+												<select class="form-control radius">
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="panel pd-30">
+							<div class="row">
+								<div class="col-sm-12">
+									<h3></h3>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -218,9 +238,9 @@
 	<div class="wrapper">
 		<p class="text-center">Copyright 2017四川唯恩梦耀网络科技有限公司技术部出品</p>
 	</div>
-</footer> 
+</footer>
 		</div>
-		
+
 		<!--描述：公共js -->
 <!--<script src="scripts/lib/bootstrap-3.3.7/js/bootstrap.min.js" ></script>-->
 <script src="scripts/lib/jquery-1.11.0/jquery-1.11.0.min.js"></script>
