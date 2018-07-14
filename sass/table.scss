@@ -1,0 +1,68 @@
+$color:#858585;
+$color_:#08979D;
+thead tr{
+    font-weight: normal !important;
+}
+.table{
+    
+    width: 98%;
+    margin: auto;
+    
+    thead{
+        tr{
+            th{
+                border-bottom: 1px  solid #ddd;
+                font-weight: normal;
+            }
+        }
+    }
+    
+    
+    tbody{
+        color: $color;
+        a{
+        color: $color_;
+        span{
+            color: $color_ !important; 
+            font-size:12px ;
+           }
+        
+        }
+        tr{
+            td{
+                padding: 10px;
+                line-height: 1.5;
+            }
+        }
+   }
+   
+   label{
+       font-weight: normal;
+   }
+}
+
+.button{
+    margin: 25px 0 25px 1%;
+}
+
+input[type="checkbox"] + label::before {
+    content: "\a0"; 
+    display: inline-block;
+    vertical-align: .2em;
+    width: 1.1em;
+    height: 1.1em;
+    margin-right: .3em;
+    border-radius: .2em;
+    text-indent: .15em;
+    line-height: .65; 
+    border: solid 1px #C1C1C1;
+}
+input[type="checkbox"]:checked + label::before {
+    content: "\2713";
+    background-color: #08979D;
+    color: #fff;
+}
+.checkbox label{
+    padding: 0 !important;
+}
+

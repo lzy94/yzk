@@ -1,3 +1,4 @@
+$color_:#08979D;
 html,
 body {
     overflow-x: hidden;
@@ -9,6 +10,22 @@ body {
     }
     &.small {
         font-size: 20px !important;
+    }
+}
+
+//NOtton
+.button {
+    button {
+        border-radius: 3px;
+        margin-right: 25px;
+        &:focus{
+            outline: none;
+        }
+    }
+    .add {
+        background: $color_;
+        border-color: $color_;
+        color: #fff;
     }
 }
 
@@ -82,17 +99,19 @@ body {
         margin-right: 15px;
     }
 }
-.radius{
+
+.radius {
     border-radius: 5px;
 }
-.form-horizontal{
-    .form-group{
-        >label{
+
+.form-horizontal {
+    .form-group {
+        >label {
             color: #A4A4A4;
-            font-weight: 500;   
+            font-weight: 500;
         }
     }
-    .row > [class*="col-"] {
-    margin-bottom: 10px;
-}
+    .row>[class*="col-"] {
+        margin-bottom: 10px;
+    }
 }
