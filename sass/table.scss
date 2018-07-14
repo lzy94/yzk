@@ -57,6 +57,19 @@ thead tr{
     margin-top: 20px;
 //  padding-right: 18%;    
 }
+.layui-laypage a, .layui-laypage span{
+    border-radius: 3px;
+    margin: 0 5px 5px 0;
+}
+
+.layui-laypage .layui-laypage-curr em {
+    color:#009688;
+}
+.layui-laypage .layui-laypage-curr .layui-laypage-em {
+    background: #fff;
+    border: solid 1px  #009688;
+    padding: 0;
+}
 
 // checck
 

@@ -98,7 +98,9 @@
              laypage.render({
 			    elem: 'page'
 			    ,count: 100
-			    ,layout: [ 'prev', 'page', 'next', 'limit', 'refresh', 'skip']
+			    ,prev:'<'
+			    ,next:'>'
+			    ,layout: [ 'prev', 'page', 'next', 'limit', 'skip']
 			    ,jump: function(obj){
 			      //console.log(obj)
 			    }

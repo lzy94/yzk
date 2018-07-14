@@ -98,8 +98,11 @@
 											<label for="num" class="checkbox_label"></label>
 										</th>
 										<th>序号</th>
-										<th>试题类型</th>
-										<th>说明</th>
+										<th>试题标题</th>
+										<th>考试时长</th>
+										<th>虚拟公司</th>
+										<th>试卷编号</th>
+										<th>试卷标识</th>
 										<th>操作</th>
 									</tr>
 								</thead>
@@ -107,17 +110,38 @@
 									<tr>
 										<td class="text-center"><input type="checkbox" id="1" hidden="hidden"><label for="1" class="checkbox_label"></label></td>
 										<td>1</td>
-										<td>单选</td>
-										<td>四个选项一个正确答案</td>
+										<td>2018年建设工程初级选拔考试</td>
+										<td>2017/7/8 15:00:00</td>
+										<td>90分钟</td>
+										<td>东莞市嘉诚电子有限公司</td>
+										<td>K1212</td>
+										<td>学校创建</td>
 										<td>
 											<a href="">编辑</a> <span>|</span>
 											<a href="">删除</a>
 										</td>
 									</tr>
+									<tr>
+										<td class="text-center"><input type="checkbox" id="2" hidden="hidden"><label for="2" class="checkbox_label"></label></td>
+										<td>2</td>
+										<td>2018年建设工程初级选拔考试</td>
+										<td>2017/7/8 15:00:00</td>
+										<td>90分钟</td>
+										<td>东莞市嘉诚电子有限公司</td>
+										<td>K1212</td>
+										<td>学校创建</td>
+										<td>
+											<a href="">编辑</a> <span>|</span>
+											<a href="">删除</a>
+										</td>
 									</tr>
 								</tbody>
 							</table>
+<<<<<<< HEAD
 							<div class="page pd-10" id="page"></div>
+=======
+                             <div class="page" id="page"></div>
+>>>>>>> 476b98e57932a08f0e447ed615a2b38ad4d6201c
 						</div>
 					</div>
 				</div>
@@ -126,6 +150,7 @@
 		</div>
 
 		@@include('include/js.html')
+<<<<<<< HEAD
 		<script type="text/javascript">
 			layui.use('laypage', function() {
 				var laypage = layui.laypage;
@@ -141,6 +166,24 @@
 				});
 			});
 		</script>
+=======
+		
+		<script>
+		layui.use('laypage', function(){
+		  var laypage = layui.laypage;
+		  //执行一个laypage实例
+             laypage.render({
+			    elem: 'page'
+			    ,count: 100
+			    ,layout: [ 'prev', 'page', 'next', 'limit', 'refresh', 'skip']
+			    ,jump: function(obj){
+			      //console.log(obj)
+			    }
+			  });
+		});
+		</script>
+		
+>>>>>>> 476b98e57932a08f0e447ed615a2b38ad4d6201c
 	</body>
 
 </html>
