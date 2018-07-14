@@ -26,8 +26,7 @@
 <link rel="stylesheet" type="text/css" href="styles/style.css" />
 
 	</head>
-	<!--class="flat-blue"-->
-
+<!--class="flat-blue"-->
 	<body class="theme-black">
 		<div class="app-container expanded">
 			<div class="row content-container">
@@ -91,7 +90,8 @@
 			</li>
 		</ul>
 	</div>
-</nav> <!--描述：左边导航-->
+</nav> 
+				<!--描述：左边导航-->
 <div class="side-menu sidebar-inverse">
 	<nav class="navbar navbar-default" role="navigation">
 		<div class="side-menu-container">
@@ -167,21 +167,71 @@
 	</div>
 				<!-- Main Content -->
 				<div class="container-fluid pad-0">
-						<ol class="breadcrumb path-nav">
-							<li>
-								<a href="#">首页</a>
-							</li>
-							<li>
-								<a href="#">Library</a>
-							</li>
-							<li class="active">Data</li>
-						</ol>
+					<ol class="breadcrumb path-nav">
+						<li>
+							<a href="#">首页</a>
+						</li>
+						<li>
+							<a href="#">试题基础信息管理</a>
+						</li>
+						<li class="active">职务管理</li>
+					</ol>
 					<div class="side-body pt-10">
 						<div class="panel">
-							<div class="page-title">
-								<span class="title">Table</span>
-								<div class="description">A bootstrap table for display list of data.</div>
-							</div>
+							<div class="button"><button type="button" class="btn btn-default add"> <span class="iconfont icon-plus"></span> 新建</button><button type="button" class="btn btn-default del">批量删除</button></div>
+							<table class="table table-hover">
+							  <thead>
+							    <tr>
+							      <th>
+							      	<input type="checkbox" id="num" hidden="hidden">
+								    <label for="num" class="checkbox_label">
+								    	序号
+								    </label>
+							      </th>
+							      <th>职务名称</th>
+							      <th>职务说明</th>
+							      <th>操作</th>
+							    </tr>
+							  </thead>
+							  <tbody>
+							    <tr>
+							      <td><input type="checkbox" id="1" hidden="hidden"><label for="1" class="checkbox_label"> 1</label></td>
+							      <td>总经理</td>
+							      <td>高级</td>
+							      <td><a href="">编辑</a> <span>|</span> <a href="">删除</a></td>
+							    </tr>
+							    <tr>
+							      <td><input type="checkbox" id="2" hidden="hidden"><label for="2" class="checkbox_label"> 2</label></td>
+							      <td>副总经理</td>
+							      <td>高级</td>
+							      <td><a href="">编辑</a> <span>|</span> <a href="">删除</a></td>
+							    </tr>
+							     <tr>
+							      <td><input type="checkbox" id="3" hidden="hidden"><label for="1" class="checkbox_label"> 3</label></td>
+							      <td>人力资源总监</td>
+							      <td>高级</td>
+							      <td><a href="">编辑</a> <span>|</span> <a href="">删除</a></td>
+							    </tr>
+							     <tr>
+							      <td><input type="checkbox" id="4" hidden="hidden"><label for="1" class="checkbox_label"> 4</label></td>
+							      <td>财务经理</td>
+							      <td>中级</td>
+							      <td><a href="">编辑</a> <span>|</span> <a href="">删除</a></td>
+							    </tr>
+							    <tr>
+							      <td><input type="checkbox" id="5" hidden="hidden"><label for="2" class="checkbox_label"> 5</label></td>
+							      <td>收银员</td>
+							      <td>初级</td>
+							      <td><a href="">编辑</a> <span>|</span> <a href="">删除</a></td>
+							    </tr>
+							  </tbody>
+							</table>
+                            
+                            <div class="page" id="page"></div>
+                            
+                            
+                            
+                            
 						</div>
 					</div>
 				</div>
@@ -190,15 +240,30 @@
 	<div class="wrapper">
 		<p class="text-center">Copyright 2017四川唯恩梦耀网络科技有限公司技术部出品</p>
 	</div>
-</footer>
+</footer> 
 		</div>
-
+		
 		<!--描述：公共js -->
 <!--<script src="scripts/lib/bootstrap-3.3.7/js/bootstrap.min.js" ></script>-->
 <script src="scripts/lib/jquery-1.11.0/jquery-1.11.0.min.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="scripts/public.min.js"></script>
 <script src="scripts/lib/layui-v2.3.0/layui-v2.3.0/layui/layui.js"></script>
+		
+		<script>
+		layui.use('laypage', function(){
+		  var laypage = layui.laypage;
+		  //执行一个laypage实例
+             laypage.render({
+			    elem: 'page'
+			    ,count: 100
+			    ,layout: [ 'prev', 'page', 'next', 'limit', 'refresh', 'skip']
+			    ,jump: function(obj){
+			      //console.log(obj)
+			    }
+			  });
+		});
+		</script>
 	</body>
 
 </html>

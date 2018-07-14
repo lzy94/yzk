@@ -45,6 +45,18 @@ thead tr{
     margin: 25px 0 25px 1%;
 }
 
+
+//分页
+
+.page{
+    width: 100%;
+    text-align: right;
+    margin-top: 20px;
+    padding-right: 18%;    
+}
+
+// checck
+
 input[type="checkbox"] + label::before {
     content: "\a0"; 
     display: inline-block;
