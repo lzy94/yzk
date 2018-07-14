@@ -77,9 +77,110 @@
 							</form>
 						</div>
 						<div class="panel pd-30">
-							<div class="row">
-								<div class="col-sm-12">
-									<h3></h3>
+							<div class="question">
+								<div class="title">
+									一、单选题 &nbsp;&nbsp;
+									<a href="javascript:void(0)" data-toggle="modal" data-target=".bs-example-modal-lg" class="btn btn-add radius"> <i class="iconfont icon-plus"></i> 添加题目</a>
+								</div>
+								<div class="question-item" id="single">
+									<div class="question-list">
+										<div class="subject">
+											<span>1、（单选题5分）</span>关于你，2012年的九月，那是我们认识的季节，在四十多平米的教室里，我认识了你。我们是同学，彼此都还不熟悉的同学。那一句个子还高嘛，是我关注你的开始，有意无意的从四组向一组瞟你，小心翼翼的眼神怕你发现，却又怕你不明白，一点点的喜欢不敢声张。
+										</div>
+										<ul class="answer-list">
+											<li>
+
+												<div class="radio-box">
+													<input type="radio" name="one" />
+													<label>A、</label>
+												</div>
+												<span>关于你。就是因为我的害怕，我亲眼看你走向她。</span>
+											</li>
+											<li>
+
+												<div class="radio-box">
+													<input type="radio" name="one" />
+													<label>B、</label>
+												</div>
+												<span>关于你。就是因为我的害怕，我亲眼看你走向她。</span>
+											</li>
+											<li>
+
+												<div class="radio-box">
+													<input type="radio" name="one" />
+													<label>C、</label>
+												</div>
+												<span>关于你。就是因为我的害怕，我亲眼看你走向她。</span>
+											</li>
+											<li>
+
+												<div class="radio-box">
+													<input type="radio" name="one" />
+													<label>D、</label>
+												</div>
+												<span>关于你。就是因为我的害怕，我亲眼看你走向她。</span>
+											</li>
+										</ul>
+										<a href="javascript:void(0)" class="btn btn-danger radius"> <i class="iconfont icon-chacha1"></i> 移除题目 </a>
+									</div>
+								</div>
+							</div>
+							<div class="question">
+								<div class="title">
+									二、多选题 &nbsp;&nbsp;
+									<a href="javascript:void(0)" class="btn btn-add radius"> <i class="iconfont icon-plus"></i> 添加题目</a>
+								</div>
+								<div class="question-item" id="multi">
+									<div class="question-list">
+										<div class="subject">
+											<span>1、（多选题10分）</span>关于你，2012年的九月，那是我们认识的季节，在四十多平米的教室里，我认识了你。我们是同学，彼此都还不熟悉的同学。那一句个子还高嘛，是我关注你的开始，有意无意的从四组向一组瞟你，小心翼翼的眼神怕你发现，却又怕你不明白，一点点的喜欢不敢声张。
+										</div>
+										<ul class="answer-list">
+											<li>
+
+												<div class="checkbox-box">
+													<input type="checkbox" name="one" checked=" " />
+													<label>A、</label>
+												</div>
+												<span>关于你。就是因为我的害怕，我亲眼看你走向她。</span>
+											</li>
+											<li>
+
+												<div class="checkbox-box">
+													<input type="checkbox" name="one" />
+													<label>B、</label>
+												</div>
+												<span>关于你。就是因为我的害怕，我亲眼看你走向她。</span>
+											</li>
+											<li>
+
+												<div class="checkbox-box">
+													<input type="checkbox" name="one" />
+													<label>C、</label>
+												</div>
+												<span>关于你。就是因为我的害怕，我亲眼看你走向她。</span>
+											</li>
+											<li>
+
+												<div class="checkbox-box">
+													<input type="checkbox" name="one" />
+													<label>D、</label>
+												</div>
+												<span>关于你。就是因为我的害怕，我亲眼看你走向她。</span>
+											</li>
+										</ul>
+										<a href="javascript:void(0)" class="btn btn-danger radius"> <i class="iconfont icon-chacha1"></i> 移除题目 </a>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="question">
+								<div class="title">
+									三、实操题 &nbsp;&nbsp;
+									<a href="javascript:void(0)" class="btn btn-add radius"> <i class="iconfont icon-plus"></i> 添加题目</a>
+								</div>
+								<div class="question-item" id="multi">
 								</div>
 							</div>
 						</div>
@@ -87,6 +188,104 @@
 				</div>
 			</div>
 			@@include('include/footer.html')
+		</div>
+
+		<!-- 添加单选题  -->
+		<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog  modal-lg">
+				<div class="modal-content radius">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+						<h4 class="modal-title">添加单选题</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-horizontal" role="form">
+							<div class="row">
+								<div class="col-sm-3">
+									<div class="form-group">
+										<div class="col-sm-12">
+											<input type="text" class="form-control radius" placeholder="关键词">
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="form-group">
+										<div class="col-sm-12">
+											<select class="form-control radius">
+												<option>题目类型</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="form-group">
+										<div class="col-sm-12">
+											<select class="form-control radius">
+												<option>行业类型</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3 dis">
+									<div class="form-group">
+										<div class="col-sm-12">
+											<select class="form-control radius">
+												<option>行业类型</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3 dis">
+									<div class="form-group">
+										<div class="col-sm-12">
+											<select class="form-control radius">
+												<option>行业类型</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<a href="javascript:void(0)" class="btn btn-add radius">查&nbsp;询</a>&nbsp;
+									<a href="javascript:void(0)" class="btn btn-default radius">重&nbsp;置</a>
+									&nbsp;
+									<a href="javascript:void(0)" class="spread"><span>展开</span><i class="iconfont icon-xiala"></i> </a>
+								</div>
+							</div>
+						</form>
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th width="100">序号</th>
+									<th>题目名称</th>
+									<th  width="80">分值</th>
+									<th  width="80">操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>于你，2012年的九月，那是我们认识的季节，</td>
+									<td>5</td>
+									<td>
+										<a href="javascript:void(0)">添加</a>
+									</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>于你，2012年的九月，那是我们认识的季节，</td>
+									<td>5</td>
+									<td>
+										<span>已添加</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+					</div>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			<!-- /.modal-dialog -->
 		</div>
 
 		@@include('include/js.html')
