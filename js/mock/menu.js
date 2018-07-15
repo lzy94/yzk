@@ -1,16 +1,17 @@
 // 菜单数据 
-
-var menu = [{
-	title: '首页',
-	path: '/',
-	icon: 'icon-shouye',
-	childs: [{
-		title: '首页',
-		path: '/',
-		icon: 'icon-shouye',
-		childs: ''
-	}]
-}, {
+//{
+//	title: '首页',
+//	path: '/',
+//	icon: 'icon-shouye',
+//	childs: [{
+//		title: '首页',
+//		path: '/',
+//		icon: 'icon-shouye',
+//		childs: ''
+//	}]
+//}, 
+var menu = [
+{
 	title: '用户系统',
 	path: '#',
 	icon: 'icon-yonghushezhi',
