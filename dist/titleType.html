@@ -40,37 +40,11 @@
 				<i class="iconfont icon-caidan icon"></i>
 			</button>
 		</div>
-		<ul class="nav navbar-nav navbar-right">
+		<ul class="nav navbar-nav navbar-right head-nav">
 			<button type="button" class="navbar-right-expand-toggle pull-right visible-xs">
 				<i class="iconfont icon-chacha icon"></i>
 			</button>
-			
-			<li>
-				<a href="#">
-					<span class="icon iconfont icon-shouye"></span> 首页
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span class="icon iconfont icon-yonghushezhi"></span> 用户系统
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span class="icon iconfont icon-kaodianqingdan"></span> 题库系统
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span class="icon iconfont icon-shitiguanli"></span> 考点系统
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span class="icon iconfont icon-xitongguanli"></span> 系统管理
-				</a>
-			</li>
-			
+
 			<li class="header-msg-num">
 				<a href="#">
 					<i class="iconfont icon-weibiaoti555 big"></i><span class="badge danger">2</span>
@@ -78,14 +52,23 @@
 			</li>
 			<li class="dropdown profile">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-						<div class="header-img">
-							<div class="img">
-								<img src="images/test/profile-1.jpg" />
-							</div>
+					<div class="header-img">
+						<div class="img">
+							<img src="images/test/profile-1.jpg" />
 						</div>
+					</div>
 					<span>这是啥</span>
 					<span class="caret"></span>
 				</a>
+				<ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu1">
+					<li role="presentation">
+						<a role="menuitem" tabindex="-1" href="#">个人中心</a>
+					</li>
+					<li role="presentation" class="divider"></li>
+					<li role="presentation">
+						<a role="menuitem" tabindex="-1" href="#">退出</a>
+					</li>
+				</ul>
 			</li>
 		</ul>
 	</div>
@@ -95,7 +78,7 @@
 	<nav class="navbar navbar-default" role="navigation">
 		<div class="side-menu-container">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#">
+				<a class="navbar-brand" href="/">
 					<div class="icon iconfont icon-shuye big"></div>
 					<div class="title">唯恩云智库</div>
 				</a>
@@ -103,8 +86,8 @@
 								<i class="iconfont icon-chacha icon"></i>
 							</button>
 			</div>
-			<ul class="nav navbar-nav">
-				<li class="active">
+			<ul class="nav navbar-nav left-menu">
+				<!--<li class="active">
 					<a href="/">
 						<span class="icon iconfont icon-shouye"></span>
 						<span class="title">首页</span>
@@ -191,17 +174,13 @@
 							</ul>
 						</div>
 					</div>
-				  <a href="/">
-					<span class="icon iconfont icon-shitiguanli"></span>
-						<span class="title">考点系统</span>
-					</a>
 				</li>
 				<li class="panel panel-default dropdown">
 					<a href="/">
 						<span class="icon iconfont icon-xitongguanli"></span>
 						<span class="title">系统管理</span>
 					</a>
-				</li>
+				</li>-->
 			</ul>
 		</div>
 	</nav>
@@ -286,9 +265,10 @@
 <script src="scripts/lib/jquery-1.11.0/jquery-1.11.0.min.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="scripts/lib/layui-v2.3.0/layui-v2.3.0/layui/layui.js"></script>
-<script src="scripts/lib/artTemplate-4.12.2/artTemplate.js"></script>
-<script src="scripts/public.min.js"></script>
 <script src="scripts/lib/echarts/echarts.min.js"></script>
+<script src="scripts/lib/artTemplate-4.12.2/artTemplate.js"></script>
+<script src="scripts/mock/menu.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="scripts/public.min.js"></script>
 
 		
 		<script>

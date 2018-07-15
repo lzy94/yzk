@@ -15,6 +15,7 @@ var uglify = require('gulp-uglify');
 var htmlmin = require('gulp-htmlmin'); //压缩html代码
 var sass = require('gulp-sass');
 var zip = require('gulp-zip');  // 打包发布
+var gutil  = require('gulp-util');
 
 var uncss = require('gulp-uncss'); // 删除多余css  代码
 
@@ -65,6 +66,9 @@ gulp.task('js', function() {
 			suffix: '.min'
 		}))
 		.pipe(uglify())
+		.on('error', function (err) {
+                gutil.log(gutil.colors.red('[Error]'), err.toString());
+            })
 		.pipe(gulp.dest('dist/scripts'))
 		.pipe(browserSync.stream());
 });

@@ -28,7 +28,11 @@
     padding: 0 0 0 30px;
 }
     .side-menu {
+        .navbar-nav{
+            width: 100%;
+        }
         .navbar {
+            width: 100%;
             background-color: #1F2935;
             border-bottom: 0px;
             -moz-box-shadow: none;

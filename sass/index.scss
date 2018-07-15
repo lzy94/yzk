@@ -1,75 +1,68 @@
 $color:#fff;
 $font:#ACACAC;
 $font2:#378790;
-.user{
-//  width: 100%;
-//  min-height: 80px;
-    background:$color ;
-//  margin-left: 250px;
-    display: -webkit-flex;
-    display: flex;
-    
-    >.img{
-        width: 4%;
+.user {
+    overflow: hidden;
+    padding: 0 15px;
+    >.img {
+        width: 80px;
         height: 80px;
-        margin-left:17px ;
-        line-height:  80px;
-        .img{
+        line-height: 80px;
+        .img {
             width: 55px;
             height: 55px;
-            
         }
     }
-    .msg{
-        width: 76%;
+    .msg {
         height: 80px;
-        h3{
+        h3 {
             letter-spacing: 2px;
             margin: 15px 0 10px 0;
         }
-        p{
-            color:$font ;
+        p {
+            color: $font;
         }
     }
-    .time{
-        width: 6%;
+    .time {
         height: 80px;
         text-align: center;
-         h3{
+        h3 {
             letter-spacing: 2px;
             margin: 15px 0 10px 0;
         }
-        p{
-            color:$font ;
+        p {
+            color: $font;
         }
     }
 }
 
-.index{
-     background:#F2F3F8;
-     box-shadow: none;
+.index {
+    background: #F2F3F8;
+    box-shadow: none;
 }
-.index_content{
+
+.index_content {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    .con_left{
+    .con_left {
         width: 61%;
         min-height: 650px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        .left_top{
+        .left_top {
             width: 100%;
             height: 38%;
-            background:$color ;
-            ul{
+            background: $color;
+            ul {
                 margin-left: 20px;
-                li{
-                    a{
+                li {
+                    a {
                         color: #6D6D6D;
                     }
-                    .active,a:hover{
+                    .active,
+                    a:hover {
                         color: $font2;
                     }
                     float:left;
@@ -77,8 +70,8 @@ $font2:#378790;
                     margin: 40px 150px 0 0;
                 }
                 li:last-child {
-                    a{
-                       display: inline-block;
+                    a {
+                        display: inline-block;
                         width: 80px;
                         height: 30px;
                         border: solid 1px $font2;
@@ -86,28 +79,25 @@ $font2:#378790;
                         text-align: center;
                         line-height: 30px;
                         border-radius: 3px;
-    
                     }
-                    
                 }
-                
             }
         }
-        .left_bottom{
+        .left_bottom {
             width: 100%;
             height: 60%;
-            background:$color ;
-            ul{
+            background: $color;
+            ul {
                 margin-left: 20px;
-                li{
-                    a{
+                li {
+                    a {
                         color: #6D6D6D;
-                        span:last-child{
+                        span:last-child {
                             float: right;
                             margin-right: 20px;
                             color: $font;
                         }
-                        span:first-child{
+                        span:first-child {
                             display: inline-block;
                             width: 8px;
                             height: 8px;
@@ -116,7 +106,7 @@ $font2:#378790;
                             margin-right: 10px;
                         }
                     }
-                    a:hover{
+                    a:hover {
                         text-decoration: underline;
                         color: $font2;
                     }
@@ -126,26 +116,23 @@ $font2:#378790;
             }
         }
     }
-    .con_right{
+    .con_right {
         width: 38%;
         min-height: 650px;
-        background:$color ;
-        
-        .chart{
+        background: $color;
+        .chart {
             width: 100%;
             height: 550px;
         }
-        
-        
     }
-    .title{
+    .title {
         width: 100%;
         height: 50px;
         border-bottom: solid 1px #D7D7D7;
         line-height: 50px;
         text-indent: 20px;
         font-size: 18px;
-        a{
+        a {
             float: right;
             margin-right: 20px;
             font-size: 16px;

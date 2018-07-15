@@ -26,6 +26,7 @@
 		"gulp-sass": "^4.0.1",
 		"gulp-uglify": "^3.0.0",
 		"gulp-uncss": "^1.0.6",
+		"gulp-util": "^3.0.8",
 		"gulp-zip": "^4.1.0"
 	}
 }
