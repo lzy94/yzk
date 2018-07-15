@@ -264,7 +264,7 @@
 								<thead>
 									<tr>
 										<th width="40" class="text-center">
-											<input type="checkbox" id="num" hidden="hidden">
+											<input type="checkbox" id="num" name="allSelect" hidden="hidden">
 											<label for="num" class="checkbox_label"></label>
 										</th>
 										<th>序号</th>
@@ -279,7 +279,7 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td class="text-center"><input type="checkbox" id="1" hidden="hidden"><label for="1" class="checkbox_label"></label></td>
+										<td class="text-center"><input type="checkbox" name="list_ch" id="1" hidden="hidden"><label for="1" class="checkbox_label"></label></td>
 										<td>1</td>
 										<td>2018年建设工程初级选拔考试</td>
 										<td>2017/7/8 15:00:00</td>
@@ -293,7 +293,7 @@
 										</td>
 									</tr>
 									<tr>
-										<td class="text-center"><input type="checkbox" id="2" hidden="hidden"><label for="2" class="checkbox_label"></label></td>
+										<td class="text-center"><input type="checkbox" name="list_ch" id="2" hidden="hidden"><label for="2" class="checkbox_label"></label></td>
 										<td>2</td>
 										<td>2018年建设工程初级选拔考试</td>
 										<td>2017/7/8 15:00:00</td>
@@ -330,20 +330,35 @@
 <script src="scripts/mock/menu.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="scripts/public.min.js"></script>
 
-		
+
 		<script>
-		layui.use('laypage', function(){
-		  var laypage = layui.laypage;
-		  //执行一个laypage实例
-             laypage.render({
-			    elem: 'page'
-			    ,count: 100
-			    ,layout: [ 'prev', 'page', 'next', 'limit', 'refresh', 'skip']
-			    ,jump: function(obj){
-			      //console.log(obj)
-			    }
-			  });
-		});
+			layui.use('laypage', function() {
+				var laypage = layui.laypage;
+				//执行一个laypage实例
+				laypage.render({
+					elem: 'page',
+					count: 100,
+					layout: ['prev', 'page', 'next', 'limit', 'refresh', 'skip'],
+					jump: function(obj) {
+						//console.log(obj)
+					}
+				});
+			});
+
+			$(function() {
+
+				$('input[name="allSelect"]').click(function() {
+					if($(this).prop('checked')) {
+						$.each($('input[name="list_ch"]'), function(i, n) {
+							$(n).prop('checked', 'checked')
+						})
+					} else {
+						$.each($('input[name="list_ch"]'), function(i, n) {
+							$(n).prop('checked', '')
+						})
+					}
+				})
+			})
 		</script>
 	</body>
 
