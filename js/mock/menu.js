@@ -17,7 +17,7 @@ var menu = [
 	icon: 'icon-yonghushezhi',
 	childs: [{
 		title: '用户系统',
-		path: '#',
+		path: '/user/user.html',
 		icon: 'icon-yonghushezhi',
 		childs: ''
 	}]
@@ -46,7 +46,7 @@ var menu = [
 			childs: ''
 		}, {
 			title: '职务管理',
-			path: 'jobManagement.html',
+			path: '/jobManagement.html',
 			childs: ''
 		}, {
 			title: '实操键值管理',
@@ -70,18 +70,18 @@ var menu = [
 			childs: ''
 		}, {
 			title: '选择题管理',
-			path: 'choiceQuestion.html',
+			path: '/choiceQuestion.html',
 			icon: 'icon-kaodianqingdan',
 			childs: ''
 		}, {
 			title: '实操题管理',
-			path: 'practicalExercises.html',
+			path: '/practicalExercises.html',
 			icon: 'icon-kaodianqingdan',
 			childs: ''
 		}]
 	}, {
 		title: '试卷管理',
-		path: 'examinationPaper.html',
+		path: '/examinationPaper.html',
 		icon: 'icon-kaodianqingdan',
 		childs: ''
 	}]
@@ -155,8 +155,13 @@ var menu = [
 	path: '#',
 	icon: 'icon-xitongguanli',
 	childs: [{
-		title: '系统管理',
-		path: '#',
+		title: '操作员管理',
+		path: '/sys/operator.html',
+		icon: 'icon-xitongguanli',
+		childs: ''
+	},{
+		title: '角色管理',
+		path: '/sys/role.html',
 		icon: 'icon-xitongguanli',
 		childs: ''
 	}]

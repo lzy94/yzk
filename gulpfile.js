@@ -61,7 +61,7 @@ gulp.task('uncss', function() {
 });
 
 gulp.task('js', function() {
-	return gulp.src(['js/**/*.js', '!js/lib/**.js'])
+	return gulp.src(['js/**/*.js','!js/lib/**.min.js'])
 		.pipe(rename({
 			suffix: '.min'
 		}))

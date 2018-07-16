@@ -14,16 +14,16 @@
 <!--<link rel="stylesheet" type="text/css" href="styles/lib/css/animate.min.css"/>-->
 <link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
 <!--<link rel="stylesheet" type="text/css" href="styles/lib/css/font-awesome.min.css" />-->
-<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_745936_fum6122q86.css"/>
-<link rel="stylesheet" type="text/css" href="styles/lib/css/admin.css" />
+<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_745936_0zw86zfz7nw.css"/>
+<link rel="stylesheet" type="text/css" href="/styles/lib/css/admin.css" />
 <!--<link rel="stylesheet" type="text/css" href="styles/lib/css/blue.css" />-->
-<link rel="stylesheet" type="text/css" href="scripts/lib/layui-v2.3.0/layui-v2.3.0/layui/css/layui.css"/>
+<link rel="stylesheet" type="text/css" href="/scripts/lib/layui-v2.3.0/layui-v2.3.0/layui/css/layui.css"/>
 
-<link rel="stylesheet" type="text/css" href="styles/table.css"/>
+<link rel="stylesheet" type="text/css" href="/styles/table.css"/>
 
-<link rel="stylesheet" type="text/css" href="styles/theme.css"/>
-<link rel="stylesheet" type="text/css" href="styles/style.css" />
-<link rel="stylesheet" type="text/css" href="styles/index.css" />
+<link rel="stylesheet" type="text/css" href="/styles/theme.css"/>
+<link rel="stylesheet" type="text/css" href="/styles/style.css" />
+<link rel="stylesheet" type="text/css" href="/styles/index.css" />
 	</head>
 	<!--class="flat-blue"-->
 
@@ -60,7 +60,7 @@
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
 					<div class="header-img">
 						<div class="img">
-							<img src="images/test/profile-1.jpg" />
+							<img src="/images/test/profile-1.jpg" />
 						</div>
 					</div>
 					<span>这是啥</span>
@@ -256,7 +256,7 @@
 										</div>
 									</form>
 									<div class="button">
-										<a href="#" class="btn btn-add radius"> <span class="iconfont icon-plus"></span>新建</a>&nbsp;
+										<a href="#" data-toggle="modal" data-target=".addChoiceQuestion" class="btn btn-add radius"> <span class="iconfont icon-plus"></span>新建</a>&nbsp;
 										<a href="javascript:void(0)" class="btn btn-default radius">批量上传</a>&nbsp;
 										<div class="btn-group">
 											<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown">
@@ -356,7 +356,7 @@
 										</div>
 									</form>
 									<div class="button">
-										<a href="#" class="btn btn-add radius"> <span class="iconfont icon-plus"></span>新建</a>&nbsp;
+										<a href="#" data-toggle="modal" data-target=".addChoiceQuestion" class="btn btn-add radius"> <span class="iconfont icon-plus"></span>新建</a>&nbsp;
 										<a href="javascript:void(0)" class="btn btn-default radius">批量上传</a>&nbsp;
 										<div class="btn-group">
 											<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown">
@@ -428,6 +428,136 @@
 		<p class="text-center">Copyright 2017四川唯恩梦耀网络科技有限公司技术部出品</p>
 	</div>
 </footer>
+		</div>
+
+		<!--  添加选择题   -->
+		<div class="modal fade addChoiceQuestion" id="single_edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog ">
+				<div class="modal-content radius">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+						<h4 class="modal-title">选择题添加</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-horizontal" role="form">
+							<div class="row">
+								<div class="col-sm-12 pl-0">
+									<div class="row">
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label for="firstname" class="col-sm-4 control-label pr-0">题目类型:</label>
+												<div class="col-sm-8">
+													<select class="form-control radius" id="choiceQuestion-type">
+														<option value="1"> 单选 </option>
+														<option value="2">多选 </option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label for="firstname" class="col-sm-4 control-label pr-0">分值:</label>
+												<div class="col-sm-8">
+													<input type="text" class="form-control radius">
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label for="firstname" class="col-sm-4 control-label pr-0">标志:</label>
+												<div class="col-sm-8">
+													<select class="form-control radius">
+														<option>试题</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label for="firstname" class="col-sm-4 control-label pr-0">
+													行业类型:</label>
+												<div class="col-sm-8">
+													<select class="form-control radius">
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label for="firstname" class="col-sm-4 control-label pr-0">职务名称:</label>
+												<div class="col-sm-8">
+													<select class="form-control radius">
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label for="firstname" class="col-sm-4 control-label pr-0">岗位名称:</label>
+												<div class="col-sm-8">
+													<select class="form-control radius">
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="firstname" class="col-sm-2 control-label">选项数:</label>
+										<div class="col-sm-10">
+											<div class="col-sm-9 pl-0">
+												<input type="number" class="form-control radius" min="1" id="choice-num" />
+											</div>
+											<div class="col-sm-3">
+												<button type="button" class="btn btn-add radius" id="choice-num-ok">确定</button>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="firstname" class="col-sm-2 control-label">题目试题:</label>
+										<div class="col-sm-10">
+											<textarea name="" class="form-control radius" rows="3"></textarea>
+										</div>
+									</div>
+								</div>
+								<div class="row" id="option-list">
+
+								</div>
+								<div class="col-sm-12">
+									<div class="form-group" id="answer-list">
+
+									</div>
+								</div>
+								
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="firstname" class="col-sm-2 control-label">错误解析:</label>
+										<div class="col-sm-10">
+											<textarea name="" class="form-control radius" rows="4"></textarea>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6 ">
+									<label for="firstname" class="col-sm-4 control-label pr-0"></label>
+									<div class="col-sm-8 pad-0">
+										<div class="button">
+											<a href="javascript:void(0)" class="btn btn-add radius">提&nbsp;交</a>&nbsp;
+											<a href="javascript:void(0)" class="btn btn-default radius" data-dismiss="modal">取&nbsp;消</a>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</form>
+					</div>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			<!-- /.modal-dialog -->
 		</div>
 
 		<!--  单选题编辑   -->
@@ -582,8 +712,7 @@
 			</div>
 			<!-- /.modal-dialog -->
 		</div>
-		
-		
+
 		<!--  多选题编辑   -->
 		<div class="modal fade bs-example-modal-lg" id="multi_edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			<div class="modal-dialog ">
@@ -746,13 +875,16 @@
 
 		<!--描述：公共js -->
 <!--<script src="scripts/lib/bootstrap-3.3.7/js/bootstrap.min.js" ></script>-->
-<script src="scripts/lib/jquery-1.11.0/jquery-1.11.0.min.js"></script>
+<script src="/scripts/lib/jquery-1.11.0/jquery-1.11.0.min.js"></script>
+<!-- CDN  -->
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="scripts/lib/layui-v2.3.0/layui-v2.3.0/layui/layui.js"></script>
-<script src="scripts/lib/echarts/echarts.min.js"></script>
-<script src="scripts/lib/artTemplate-4.12.2/artTemplate.js"></script>
-<script src="scripts/mock/menu.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="scripts/public.min.js"></script>
+<script src="/scripts/lib/layui-v2.3.0/layui-v2.3.0/layui/layui.js"></script>
+<script src="/scripts/lib/echarts/echarts.min.js"></script>
+<!-- CDN  -->
+<script src="https://cdn.bootcss.com/sweetalert/2.1.0/sweetalert.min.js"></script>
+<script src="/scripts/lib/artTemplate-4.12.2/artTemplate.js"></script>
+<script src="/scripts/mock/menu.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/scripts/public.min.js"></script>
 
 		<script type="text/javascript">
 			layui.use('laypage', function() {
@@ -782,9 +914,54 @@
 				$('#single_edit').modal()
 
 			}
-			function multi_edit(id){
+
+			function multi_edit(id) {
 				$('#multi_edit').modal()
 			}
+
+			// 添加选择题操作
+			$(function() {
+
+				var chname = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+				$('#choice-num-ok').click(function() {
+					var num = $('#choice-num').val();
+					var newNames = chname.slice(0,num);
+					renderChoice(newNames, $('#choiceQuestion-type').val());
+				})
+				
+				$('#choiceQuestion-type').change(function(){
+					var num = $('#choice-num').val();
+					if(num){
+						var newNames = chname.slice(0,num);
+						var type = $(this).val();
+						renderChoice(newNames, type);
+					}else{
+						$('#option-list').html('');
+						$('#answer-list').html('')
+					}
+				})
+				
+				/**
+				 * 渲染选择题类型选项
+				 * @param {Object} names
+				 * @param {Object} type				 
+				 */
+				function renderChoice(names, type) {
+					var html = '',html2 = '<label for="firstname" class="col-sm-2 control-label">正确答案:</label><div class="col-sm-9">';
+					var className = (type==1)?'radio-box':'checkbox-box';
+					var inputType = (type==1)?'radio':'checkbox';
+					var inputName = (type==1)?'singleSelection':'multiSelection';
+					$.each(names, function(i, n) {
+						html += '<div class="col-sm-12"><div class="form-group">' +
+							'<label for="firstname" class="col-sm-2 control-label">' + n + ':</label>' +
+							'<div class="col-sm-10"><input type="text" class="form-control radius"></div></div></div>';
+						html2+='<div class="' + className + ' mr-30"><input type="'+ inputType +'" name="'+ inputName +'" /><label>' + n+  '</label></div>';
+					})
+					$('#option-list').html(html);
+					$('#answer-list').html(html2+'</div>')
+				}
+
+			})
 		</script>
 	</body>
 

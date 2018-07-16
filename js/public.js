@@ -67,7 +67,12 @@ $(function() {
 		var index = $(this).data('num');
 		readMenu(index);
 	})
-
+	
+	
+	/**
+	 * 读取本地菜单
+	 * @param {Object} index
+	 */
 	function readMenu(index) {
 		var html = '';
 		var child = menu[index];
@@ -83,7 +88,7 @@ $(function() {
 				if(n.childs) {
 					html += '<div id="' + n.path + '" class="panel-collapse collapse"><div class="panel-body"><ul class="nav navbar-nav">';
 					$.each(n.childs, function(j, m) {
-						html += '<li><a href="' + m.path + '?num=' + index + '-' + i + '-' + j + '"><span class="icon iconfont ' + n.icon + '">&nbsp;&nbsp;' + m.title + '</a></li>';
+						html += '<li><a href="' + m.path + '?num=' + index + '-' + i + '-' + j + '">&nbsp;&nbsp;' + m.title + '</a></li>';
 					})
 					html += '</ul></div></div>';
 				}
