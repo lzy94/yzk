@@ -7,6 +7,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="format-detection" content="telephone=no" />
 		<title>唯恩云智库</title>
+		<link rel="stylesheet" type="text/css" href="/scripts/lib/fileinput/css/fileinput.min.css"/>
 		@@include('include/css.html')
 	</head>
 	<!--class="flat-blue"-->
@@ -72,7 +73,7 @@
 												</div>
 											</div>
 
-											<div class="col-sm-4">
+											<div class="col-sm-4 pull-right">
 												<a href="javascript:void(0)" class="btn btn-add radius">查&nbsp;询</a>&nbsp;&nbsp;
 												<a href="javascript:void(0)" class="btn btn-default radius">重&nbsp;置</a>
 												&nbsp;&nbsp;&nbsp;
@@ -82,7 +83,7 @@
 									</form>
 									<div class="button">
 										<a href="#" data-toggle="modal" data-target=".addChoiceQuestion" class="btn btn-add radius"> <span class="iconfont icon-plus"></span>新建</a>&nbsp;
-										<a href="javascript:void(0)" class="btn btn-default radius">批量上传</a>&nbsp;
+										<a href="#" data-toggle="modal" data-target=".uploadChoiceQuestion" class="btn btn-add radius"><span class="iconfont icon-shangchuan"></span>上传选择题</a>&nbsp;
 										<div class="btn-group">
 											<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown">
 										更多操作<span class="caret"></span>
@@ -172,7 +173,7 @@
 												</div>
 											</div>
 
-											<div class="col-sm-4">
+											<div class="col-sm-4 pull-right">
 												<a href="javascript:void(0)" class="btn btn-add radius">查&nbsp;询</a>&nbsp;&nbsp;
 												<a href="javascript:void(0)" class="btn btn-default radius">重&nbsp;置</a>
 												&nbsp;&nbsp;&nbsp;
@@ -182,7 +183,7 @@
 									</form>
 									<div class="button">
 										<a href="#" data-toggle="modal" data-target=".addChoiceQuestion" class="btn btn-add radius"> <span class="iconfont icon-plus"></span>新建</a>&nbsp;
-										<a href="javascript:void(0)" class="btn btn-default radius">批量上传</a>&nbsp;
+										<a href="#" data-toggle="modal" data-target=".uploadChoiceQuestion" class="btn btn-add radius"><span class="iconfont icon-shangchuan"></span>上传选择题</a>&nbsp;
 										<div class="btn-group">
 											<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown">
 										更多操作<span class="caret"></span>
@@ -353,12 +354,111 @@
 
 									</div>
 								</div>
-								
+
 								<div class="col-sm-12">
 									<div class="form-group">
 										<label for="firstname" class="col-sm-2 control-label">错误解析:</label>
 										<div class="col-sm-10">
 											<textarea name="" class="form-control radius" rows="4"></textarea>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6 ">
+									<label for="firstname" class="col-sm-4 control-label pr-0"></label>
+									<div class="col-sm-8 pad-0">
+										<div class="button">
+											<a href="javascript:void(0)" class="btn btn-add radius">提&nbsp;交</a>&nbsp;
+											<a href="javascript:void(0)" class="btn btn-default radius" data-dismiss="modal">取&nbsp;消</a>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</form>
+					</div>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			<!-- /.modal-dialog -->
+		</div>
+
+		<!--  上传选择题   -->
+		<div class="modal fade uploadChoiceQuestion" id="single_edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog ">
+				<div class="modal-content radius">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+						<h4 class="modal-title">选择题添加</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-horizontal" role="form">
+							<div class="row">
+								<div class="col-sm-12 pl-0">
+									<div class="row">
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label for="firstname" class="col-sm-4 control-label pr-0">题目类型:</label>
+												<div class="col-sm-8">
+													<select class="form-control radius">
+														<option value="1"> 单选 </option>
+														<option value="2">多选 </option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label for="firstname" class="col-sm-4 control-label pr-0">分值:</label>
+												<div class="col-sm-8">
+													<input type="text" class="form-control radius">
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label for="firstname" class="col-sm-4 control-label pr-0">标志:</label>
+												<div class="col-sm-8">
+													<select class="form-control radius">
+														<option>试题</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label for="firstname" class="col-sm-4 control-label pr-0">
+													行业类型:</label>
+												<div class="col-sm-8">
+													<select class="form-control radius">
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label for="firstname" class="col-sm-4 control-label pr-0">职务名称:</label>
+												<div class="col-sm-8">
+													<select class="form-control radius">
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label for="firstname" class="col-sm-4 control-label pr-0">岗位名称:</label>
+												<div class="col-sm-8">
+													<select class="form-control radius">
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="firstname" class="col-sm-2 control-label">excel表格:</label>
+										<div class="col-sm-10">
+											<input id="input-1a" type="file" class="file form-control  radius" data-show-preview="false">
 										</div>
 									</div>
 								</div>
@@ -695,13 +795,29 @@
 		</div>
 
 		@@include('include/js.html')
+		<script src="/scripts/lib/fileinput/js/fileinput.min.js"></script>
 		<script type="text/javascript">
+			
+			function initFileInput(ctrlName, uploadUrl) {
+				var control = $('#' + ctrlName);
+				control.fileinput({
+					language: 'zh', //设置语言
+					uploadUrl: uploadUrl, //上传的地址
+					showUpload: false, //是否显示上传按钮
+					showCaption: true, //是否显示标题
+					browseClass: "btn btn-primary", //按钮样式             
+					previewFileIcon: "<i class='glyphicon glyphicon-king'></i>",
+				});
+			}
+			initFileInput("input-1a", '')
+			
+			
 			layui.use('laypage', function() {
 				var laypage = layui.laypage;
 				//执行一个laypage实例
 				laypage.render({
 					elem: 'page',
-					count: 100,
+					count: 10,
 					groups: 3,
 					layout: ['prev', 'page', 'next', 'limit', 'skip'],
 					jump: function(obj) {
@@ -710,7 +826,7 @@
 				});
 				laypage.render({
 					elem: 'page2',
-					count: 100,
+					count: 10,
 					groups: 3,
 					layout: ['prev', 'page', 'next', 'limit', 'skip'],
 					jump: function(obj) {
@@ -731,43 +847,44 @@
 			// 添加选择题操作
 			$(function() {
 
-				var chname = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+				var chname = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 				$('#choice-num-ok').click(function() {
 					var num = $('#choice-num').val();
-					var newNames = chname.slice(0,num);
+					var newNames = chname.slice(0, num);
 					renderChoice(newNames, $('#choiceQuestion-type').val());
 				})
-				
-				$('#choiceQuestion-type').change(function(){
+
+				$('#choiceQuestion-type').change(function() {
 					var num = $('#choice-num').val();
-					if(num){
-						var newNames = chname.slice(0,num);
+					if(num) {
+						var newNames = chname.slice(0, num);
 						var type = $(this).val();
 						renderChoice(newNames, type);
-					}else{
+					} else {
 						$('#option-list').html('');
 						$('#answer-list').html('')
 					}
 				})
-				
+
 				/**
 				 * 渲染选择题类型选项
 				 * @param {Object} names
 				 * @param {Object} type				 
 				 */
 				function renderChoice(names, type) {
-					var html = '',html2 = '<label for="firstname" class="col-sm-2 control-label">正确答案:</label><div class="col-sm-9">';
-					var className = (type==1)?'radio-box':'checkbox-box';
-					var inputType = (type==1)?'radio':'checkbox';
-					var inputName = (type==1)?'singleSelection':'multiSelection';
+					var html = '',
+						html2 = '<label for="firstname" class="col-sm-2 control-label">正确答案:</label><div class="col-sm-9">';
+					var className = (type == 1) ? 'radio-box' : 'checkbox-box';
+					var inputType = (type == 1) ? 'radio' : 'checkbox';
+					var inputName = (type == 1) ? 'singleSelection' : 'multiSelection';
 					$.each(names, function(i, n) {
 						html += '<div class="col-sm-12"><div class="form-group">' +
 							'<label for="firstname" class="col-sm-2 control-label">' + n + ':</label>' +
 							'<div class="col-sm-10"><input type="text" class="form-control radius"></div></div></div>';
-						html2+='<div class="' + className + ' mr-30"><input type="'+ inputType +'" name="'+ inputName +'" /><label>' + n+  '</label></div>';
+						html2 += '<div class="' + className + ' mr-30"><input type="' + inputType + '" name="' + inputName + '" /><label>' + n + '</label></div>';
 					})
 					$('#option-list').html(html);
-					$('#answer-list').html(html2+'</div>')
+					$('#answer-list').html(html2 + '</div>')
 				}
 
 			})

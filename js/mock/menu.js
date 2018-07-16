@@ -56,9 +56,41 @@ var menu = [
 		}]
 	}, {
 		title: '虚拟公司管理',
-		path: '#',
+		path: 'dropdown-xngsgl',
 		icon: 'icon-kaodianqingdan',
-		childs: ''
+		childs: [
+			{
+				title:'虚拟公司管理',
+				path:'#',
+				icon: 'icon-kaodianqingdan',
+				childs:''
+			},{
+				title:'客户公司管理',
+				path:'#',
+				icon: 'icon-kaodianqingdan',
+				childs:''
+			},{
+				title:'供应商管理',
+				path:'#',
+				icon: 'icon-kaodianqingdan',
+				childs:''
+			},{
+				title:'维修商管理',
+				path:'#',
+				icon: 'icon-kaodianqingdan',
+				childs:''
+			},{
+				title:'固定资产管理',
+				path:'#',
+				icon: 'icon-kaodianqingdan',
+				childs:''
+			},{
+				title:'库存产品管理',
+				path:'#',
+				icon: 'icon-kaodianqingdan',
+				childs:''
+			}
+		]
 	}, {
 		title: '试题管理',
 		path: 'dropdown-stgl',
