@@ -7,30 +7,25 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="format-detection" content="telephone=no" />
 		<title>唯恩云智库</title>
-		@@include('include/css.html')
+		@@include('../include/css.html')
 	</head>
 <!--class="flat-blue"-->
 	<body class="theme-black">
 		<div class="app-container expanded">
 			<div class="row content-container">
-				@@include('include/header.html') 
-				@@include('include/menu.html')
+				@@include('../include/header.html') 
+				@@include('../include/menu.html')
 				<!-- Main Content -->
 				<div class="container-fluid pad-0">
 					<ol class="breadcrumb path-nav">
 						<li>
 							<a href="#">首页</a>
 						</li>
-						<li>
-							<a href="#">试题基础信息管理</a>
-						</li>
-						<li class="active">试题类型管理</li>
+						<li class="active">考点类型管理</li>
 					</ol>
 					<div class="side-body pt-10">
 						<div class="panel">
-							
 							<div class="button"><button type="button" class="btn btn-default add"> <span class="iconfont icon-plus"></span> 新建</button><button type="button" class="btn btn-default del">批量删除</button></div>
-							
 							<table class="table table-hover">
 							  <thead>
 							    <tr>
@@ -40,41 +35,48 @@
 								    	序号
 								    </label>
 							      </th>
-							      <th>试题类型</th>
-							      <th>说明</th>
+							      <th>考点类型</th>
+							      <th>考点说明</th>
 							      <th>操作</th>
 							    </tr>
 							  </thead>
 							  <tbody>
 							    <tr>
 							      <td><input type="checkbox" id="1" hidden="hidden"><label for="1" class="checkbox_label"> 1</label></td>
-							      <td>单选</td>
-							      <td>四个选项一个正确答案</td>
+							      <td>个人考点</td>
+							      <td>针对个人定制的考点</td>
 							      <td><a href="">编辑</a> <span>|</span> <a href="">删除</a></td>
 							    </tr>
 							    <tr>
 							      <td><input type="checkbox" id="2" hidden="hidden"><label for="2" class="checkbox_label"> 2</label></td>
-							      <td>单选</td>
-							      <td>四个选项一个正确答案</td>
+							      <td>学校考点</td>
+							      <td>针对学校定制的考点</td>
 							      <td><a href="">编辑</a> <span>|</span> <a href="">删除</a></td>
 							    </tr>
-							    <tr>
-							      <td><input type="checkbox" id="3" hidden="hidden"><label for="3" class="checkbox_label"> 3</label></td>
-							      <td>实操</td>
-							      <td>实际操作</td>
+							     <tr>
+							      <td><input type="checkbox" id="3" hidden="hidden"><label for="1" class="checkbox_label"> 3</label></td>
+							      <td>企业考点</td>
+							      <td>针对企业定制的考点</td>
+							      <td><a href="">编辑</a> <span>|</span> <a href="">删除</a></td>
+							    </tr>
+							     <tr>
+							      <td><input type="checkbox" id="4" hidden="hidden"><label for="1" class="checkbox_label"> 4</label></td>
+							      <td>机构考点</td>
+							      <td>针对机构定制的考点</td>
 							      <td><a href="">编辑</a> <span>|</span> <a href="">删除</a></td>
 							    </tr>
 							  </tbody>
 							</table>
-
+                            
 						</div>
 					</div>
 				</div>
 			</div>
-			@@include('include/footer.html') 
+			@@include('../include/footer.html') 
 		</div>
 		
-		@@include('include/js.html')
+		@@include('../include/js.html')
+	
 	</body>
 
 </html>

@@ -31,26 +31,31 @@ var menu = [
 		icon: 'icon-kaodianqingdan',
 		childs: [{
 			title: '试题类型管理',
-			path: '#',
+			path: '/tksys/testType.html',
 			icon: 'icon-kaodianqingdan',
 			childs: ''
 		}, {
 			title: '题目类型管理',
-			path: '#',
+			path: '/tksys/titleType.html',
 			icon: 'icon-kaodianqingdan',
 			childs: ''
 		}, {
 			title: '岗位管理',
-			path: '#',
+			path: '/tksys/postManagement.html',
 			icon: 'icon-kaodianqingdan',
 			childs: ''
 		}, {
 			title: '职务管理',
-			path: '/jobManagement.html',
+			path: '/tksys/jobManagement.html',
+			childs: ''
+		}, {
+			title: '试卷标识管理',
+			path: '/tksys/identification.html',
+			icon: 'icon-kaodianqingdan',
 			childs: ''
 		}, {
 			title: '实操键值管理',
-			path: '#',
+			path: '/tksys/practicalManagement.html',
 			icon: 'icon-kaodianqingdan',
 			childs: ''
 		}]
@@ -102,18 +107,18 @@ var menu = [
 			childs: ''
 		}, {
 			title: '选择题管理',
-			path: '/choiceQuestion.html',
+			path: '/testQuestions/choiceQuestion.html',
 			icon: 'icon-kaodianqingdan',
 			childs: ''
 		}, {
 			title: '实操题管理',
-			path: '/practicalExercises.html',
+			path: '/testQuestions/practicalExercises.html',
 			icon: 'icon-kaodianqingdan',
 			childs: ''
 		}]
 	}, {
 		title: '试卷管理',
-		path: '/examinationPaper.html',
+		path: '/testQuestions/examinationPaper.html',
 		icon: 'icon-kaodianqingdan',
 		childs: ''
 	}]
@@ -127,7 +132,7 @@ var menu = [
 		icon: 'icon-shitiguanli',
 		childs: [{
 			title: '考点类型管理',
-			path: '#',
+			path: '/kdsys/examinationPoint.html',
 			icon: 'icon-shitiguanli',
 			childs: ''
 		}, {

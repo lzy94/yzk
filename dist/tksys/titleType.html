@@ -6,7 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="format-detection" content="telephone=no" />
-		<title>唯恩云智库</title>
+		<title>唯恩云智库-题目类型管理</title>
 		<!--描述：公共css -->
 <link rel="shortcut icon" href="/favicon.ico" />
 <!--<link rel="stylesheet" type="text/css" href="scripts/lib/bootstrap-3.3.7/css/bootstrap.min.css"/>-->
@@ -197,9 +197,9 @@
 							<a href="#">首页</a>
 						</li>
 						<li>
-							<a href="#">基础信息管理</a>
+							<a href="#">试题基础信息管理</a>
 						</li>
-						<li class="active">实操键值管理</li>
+						<li class="active">题目类型管理</li>
 					</ol>
 					<div class="side-body pt-10">
 						<div class="panel">
@@ -213,50 +213,47 @@
 								    	序号
 								    </label>
 							      </th>
-							      <th>职务名称</th>
-							      <th>职务说明</th>
+							      <th>类型名称</th>
+							      <th>类型说明</th>
 							      <th>操作</th>
 							    </tr>
 							  </thead>
 							  <tbody>
 							    <tr>
 							      <td><input type="checkbox" id="1" hidden="hidden"><label for="1" class="checkbox_label"> 1</label></td>
-							      <td>总经理</td>
-							      <td>高级</td>
+							      <td>企业基本情况</td>
+							      <td>普通技能</td>
 							      <td><a href="">编辑</a> <span>|</span> <a href="">删除</a></td>
 							    </tr>
 							    <tr>
 							      <td><input type="checkbox" id="2" hidden="hidden"><label for="2" class="checkbox_label"> 2</label></td>
-							      <td>副总经理</td>
-							      <td>高级</td>
+							      <td>销售文员实际操作技能</td>
+							      <td>普通技能</td>
 							      <td><a href="">编辑</a> <span>|</span> <a href="">删除</a></td>
 							    </tr>
 							     <tr>
 							      <td><input type="checkbox" id="3" hidden="hidden"><label for="1" class="checkbox_label"> 3</label></td>
-							      <td>人力资源总监</td>
-							      <td>高级</td>
+							      <td>企业基本情况</td>
+							      <td>普通技能</td>
 							      <td><a href="">编辑</a> <span>|</span> <a href="">删除</a></td>
 							    </tr>
 							     <tr>
 							      <td><input type="checkbox" id="4" hidden="hidden"><label for="1" class="checkbox_label"> 4</label></td>
-							      <td>财务经理</td>
-							      <td>中级</td>
+							      <td>企业基本情况</td>
+							      <td>普通技能</td>
 							      <td><a href="">编辑</a> <span>|</span> <a href="">删除</a></td>
 							    </tr>
 							    <tr>
 							      <td><input type="checkbox" id="5" hidden="hidden"><label for="2" class="checkbox_label"> 5</label></td>
-							      <td>收银员</td>
-							      <td>初级</td>
+							      <td>销售文员实际操作技能</td>
+							      <td>普通技能</td>
 							      <td><a href="">编辑</a> <span>|</span> <a href="">删除</a></td>
 							    </tr>
 							  </tbody>
 							</table>
                             
                             <div class="page" id="page"></div>
-                            
-                            
-                            
-                            
+                          
 						</div>
 					</div>
 				</div>
@@ -290,8 +287,8 @@
 			    elem: 'page'
 			    ,count: 100
 			    ,prev:'<'
-			    ,next:'>'s
-			    ,layout: [ 'prev', 'page', 'next', 'limit','skip']
+			    ,next:'>'
+			    ,layout: [ 'prev', 'page', 'next', 'limit', 'skip']
 			    ,jump: function(obj){
 			      //console.log(obj)
 			    }
