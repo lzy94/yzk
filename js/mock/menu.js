@@ -159,57 +159,57 @@ var menu = [{
 		path: 'dropdown-kdgl',
 		icon: 'icon-shitiguanli',
 		childs: [{
-			title: '考点类型管理',
-			path: '/kdsys/examinationPointType.html',
-			icon: 'icon-shitiguanli',
-			childs: ''
-		},{
-			title: '考点管理',
-			path: '/kdsys/examinationPoint.html',
-			icon: 'icon-shitiguanli',
-			childs: ''
-		}
-//		, {
-//			title: '个人考点管理',
-//			path: '#',
-//			icon: 'icon-shitiguanli',
-//			childs: ''
-//		}, {
-//			title: '学校考点管理',
-//			path: '#',
-//			icon: 'icon-shitiguanli',
-//			childs: ''
-//		}, {
-//			title: '企业考点管理',
-//			path: '#',
-//			icon: 'icon-shitiguanli',
-//			childs: ''
-//		}, {
-//			title: '机构考点管理',
-//			path: '#',
-//			icon: 'icon-shitiguanli',
-//			childs: ''
-//		}, {
-//			title: '个人考生管理',
-//			path: '#',
-//			icon: 'icon-shitiguanli',
-//			childs: ''
-//		}, {
-//			title: '学校考生管理',
-//			path: '#',
-//			icon: 'icon-shitiguanli',
-//			childs: ''
-//		}, {
-//			title: '企业考生管理',
-//			path: '#',
-//			icon: 'icon-shitiguanli',
-//			childs: ''
-//		}, {
-//			title: '机构考生管理',
-//			path: '#',
-//			icon: 'icon-shitiguanli',
-//			childs: ''
-//		}
+				title: '考点类型管理',
+				path: '/kdsys/examinationPointType.html',
+				icon: 'icon-shitiguanli',
+				childs: ''
+			}, {
+				title: '考点管理',
+				path: '/kdsys/examinationPoint.html',
+				icon: 'icon-shitiguanli',
+				childs: ''
+			}
+			//		, {
+			//			title: '个人考点管理',
+			//			path: '#',
+			//			icon: 'icon-shitiguanli',
+			//			childs: ''
+			//		}, {
+			//			title: '学校考点管理',
+			//			path: '#',
+			//			icon: 'icon-shitiguanli',
+			//			childs: ''
+			//		}, {
+			//			title: '企业考点管理',
+			//			path: '#',
+			//			icon: 'icon-shitiguanli',
+			//			childs: ''
+			//		}, {
+			//			title: '机构考点管理',
+			//			path: '#',
+			//			icon: 'icon-shitiguanli',
+			//			childs: ''
+			//		}, {
+			//			title: '个人考生管理',
+			//			path: '#',
+			//			icon: 'icon-shitiguanli',
+			//			childs: ''
+			//		}, {
+			//			title: '学校考生管理',
+			//			path: '#',
+			//			icon: 'icon-shitiguanli',
+			//			childs: ''
+			//		}, {
+			//			title: '企业考生管理',
+			//			path: '#',
+			//			icon: 'icon-shitiguanli',
+			//			childs: ''
+			//		}, {
+			//			title: '机构考生管理',
+			//			path: '#',
+			//			icon: 'icon-shitiguanli',
+			//			childs: ''
+			//		}
 		]
 	}, {
 		title: '成绩管理',
@@ -242,17 +242,59 @@ var menu = [{
 		path: 'dropdown-jggl',
 		icon: 'icon-xitongguanli',
 		childs: [{
-				title: '机构类型管理',
-				path: '/sys/institutionType.html',
+			title: '机构类型管理',
+			path: '/sys/institutionType.html',
+			icon: 'icon-xitongguanli',
+			childs: ''
+		}, {
+			title: '机构管理',
+			path: '/sys/institution.html',
+			icon: 'icon-xitongguanli',
+			childs: ''
+		}]
+
+	}, {
+		title: '数据字典',
+		path: 'dropdown-sjzd',
+		icon: 'icon-xitongguanli',
+		childs: [{
+				title: '单位管理',
+				path: '#',
 				icon: 'icon-xitongguanli',
-				childs: ''
-			},{
-				title: '机构管理',
-				path: '/sys/institution.html',
+				childs: '',
+			},
+			{
+				title: '货币管理',
+				path: '#',
 				icon: 'icon-xitongguanli',
-				childs: ''
+				childs: '',
+			},
+			{
+				title: '行业管理',
+				path: '#',
+				icon: 'icon-xitongguanli',
+				childs: '',
+			}, {
+				title: '部门管理',
+				path: '#',
+				icon: 'icon-xitongguanli',
+				childs: '',
+			}, {
+				title: '岗位管理',
+				path: '#',
+				icon: 'icon-xitongguanli',
+				childs: '',
+			}, {
+				title: '职务管理',
+				path: '#',
+				icon: 'icon-xitongguanli',
+				childs: '',
+			}, {
+				title: '行业类别管理',
+				path: '#',
+				icon: 'icon-xitongguanli',
+				childs: '',
 			}
 		]
-
 	}]
 }]
