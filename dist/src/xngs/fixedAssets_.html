@@ -6,7 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="format-detection" content="telephone=no" />
-		<title>唯恩云智库-供应商管理</title>
+		<title>唯恩云智库-固定资产管理</title>
 		<!--描述：公共css -->
 <link rel="shortcut icon" href="/favicon.ico" />
 <!--<link rel="stylesheet" type="text/css" href="scripts/lib/bootstrap-3.3.7/css/bootstrap.min.css"/>-->
@@ -199,7 +199,7 @@
 						<li>
 							<a href="#">虚拟公司管理</a>
 						</li>
-						<li class="active">供应商管理</li>
+						<li class="active">固定资产管理</li>
 					</ol>
 				</div>
 
@@ -209,7 +209,7 @@
 							<div class="row">
 								<div class="col-sm-4">
 									<div class="form-group">
-										<label for="firstname" class="pull-left control-label">供应商名称:</label>
+										<label for="firstname" class="pull-left control-label">固定资产名称:</label>
 										<div class="col-sm-9">
 											<input type="text" class="form-control radius" />
 										</div>
@@ -221,7 +221,7 @@
 							</div>
 						</form>
 						<div class="button">
-							<a href="#" data-toggle="modal" data-target=".addModal" class="btn btn-add radius"> <span class="iconfont icon-plus"></span>添加供应商</a>&nbsp;
+							<a href="#" data-toggle="modal" data-target=".addModal" class="btn btn-add radius"> <span class="iconfont icon-plus"></span>添加固定资产</a>&nbsp;
 							<a href="javascript:void(0)" class="btn btn-default radius">批量删除</a>&nbsp;
 						</div>
 						<div class="table-tip radius mb-20">
@@ -236,10 +236,12 @@
 											<label for="num" class="checkbox_label"></label>
 										</th>
 										<th>序号</th>
-										<th>供应商名称</th>
-										<th>供应商编码</th>
+										<th>设备品目</th>
+										<th>关务名称</th>
+										<th>关务代码</th>
 										<th>财务科目名称</th>
 										<th>财务科目代码</th>
+										<th>产品编码</th>
 										<th>操作</th>
 									</tr>
 								</thead>
@@ -250,7 +252,9 @@
 										<td>四个选项一个正确答案四个选项一个正确答案四个选项一个正确答案</td>
 										<td>2018年7月14日</td>
 										<td>2018年7月14日</td>
-											<td>2018年7月14日</td>
+										<td>2018年7月14日</td>
+										<td>2018年7月14日</td>
+										<td>2018年7月14日</td>
 										<td>
 											<a href="javasript:void()" onclick="single_edit(1)">编辑</a> <span>|</span>
 											<a href="">删除</a>
@@ -266,13 +270,13 @@
 			</div>
 		</div>
 
-		<!--  添加供应商  -->
+		<!--  添加固定资产  -->
 		<div class="modal fade addModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content radius">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-						<h4 class="modal-title">添加供应商</h4>
+						<h4 class="modal-title">添加固定资产</h4>
 					</div>
 					<div class="modal-body">
 						<form class="form-horizontal" role="form">
@@ -287,7 +291,7 @@
 								</div>
 								<div class="col-sm-12">
 									<div class="form-group">
-										<label for="firstname" class="col-sm-3 control-label">供应商:</label>
+										<label for="firstname" class="col-sm-3 control-label">固定资产:</label>
 										<div class="col-sm-8">
 											<select name="" class="form-control radius">
 												<option value=""></option>
@@ -297,7 +301,15 @@
 								</div>
 								<div class="col-sm-12">
 									<div class="form-group">
-										<label for="firstname" class="col-sm-3 control-label">供应商编码:</label>
+										<label for="firstname" class="col-sm-3 control-label">关务名称:</label>
+										<div class="col-sm-8">
+											<input type="text" class="form-control radius" />
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="firstname" class="col-sm-3 control-label">关务代码:</label>
 										<div class="col-sm-8">
 											<input type="text" class="form-control radius" />
 										</div>
@@ -316,6 +328,48 @@
 										<label for="firstname" class="col-sm-3 control-label">财务科目代码:</label>
 										<div class="col-sm-8">
 											<input type="text" class="form-control radius" />
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="firstname" class="col-sm-3 control-label">产品编码:</label>
+										<div class="col-sm-8">
+											<input type="text" class="form-control radius" />
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="firstname" class="col-sm-3 control-label">单位:</label>
+										<div class="col-sm-8">
+											<select name="" class="form-control radius">
+												<option value=""></option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="firstname" class="col-sm-3 control-label">型号:</label>
+										<div class="col-sm-8">
+											<input type="text" class="form-control radius" />
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="firstname" class="col-sm-3 control-label">用途:</label>
+										<div class="col-sm-8">
+											<input type="text" class="form-control radius" />
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="firstname" class="col-sm-3 control-label">存放地址:</label>
+										<div class="col-sm-8">
+											<textarea class="form-control radius" ></textarea>
 										</div>
 									</div>
 								</div>
