@@ -6,8 +6,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="format-detection" content="telephone=no" />
-		<title>唯恩云智库-实操键值管理</title>
-		<!--描述：公共css -->
+		<title>唯恩云智库-虚拟公司管理</title>
+		<link rel="stylesheet" type="text/css" href="/scripts/lib/fileinput/css/fileinput.min.css" /> <!--描述：公共css -->
 <link rel="shortcut icon" href="/favicon.ico" />
 <!--<link rel="stylesheet" type="text/css" href="scripts/lib/bootstrap-3.3.7/css/bootstrap.min.css"/>-->
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -26,7 +26,7 @@
 <link rel="stylesheet" type="text/css" href="/styles/style.css" />
 <link rel="stylesheet" type="text/css" href="/styles/index.css" />
 	</head>
-<!--class="flat-blue"-->
+
 	<body class="theme-black">
 		<div class="app-container expanded">
 			<div class="row content-container">
@@ -78,8 +78,7 @@
 			</li>
 		</ul>
 	</div>
-</nav> 
-				<!--描述：左边导航-->
+</nav> <!--描述：左边导航-->
 <div class="side-menu sidebar-inverse">
 	<nav class="navbar navbar-default" role="navigation">
 		<div class="side-menu-container">
@@ -198,77 +197,154 @@
 							<a href="#">首页</a>
 						</li>
 						<li>
-							<a href="#">基础信息管理</a>
+							<a href="#">虚拟公司管理</a>
 						</li>
-						<li class="active">实操键值管理</li>
+						<li class="active">客户管理</li>
 					</ol>
-					<div class="side-body pt-10">
-						<div class="panel">
-							<div class="button"><button type="button" class="btn btn-default add"> <span class="iconfont icon-plus"></span> 新建</button><button type="button" class="btn btn-default del">批量删除</button></div>
-							<table class="table table-hover">
-							  <thead>
-							    <tr>
-							      <th>
-							      	<input type="checkbox" id="num" hidden="hidden">
-								    <label for="num" class="checkbox_label">
-								    	序号
-								    </label>
-							      </th>
-							      <th>职务名称</th>
-							      <th>职务说明</th>
-							      <th>操作</th>
-							    </tr>
-							  </thead>
-							  <tbody>
-							    <tr>
-							      <td><input type="checkbox" id="1" hidden="hidden"><label for="1" class="checkbox_label"> 1</label></td>
-							      <td>总经理</td>
-							      <td>高级</td>
-							      <td><a href="">编辑</a> <span>|</span> <a href="">删除</a></td>
-							    </tr>
-							    <tr>
-							      <td><input type="checkbox" id="2" hidden="hidden"><label for="2" class="checkbox_label"> 2</label></td>
-							      <td>副总经理</td>
-							      <td>高级</td>
-							      <td><a href="">编辑</a> <span>|</span> <a href="">删除</a></td>
-							    </tr>
-							     <tr>
-							      <td><input type="checkbox" id="3" hidden="hidden"><label for="1" class="checkbox_label"> 3</label></td>
-							      <td>人力资源总监</td>
-							      <td>高级</td>
-							      <td><a href="">编辑</a> <span>|</span> <a href="">删除</a></td>
-							    </tr>
-							     <tr>
-							      <td><input type="checkbox" id="4" hidden="hidden"><label for="1" class="checkbox_label"> 4</label></td>
-							      <td>财务经理</td>
-							      <td>中级</td>
-							      <td><a href="">编辑</a> <span>|</span> <a href="">删除</a></td>
-							    </tr>
-							    <tr>
-							      <td><input type="checkbox" id="5" hidden="hidden"><label for="2" class="checkbox_label"> 5</label></td>
-							      <td>收银员</td>
-							      <td>初级</td>
-							      <td><a href="">编辑</a> <span>|</span> <a href="">删除</a></td>
-							    </tr>
-							  </tbody>
-							</table>
-                            
-                            <div class="page" id="page"></div>
-                            
-                            
-                            
-                            
+				</div>
+
+				<div class="side-body pt-10">
+					<div class="panel">
+						<div class="button">
+							<a href="#" data-toggle="modal" data-target=".addModal" class="btn btn-add radius"> <span class="iconfont icon-plus"></span>添加客户</a>&nbsp;
+							<a href="javascript:void(0)" class="btn btn-default radius">批量删除</a>&nbsp;
 						</div>
+						<div class="table-responsive">
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th width="40" class="text-center">
+											<input type="checkbox" id="num" hidden="hidden">
+											<label for="num" class="checkbox_label"></label>
+										</th>
+										<th>序号</th>
+										<th>客户名称</th>
+										<th>客户编码</th>
+										<th>财务科目名称</th>
+										<th>财务科目代码</th>
+										<th>操作</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="text-center"><input type="checkbox" id="1" hidden="hidden"><label for="1" class="checkbox_label"></label></td>
+										<td>1</td>
+										<td>广州市联讯通讯有限公司</td>
+										<td>1000001</td>
+										<td>应收账款</td>
+										<td>1003001</td> 
+										<td>
+											<a href="javasript:void()" onclick="single_edit(1)">编辑</a> <span>|</span>
+											<a href="">删除</a>
+										</td>
+									</tr>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="page pd-10" id="page"></div>
 					</div>
 				</div>
 			</div>
-			<footer class="app-footer">
-	<div class="wrapper">
-		<p class="text-center">Copyright 2017四川唯恩梦耀网络科技有限公司技术部出品</p>
-	</div>
-</footer> 
 		</div>
-		
+
+		<!--  添加公司  -->
+		<div class="modal fade addModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content radius">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+						<h4 class="modal-title">添加客户</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-horizontal" role="form">
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="firstname" class="col-sm-2 control-label">公司名称:</label>
+										<div class="col-sm-8">
+											<input type="text" class="form-control radius" />
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="firstname" class="col-sm-2 control-label"><span class="red">*</span>客户公司:</label>
+										<div class="col-sm-8">
+											<select name="" class="form-control radius">
+												<option value=""></option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="firstname" class="col-sm-2 control-label"><span class="red">*</span>客户编码:</label>
+										<div class="col-sm-8">
+											<input type="text" class="form-control radius" />
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="firstname" class="col-sm-2 control-label"><span class="red">*</span>财务科目名称:</label>
+										<div class="col-sm-8">
+											<input type="tel" class="form-control radius" />
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="firstname" class="col-sm-2 control-label"><span class="red">*</span>财务科目代码:</label>
+										<div class="col-sm-8">
+											<input type="text" class="form-control radius" />
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="firstname" class="col-sm-2 control-label"><span class="red">*</span>添加货币:</label>
+										<div class="col-sm-8">
+											<button class="btn btn-add radius" id="add-coin">添加货币</button>
+											
+											<div class="coin">
+												
+												<!--<div class="col-sm-12">
+													<div class="form-group">
+														<label for="firstname" class="col-sm-2 control-label"><span class="red">*</span>货币:</label>
+														<div class="col-sm-6">
+															<select name="" class="form-control radius">
+																<option value=""></option>
+															</select>
+														</div>
+													</div>
+												</div>-->
+												
+											</div>
+											
+											
+											
+										</div>
+									</div>
+								</div>
+							
+								<div class="col-sm-6 ">
+									<label for="firstname" class="col-sm-4 control-label pr-0"></label>
+									<div class="col-sm-8 pad-0">
+										<div class="button">
+											<a href="javascript:void(0)" class="btn btn-add radius">提&nbsp;交</a>&nbsp;
+											<a href="javascript:void(0)" class="btn btn-default radius" data-dismiss="modal">取&nbsp;消</a>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<!--描述：公共js -->
 <!--<script src="scripts/lib/bootstrap-3.3.7/js/bootstrap.min.js" ></script>-->
 <script src="/scripts/lib/jquery-1.11.0/jquery-1.11.0.min.js"></script>
@@ -287,21 +363,43 @@
 
 
 		
-		<script>
-		layui.use('laypage', function(){
-		  var laypage = layui.laypage;
-		  //执行一个laypage实例
-             laypage.render({
-			    elem: 'page'
-			    ,count: 100
-			    ,prev:'<'
-			    ,next:'>'s
-			    ,layout: [ 'prev', 'page', 'next', 'limit','skip']
-			    ,jump: function(obj){
-			      //console.log(obj)
-			    }
-			  });
-		});
+		<script type="text/javascript">
+			layui.use('laypage', function() {
+				var laypage = layui.laypage;
+				//执行一个laypage实例
+				laypage.render({
+					elem: 'page',
+					count: 10,
+					groups: 3,
+					layout: ['prev', 'page', 'next', 'limit', 'skip'],
+					jump: function(obj) {
+						//console.log(obj)
+					}
+				});
+			});
+			
+			//添加货币
+			$("#add-coin").click(function(e){
+				e.preventDefault();
+				
+				var coinhtml='<div class="col-sm-12">'+
+								'<div class="form-group">'+
+									'<label for="firstname" class="col-sm-2 control-label"><span class="red">*</span>货币:</label>'+
+									'<div class="col-sm-6">'+
+										'<select name="" class="form-control radius">'+
+											'<option value=""></option>'+
+										'</select>'+
+									'</div>'+
+								'</div>'+
+							'</div>';
+							
+							
+				$(this).next().append(coinhtml)			
+							
+				
+			})
+			
+			
 		</script>
 	</body>
 

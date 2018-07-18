@@ -431,11 +431,27 @@ a {
         font-size: 20px;
         text-indent: 20px;
         margin-bottom: 30px;
+        button{
+            float: right;
+            margin: 10px 20px 0 0;
+        }
     }
     
     .excel-box{
         width: 100%;
+        .excel-child{
         min-height: 300px;
         background: #F0F1F7;
+        }
     }
 }
+
+//虚拟公司--客户管理
+.coin{
+    width: 100%;
+    >div{
+        margin-bottom: 20px;
+    }
+
+}
+
