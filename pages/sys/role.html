@@ -7,6 +7,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="format-detection" content="telephone=no" />
 		<title>唯恩云智库-角色管理</title>
+		<link rel="stylesheet" type="text/css" href="/scripts/lib/ztree/css/zTreeStyle/zTreeStyle.css"/>
 		@@include('../include/css.html')
 	</head>
 
@@ -100,12 +101,19 @@
 									<div class="form-group">
 										<label for="firstname" class="col-sm-2 control-label">权限设置:</label>
 										<div class="col-sm-10">
+											<ul id="treeDemo" class="ztree"></ul>
 										</div>
 									</div>
 								</div>
-							</div>
-							<div class="bottom text-center">
-								<button type="button" class="btn btn-add radius">提交</button>
+								<div class="col-sm-6 ">
+									<label for="firstname" class="col-sm-4 control-label pr-0"></label>
+									<div class="col-sm-8 pad-0">
+										<div class="button">
+											<a href="javascript:void(0)" class="btn btn-add radius">提&nbsp;交</a>&nbsp;
+											<a href="javascript:void(0)" class="btn btn-default radius" data-dismiss="modal">取&nbsp;消</a>
+										</div>
+									</div>
+								</div>
 							</div>
 						</form>
 					</div>
@@ -114,6 +122,7 @@
 		</div>
 
 		@@include('../include/js.html')
+		<script src="/scripts/lib/ztree/js/jquery.ztree.all.min.js"></script>
 		<script>
 			layui.use('laypage', function() {
 				var laypage = layui.laypage;
@@ -148,7 +157,7 @@
 					title: "确定删除吗？",
 					text: "删除后将无法恢复！",
 					icon: "warning",
-					closeOnEsc:false,
+					closeOnEsc: false,
 					buttons: {
 						cancel: {
 							text: "取消",
@@ -164,11 +173,132 @@
 					},
 					dangerMode: true,
 				}).then(function(isCom) {
-					if(isCom){
+					if(isCom) {
 						swal('删除！', '你的文件已经被删除。', 'success');
 					}
 				});
 			}
+		</script>
+		<script type="text/javascript">
+			var setting = {
+				check: {
+					enable: true
+				},
+				data: {
+					simpleData: {
+						enable: true
+					}
+				},
+				view: {
+				showIcon: false
+			},
+				
+			};
+
+			var zNodes = [{
+					id: 1,
+					pId: 0,
+					name: "can check 1",
+					open: true
+				},
+				{
+					id: 11,
+					pId: 1,
+					name: "can check 1-1",
+					open: true
+				},
+				{
+					id: 111,
+					pId: 11,
+					name: "can check 1-1-1"
+				},
+				{
+					id: 112,
+					pId: 11,
+					name: "can check 1-1-2"
+				},
+				{
+					id: 12,
+					pId: 1,
+					name: "can check 1-2",
+					open: true
+				},
+				{
+					id: 121,
+					pId: 12,
+					name: "can check 1-2-1"
+				},
+				{
+					id: 122,
+					pId: 12,
+					name: "can check 1-2-2"
+				},
+				{
+					id: 2,
+					pId: 0,
+					name: "can check 2",
+					checked: true,
+					open: true
+				},
+				{
+					id: 21,
+					pId: 2,
+					name: "can check 2-1"
+				},
+				{
+					id: 22,
+					pId: 2,
+					name: "can check 2-2",
+					open: true
+				},
+				{
+					id: 221,
+					pId: 22,
+					name: "can check 2-2-1",
+					checked: true
+				},
+				{
+					id: 222,
+					pId: 22,
+					name: "can check 2-2-2"
+				},
+				{
+					id: 23,
+					pId: 2,
+					name: "can check 2-3"
+				}
+			];
+
+			var code;
+
+			function setCheck() {
+				var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+					py = $("#py").attr("checked") ? "p" : "",
+					sy = $("#sy").attr("checked") ? "s" : "",
+					pn = $("#pn").attr("checked") ? "p" : "",
+					sn = $("#sn").attr("checked") ? "s" : "",
+					type = {
+						"Y": py + sy,
+						"N": pn + sn
+					};
+				zTree.setting.check.chkboxType = type;
+				showCode('setting.check.chkboxType = { "Y" : "' + type.Y + '", "N" : "' + type.N + '" };');
+			}
+
+			function showCode(str) {
+				if(!code) code = $("#code");
+				code.empty();
+				code.append("<li>" + str + "</li>");
+			}
+
+			$(document).ready(function() {
+				$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+				setCheck();
+				$("#py").bind("change", setCheck);
+				$("#sy").bind("change", setCheck);
+				$("#pn").bind("change", setCheck);
+				$("#sn").bind("change", setCheck);
+			});
 		</script>
 	</body>
 

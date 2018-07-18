@@ -351,6 +351,15 @@
 					}
 				});
 			});
+			layui.use('laydate', function() {
+				var laydate = layui.laydate;
+				laydate.render({
+					elem: '#startTime',
+				});
+				laydate.render({
+					elem: '#endTime',
+				});
+			});
 		</script>
 
 	</body>
