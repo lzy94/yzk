@@ -28,5 +28,10 @@
 		"gulp-uncss": "^1.0.6",
 		"gulp-util": "^3.0.8",
 		"gulp-zip": "^4.1.0"
+	},
+	"devDependencies": {
+		"babel-core": "^6.26.3",
+		"babel-preset-es2015": "^6.24.1",
+		"gulp-babel": "^7.0.1"
 	}
 }
