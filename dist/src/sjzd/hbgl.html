@@ -197,18 +197,20 @@
 							<a href="#">首页</a>
 						</li>
 						<li>
-							<a href="#">虚拟公司管理</a>
+							<a href="#">数据字典</a>
 						</li>
-						<li class="active">客户管理</li>
+						<li class="active">货币管理</li>
 					</ol>
 				</div>
 
 				<div class="side-body pt-10">
 					<div class="panel">
+						
 						<div class="button">
-							<a href="#" data-toggle="modal" data-target=".addModal" class="btn btn-add radius"> <span class="iconfont icon-plus"></span>添加客户</a>&nbsp;
+							<a href="#" data-toggle="modal" data-target=".addModal" class="btn btn-add radius"> <span class="iconfont icon-plus"></span>添加货币</a>&nbsp;
 							<a href="javascript:void(0)" class="btn btn-default radius">批量删除</a>&nbsp;
 						</div>
+						
 						<div class="table-responsive">
 							<table class="table table-hover">
 								<thead>
@@ -218,10 +220,7 @@
 											<label for="num" class="checkbox_label"></label>
 										</th>
 										<th>序号</th>
-										<th>客户名称</th>
-										<th>客户编码</th>
-										<th>财务科目名称</th>
-										<th>财务科目代码</th>
+										<th>名称</th>
 										<th>操作</th>
 									</tr>
 								</thead>
@@ -229,10 +228,7 @@
 									<tr>
 										<td class="text-center"><input type="checkbox" id="1" hidden="hidden"><label for="1" class="checkbox_label"></label></td>
 										<td>1</td>
-										<td>广州市联讯通讯有限公司</td>
-										<td>1000001</td>
-										<td>应收账款</td>
-										<td>1003001</td> 
+										<td>CNY</td>
 										<td>
 											<a href="javasript:void()" onclick="single_edit(1)">编辑</a> <span>|</span>
 											<a href="">删除</a>
@@ -254,80 +250,19 @@
 				<div class="modal-content radius">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-						<h4 class="modal-title">添加客户</h4>
+						<h4 class="modal-title">添加货币</h4>
 					</div>
 					<div class="modal-body">
 						<form class="form-horizontal" role="form">
 							<div class="row">
 								<div class="col-sm-12">
 									<div class="form-group">
-										<label for="firstname" class="col-sm-2 control-label">公司名称:</label>
+										<label for="firstname" class="col-sm-2 control-label"><span class="red">*</span>名称:</label>
 										<div class="col-sm-8">
 											<input type="text" class="form-control radius" />
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-12">
-									<div class="form-group">
-										<label for="firstname" class="col-sm-2 control-label"><span class="red">*</span>客户公司:</label>
-										<div class="col-sm-8">
-											<select name="" class="form-control radius">
-												<option value=""></option>
-											</select>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-12">
-									<div class="form-group">
-										<label for="firstname" class="col-sm-2 control-label"><span class="red">*</span>客户编码:</label>
-										<div class="col-sm-8">
-											<input type="text" class="form-control radius" />
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-12">
-									<div class="form-group">
-										<label for="firstname" class="col-sm-2 control-label"><span class="red">*</span>财务科目名称:</label>
-										<div class="col-sm-8">
-											<input type="tel" class="form-control radius" />
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-12">
-									<div class="form-group">
-										<label for="firstname" class="col-sm-2 control-label"><span class="red">*</span>财务科目代码:</label>
-										<div class="col-sm-8">
-											<input type="text" class="form-control radius" />
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-12">
-									<div class="form-group">
-										<label for="firstname" class="col-sm-2 control-label"><span class="red">*</span>添加货币:</label>
-										<div class="col-sm-8">
-											<button class="btn btn-add radius" id="add-coin">添加货币</button>
-											
-											<div class="add-box">
-												
-												<!--<div class="col-sm-12">
-													<div class="form-group">
-														<label for="firstname" class="col-sm-2 control-label"><span class="red">*</span>货币:</label>
-														<div class="col-sm-6">
-															<select name="" class="form-control radius">
-																<option value=""></option>
-															</select>
-														</div>
-													</div>
-												</div>-->
-												
-											</div>
-											
-											
-											
-										</div>
-									</div>
-								</div>
-							
 								<div class="col-sm-6 ">
 									<label for="firstname" class="col-sm-4 control-label pr-0"></label>
 									<div class="col-sm-8 pad-0">
@@ -344,7 +279,6 @@
 				</div>
 			</div>
 		</div>
-
 		<!--描述：公共js -->
 <!--<script src="scripts/lib/bootstrap-3.3.7/js/bootstrap.min.js" ></script>-->
 <script src="/scripts/lib/jquery-1.11.0/jquery-1.11.0.min.js"></script>
@@ -362,7 +296,6 @@
 <script src="/scripts/public.min.js"></script>
 
 
-		
 		<script type="text/javascript">
 			layui.use('laypage', function() {
 				var laypage = layui.laypage;
@@ -377,29 +310,6 @@
 					}
 				});
 			});
-			
-			//添加货币
-			$("#add-coin").click(function(e){
-				e.preventDefault();
-				
-				var coinhtml='<div class="col-sm-12">'+
-								'<div class="form-group">'+
-									'<label for="firstname" class="col-sm-2 control-label"><span class="red">*</span>货币:</label>'+
-									'<div class="col-sm-6">'+
-										'<select name="" class="form-control radius">'+
-											'<option value=""></option>'+
-										'</select>'+
-									'</div>'+
-								'</div>'+
-							'</div>';
-							
-							
-				$(this).next().append(coinhtml)			
-							
-				
-			})
-			
-			
 		</script>
 	</body>
 

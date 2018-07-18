@@ -259,39 +259,39 @@ var menu = [{
 		icon: 'icon-xitongguanli',
 		childs: [{
 				title: '单位管理',
-				path: '#',
+				path: '/src/sjzd/dwgl.html',
 				icon: 'icon-xitongguanli',
 				childs: '',
 			},
 			{
 				title: '货币管理',
-				path: '#',
+				path: '/src/sjzd/hbgl.html',
 				icon: 'icon-xitongguanli',
 				childs: '',
 			},
 			{
 				title: '行业管理',
-				path: '#',
+				path: '/src/sjzd/hygl.html',
 				icon: 'icon-xitongguanli',
 				childs: '',
 			}, {
 				title: '部门管理',
-				path: '#',
+				path: '/src/sjzd/bmgl.html',
 				icon: 'icon-xitongguanli',
 				childs: '',
 			}, {
 				title: '岗位管理',
-				path: '#',
+				path: '/src/sjzd/gwgl.html',
 				icon: 'icon-xitongguanli',
 				childs: '',
 			}, {
 				title: '职务管理',
-				path: '#',
+				path: '/src/sjzd/zwgl.html',
 				icon: 'icon-xitongguanli',
 				childs: '',
 			}, {
 				title: '行业类别管理',
-				path: '#',
+				path: '/src/sjzd/hylbgl.html',
 				icon: 'icon-xitongguanli',
 				childs: '',
 			}
