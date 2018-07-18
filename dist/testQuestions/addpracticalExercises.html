@@ -202,136 +202,240 @@
 						</li>
 						<li class="active">实操题管理</li>
 					</ol>
-					<div class="pull-body pad-0">
-						<div class="panel mar-0">
-							<ul class="nav nav-tabs" role="tablist">
-								<li role="presentation" class="active">
-									<a href="#table_manger" aria-controls="single" role="tab" data-toggle="tab">表格管理</a>
-								</li>
-								<li role="presentation">
-									<a href="#ppbz" aria-controls="multi" role="tab" data-toggle="tab">匹配标准</a>
-								</li>
-								<li role="presentation">
-									<a href="#pfbz" aria-controls="multi" role="tab" data-toggle="tab">评分标准</a>
-								</li>
-							</ul>
-						</div>
-					</div>
 
 					<div class="side-body pt-10">
-						<div class="panel">
-							<div class="tab-content">
-								<!-- 表格管理  -->
-								<div role="tabpanel" class="tab-pane active" id="table_manger">
-									<form class="form-horizontal pd-15 pb-0" role="form">
-										<div class="row">
-											<div class="col-sm-4">
-												<div class="form-group">
-													<label for="firstname" class="pull-left control-label">题目类型:</label>
-													<div class="col-sm-9">
-														<input type="text" class="form-control radius">
-													</div>
-												</div>
-											</div>
-											<div class="col-sm-4">
-												<div class="form-group">
-													<label for="firstname" class="pull-left control-label">行业类型:</label>
-													<div class="col-sm-9">
-														<input type="text" class="form-control radius">
-													</div>
-												</div>
-											</div>
+						<div class="panel pd-20">
+							<form class="form-horizontal">
 
-											<div class="col-sm-4 dis">
-												<div class="form-group">
-													<label for="firstname" class="pull-left control-label">考试时长:</label>
-													<div class="col-sm-9">
-														<input type="text" class="form-control radius">
-													</div>
-												</div>
-											</div>
+								<div class="row">
 
-											<div class="col-sm-4">
-												<a href="javascript:void(0)" class="btn btn-add radius">查&nbsp;询</a>&nbsp;&nbsp;
-												<a href="javascript:void(0)" class="btn btn-default radius">重&nbsp;置</a>
-												&nbsp;&nbsp;&nbsp;
-												<a href="javascript:void(0)" class="spread"><span>展开</span><i class="iconfont icon-xiala"></i> </a>
+									
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label for="firstname" class="col-sm-4 control-label pr-0"><span class="red">*</span>试题状态:</label>
+											<div class="col-sm-8">
+												<select class="form-control radius">
+														<option>未审核</option>
+														<option>审核通过</option>
+														<option>审核不通过</option>
+														<option>废弃</option>
+													</select>
 											</div>
 										</div>
-									</form>
-									<div class="button">
-										<a href="addpracticalExercises.html" class="btn btn-add radius"> <span class="iconfont icon-plus"></span>新建</a>&nbsp;
-										<a href="javascript:void(0)" class="btn btn-add radius"><span class="iconfont icon-shangchuan"></span>批量上传</a>&nbsp;
-										<div class="btn-group">
-											<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown">
-										更多操作<span class="caret"></span>
-									</button>
-											<ul class="dropdown-menu" role="menu">
-												<li>
-													<a href="#">批量删除</a>
-												</li>
-											</ul>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label for="firstname" class="col-sm-4 control-label pr-0"><span class="red">*</span>行业:</label>
+											<div class="col-sm-8">
+												<select class="form-control radius">
+													    <option>制造业</option>
+														<option>建筑业</option>
+														<option>旅游 业</option>
+													</select>
+											</div>
 										</div>
 									</div>
-									<div class="table-tip radius mb-20">
-										<i class="iconfont icon-gantanhao3-hei"></i>&nbsp; 已选择3项，共有23132123项 ，<span>清空</span>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label for="firstname" class="col-sm-4 control-label pr-0">
+													<span class="red">*</span>部门:</label>
+											<div class="col-sm-8">
+												<select class="form-control radius">
+													<option>财务部</option>
+												</select>
+											</div>
+										</div>
 									</div>
-									<div class="table-responsive">
-										<table class="table table-hover">
-											<thead>
-												<tr>
-													<th width="40" class="text-center">
-														<input type="checkbox" id="num" hidden="hidden">
-														<label for="num" class="checkbox_label"></label>
-													</th>
-													<th>序号</th>
-													<th>试题题目</th>
-													<th>更新时间</th>
-													<th>题目类型</th>
-													<th>岗位名称</th>
-													<th>职务名称</th>
-													<th>行业名称</th>
-													<th>试题状态</th>
-													<th>标识</th>
-													<th>分值</th>
-													<th>操作</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td class="text-center"><input type="checkbox" id="1" hidden="hidden"><label for="1" class="checkbox_label"></label></td>
-													<td>1</td>
-													<td>四个选项一个正确答案四个选项一个正确答案四个选项一个正确答案</td>
-													<td>2018年7月14日</td>
-													<td>选择题</td>
-													<td>选择题</td>
-													<td>选择题</td>
-													<td>选择题</td>
-													<td>选择题</td>
-													<td>5</td>
-													<td>5</td>
-													<td>
-														<a href="javasript:void()">编辑</a> <span>|</span>
-														<a href="">删除</a>
-													</td>
-												</tr>
-												</tr>
-											</tbody>
-										</table>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label for="firstname" class="col-sm-4 control-label pr-0"><span class="red">*</span>岗位:</label>
+											<div class="col-sm-8">
+												<select class="form-control radius">
+													<option>出纳岗位</option>
+													<option>往来核算岗</option>
+													<option>资产管理岗</option>
+													<option>总账管理岗</option>
+													<option>成本收入岗</option>
+												</select>
+											</div>
+										</div>
 									</div>
-									<div class="page pd-10" id="page"></div>
-								</div>
-								<!--  匹配标准  -->
-								<div role="tabpanel" class="tab-pane" id="ppbz">
-								</div>
-								<!-- 评分标准  -->
-								<div role="tabpanel" class="tab-pane" id="pfbz">
-								</div>
-							</div>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label for="firstname" class="col-sm-4 control-label pr-0"><span class="red">*</span>职务:</label>
+											<div class="col-sm-8">
+												<select class="form-control radius">
+													<option>会计</option>
+												</select>
+											</div>
+										</div>
+									</div>
 
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label for="firstname" class="col-sm-4 control-label pr-0"><span class="red">*</span>题目:</label>
+											<div class="col-sm-8">
+												<input type="text" class="form-control radius">
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label for="firstname" class="col-sm-4 control-label pr-0"><span class="red">*</span>虚拟公司:</label>
+											<div class="col-sm-8">
+												<select class="form-control radius">
+													<option>东莞嘉诚电子科技有限公司</option>
+												</select>
+											</div>
+										</div>
+									</div>
+
+									<div class="col-sm-12">
+										<div class="form-group">
+											<label for="firstname" class="col-sm-2 control-label pr-0"><span class="red">*</span>错题解析:</label>
+											<div class="col-sm-4">
+												<textarea name="" rows="5" cols="" class="form-control radius textarea"></textarea>
+											</div>
+										</div>
+									</div>
+                                     <div class="col-sm-6">
+										<div class="form-group">
+											<label for="firstname" class="col-sm-4 control-label pr-0"><span class="red">*</span>是否练习题:</label>
+											<div class="col-sm-8">
+												<div class="radio-box">
+													<input type="radio" />
+													<label>是</label>
+												</div>
+												<div class="radio-box">
+													<input type="radio" />
+													<label>否</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-12">
+										<div class="form-group">
+											<label for="firstname" class="col-sm-2 control-label pr-0"><span class="red">*</span>上传图片:</label>
+											<div class="col-sm-10">
+												<button class="btn btn-add radius" id="add-img"><span class="iconfont icon-plus"></span>添加图片</button>
+												<div class="clear"></div>
+											</div>
+										</div>
+									</div>
+
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label for="firstname" class="col-sm-4 control-label pr-0"><span class="red">*</span>选择步骤:</label>
+											<div class="col-sm-8">
+												<select class="form-control radius" id="b-z">
+													<option>记账凭证</option>
+													<option>账簿</option>
+													<option>辅助表单</option>
+													<option>UFO表单</option>
+												</select>
+											</div>
+										</div>
+									</div>
+
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label for="firstname" class="col-sm-4 control-label pr-0"><span class="red">*</span>账本类型:</label>
+											<div class="col-sm-4">
+												<select class="form-control radius">
+													<option>单式凭证</option>
+													<option>复式凭证</option>
+													<option>单式记账凭证(底色)</option>
+													<option>复式记账凭证(底色)</option>
+													<option>单式记账凭证(一级科目)</option>
+													<option>复式记账凭证(一级科目)</option>
+												</select>
+											</div>
+											<div class="col-sm-1">
+												<button class="btn btn-add radius" id="add-operate"><span class="iconfont icon-plus"></span>添加</button>
+											</div>
+											<label class="col-sm-2 control-label"><span class="red small">实操题分数</span></label>
+											<div class="col-sm-1">
+												<input type="text" class="form-control radius" readonly="readonly" value="0">
+											</div>
+										</div>
+									</div>
+
+									<div class="col-sm-12 add-box operate-box">
+										
+										<div class="operate">
+											<p class="operate-title">记账凭证</p>
+											<form class="form-horizontal">
+												<div class="row">
+													<div class="col-sm-6">
+														<div class="form-group">
+															<label for="firstname" class="col-sm-4 control-label pr-0"><span class="red">*</span>选择账本:</label>
+															<div class="col-sm-6">
+																<select class="form-control radius">
+																	<option>记账凭证</option>
+																</select>
+															</div>
+															<div class="col-sm-2">
+																<button class="btn btn-add radius" <span class="iconfont icon-plus"></span>添加</button>
+															</div>
+														</div>
+													</div>
+													<div class="col-sm-6">
+														<div class="form-group">
+															<label for="firstname" class="col-sm-4 control-label pr-0"><span class="red">*</span>单元格设置分数:</label>
+															<div class="col-sm-6">
+																<input type="text" class="form-control radius">
+															</div>
+															<div class="col-sm-2">
+																<button class="btn btn-add radius"><span class="iconfont icon-plus"></span>设置</button>
+															</div>
+														</div>
+													</div>
+													<div class="col-sm-6">
+														<div class="form-group">
+															<label for="firstname" class="col-sm-4 control-label pr-0"><span class="red">*</span>分数检测模式:</label>
+															<div class="col-sm-6">
+																<select class="form-control radius">
+																	<option>关闭</option>
+																	<option>开启</option>
+																</select>
+															</div>
+														</div>
+													</div>
+
+													<div class="col-sm-12 excel-box">
+
+													</div>
+													
+													<div class="col-sm-6">
+														<div class="form-group">
+															<label for="firstname" class="col-sm-4 control-label pr-0"><span class="red">*</span>数据同步:</label>
+															<div class="col-sm-6">
+																<button class="btn btn-add radius">同步</button>
+															</div>
+														</div>
+													</div>
+
+												</div>
+											</form>
+										</div>
+
+									</div>
+
+									<div class="col-sm-6 ">
+										<label for="firstname" class="col-sm-4 control-label pr-0"></label>
+										<div class="col-sm-8 pad-0">
+											<div class="button">
+												<a href="javascript:void(0)" class="btn btn-add radius">提&nbsp;交</a>&nbsp;
+												<a href="javascript:void(0)" class="btn btn-default radius" data-dismiss="modal">取&nbsp;消</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
 						</div>
 					</div>
 				</div>
+				
 			</div>
 			<footer class="app-footer">
 	<div class="wrapper">
@@ -356,20 +460,19 @@
 <script src="/scripts/public.min.js"></script>
 
 		<script type="text/javascript">
-			layui.use('laypage', function() {
-				var laypage = layui.laypage;
-				//执行一个laypage实例
-				laypage.render({
-					elem: 'page',
-					count: 100,
-					groups: 3,
-					layout: ['prev', 'page', 'next', 'limit', 'skip'],
-					jump: function(obj) {
-						//console.log(obj)
-					}
-				});
-			});
-
+			//添加图片
+			$("#add-img").click(function(e) {
+				e.preventDefault();
+				var html = '<div class="imgbox">' +
+					'<img width="150" height="150" id="imageUrl" /><br /><br />' +
+					'<input name="headimg" type="hidden" id="headimg" value="" />' +
+					'<span class="fileinput-button">' +
+					'<span>上传头像</span>' +
+					'<input type="file" name="file" id="imageFile"  />' +
+					'</span>' +
+					'</div>';
+				$(this).next().append(html);
+			})
 		</script>
 	</body>
 
