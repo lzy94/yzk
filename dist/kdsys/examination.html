@@ -6,8 +6,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="format-detection" content="telephone=no" />
-		<title>唯恩云智库-角色管理</title>
-		<!--描述：公共css -->
+		<title>唯恩云智库</title>
+		<link rel="stylesheet" type="text/css" href="/scripts/lib/summernote/summernote.css" /> <!--描述：公共css -->
 <link rel="shortcut icon" href="/favicon.ico" />
 <!--<link rel="stylesheet" type="text/css" href="scripts/lib/bootstrap-3.3.7/css/bootstrap.min.css"/>-->
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -25,8 +25,8 @@
 <link rel="stylesheet" type="text/css" href="/styles/theme.css"/>
 <link rel="stylesheet" type="text/css" href="/styles/style.css" />
 <link rel="stylesheet" type="text/css" href="/styles/index.css" />
-		<link rel="stylesheet" type="text/css" href="/scripts/lib/fileinput/css/fileinput.min.css" />
 	</head>
+	<!--class="flat-blue"-->
 
 	<body class="theme-black">
 		<div class="app-container expanded">
@@ -193,85 +193,86 @@
 	</div>
 				<!-- Main Content -->
 				<div class="container-fluid pad-0">
-
 					<ol class="breadcrumb path-nav">
 						<li>
 							<a href="#">首页</a>
 						</li>
 						<li>
-							<a href="#">系统管理</a>
+							<a href="#">考点管理</a>
 						</li>
-						<li class="active">角色管理</li>
+						<li class="active">考试管理</li>
 					</ol>
-					<div class="side-body  pt-10">
+					<div class="side-body pt-10">
 						<div class="panel">
 							<div class="button">
-								<a href="#" data-toggle="modal" data-target=".addModal" class="btn btn-add radius"> <span class="iconfont icon-plus"></span>添加用户</a>&nbsp;
-								<a href="#" data-toggle="modal" data-target=".uploadUser" class="btn btn-add radius"><span class="iconfont icon-shangchuan"></span>上传用户</a>
-								<a href="javascript:void(0)" class="btn btn-default radius">批量删除</a>
+								<a href="#" data-toggle="modal" data-target=".addModal" class="btn btn-add radius"> <span class="iconfont icon-plus"></span>添加考试</a>&nbsp;
+								<a href="javascript:void(0)" class="btn btn-default radius">批量删除</a>&nbsp;
 							</div>
 							<div class="table-tip radius mb-20">
 								<i class="iconfont icon-gantanhao3-hei"></i>&nbsp; 已选择3项，共有23132123项 ，<span>清空</span>
 							</div>
 							<div class="table-responsive">
-
 								<table class="table table-hover">
 									<thead>
 										<tr>
 											<th width="40" class="text-center">
-												<input type="checkbox" id="num" name="allSelect" hidden="hidden">
+												<input type="checkbox" id="num" hidden="hidden">
 												<label for="num" class="checkbox_label"></label>
 											</th>
 											<th>序号</th>
-											<th>用户姓名</th>
-											<th>身份证号</th>
-											<th>联系电话</th>
-											<th>email</th>
-											<th>地址</th>
-											<th>所属机构</th>
+											<th>考点</th>
+											<th>考试名称</th>
+											<th>创建时间</th>
+											<th>考生管理</th>
 											<th>操作</th>
 										</tr>
 									</thead>
 									<tbody>
 										<tr>
-											<td class="text-center"><input type="checkbox" name="list_ch" id="1" hidden="hidden"><label for="1" class="checkbox_label"></label></td>
+											<td class="text-center"><input type="checkbox" id="1" hidden="hidden"><label for="1" class="checkbox_label"></label></td>
 											<td>1</td>
-											<td>2018年建设工程初级选拔考试</td>
-											<td>2017/7/8 15:00:00</td>
-											<td>2017/7/8 15:00:00</td>
-											<td>2017/7/8 15:00:00</td>
-											<td>2017/7/8 15:00:00</td>
-											<td>2017/7/8 15:00:00</td>
+											<td>四个选项一个正确答案四个选项一个正确答案四个选项一个正确答案</td>
+											<td>大概</td>
+											<td>大概</td>
 											<td>
-												<a href="">编辑</a> <span>|</span>
-												<a href="javascript:void(0)" onclick="del_role(1)">删除</a>
+												<a href="examinee.html?num=2-0-1" class="link">大概</a>
+											</td>
+											<td>
+												<a href="javasript:void()" onclick="single_edit(1)">编辑</a> <span>|</span>
+												<a href="">删除</a>
 											</td>
 										</tr>
 									</tbody>
 								</table>
 							</div>
 							<div class="page pd-10" id="page"></div>
+
 						</div>
 					</div>
-
 				</div>
 			</div>
+			<footer class="app-footer">
+	<div class="wrapper">
+		<p class="text-center">Copyright 2017四川唯恩梦耀网络科技有限公司技术部出品</p>
+	</div>
+</footer>
 		</div>
-		<!-- 描述： 添加-->
+
+		<!--  添加考试  -->
 		<div class="modal fade addModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
+			<div class="modal-dialog modal-lg">
 				<div class="modal-content radius">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-						<h4 class="modal-title">添加用户</h4>
+						<h4 class="modal-title">添加考试</h4>
 					</div>
 					<div class="modal-body">
 						<form class="form-horizontal" role="form">
 							<div class="row">
 								<div class="col-sm-12">
 									<div class="form-group">
-										<label for="firstname" class="col-sm-2 control-label pl-0">机构名称:</label>
-										<div class="col-sm-10">
+										<label for="firstname" class="col-sm-2 control-label">考点名称:</label>
+										<div class="col-sm-9">
 											<select name="" class="form-control radius">
 												<option value=""></option>
 											</select>
@@ -280,149 +281,138 @@
 								</div>
 								<div class="col-sm-12">
 									<div class="form-group">
-										<label for="firstname" class="col-sm-2 control-label pl-0">用户姓名:</label>
-										<div class="col-sm-10">
+										<label for="firstname" class="col-sm-2 control-label">考试名称:</label>
+										<div class="col-sm-9">
 											<input type="text" class="form-control radius" />
 										</div>
 									</div>
 								</div>
 								<div class="col-sm-12">
 									<div class="form-group">
-										<label for="firstname" class="col-sm-2 control-label pl-0">性别:</label>
-										<div class="col-sm-10">
-											<div class="radio-box">
-												<input type="radio" name="sex" value="1" checked="checked" />
-												<label>男</label>
+										<label for="firstname" class="col-sm-2 control-label">添加试卷:</label>
+										<div class="col-sm-9">
+											<div class="col-sm-9 pl-0">
+												<input type="text" class="form-control radius" />
 											</div>
-											<div class="radio-box">
-												<input type="radio" name="sex" value="2" />
-												<label>女</label>
+											<div class="col-sm-3">
+												<a href="#" data-toggle="modal" data-target=".addTestPaper" class="btn btn-add radius">选择试卷</a>
 											</div>
 										</div>
 									</div>
 								</div>
 								<div class="col-sm-12">
 									<div class="form-group">
-										<label for="firstname" class="col-sm-2 control-label pl-0">身份证号:</label>
-										<div class="col-sm-10">
-											<input type="text" class="form-control radius" />
+										<label for="firstname" class="col-sm-2 control-label">考试须知:</label>
+										<div class="col-sm-9">
+											<textarea id="summernote" class="radius"></textarea>
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-12">
-									<div class="form-group">
-										<label for="firstname" class="col-sm-2 control-label pl-0">联系电话:</label>
-										<div class="col-sm-10">
-											<input type="text" class="form-control radius" />
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-12">
-									<div class="form-group">
-										<label for="firstname" class="col-sm-2 control-label pl-0">email:</label>
-										<div class="col-sm-10">
-											<input type="text" class="form-control radius" />
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-12">
-									<div class="form-group">
-										<label for="firstname" class="col-sm-2 control-label pl-0">QQ:</label>
-										<div class="col-sm-10">
-											<input type="text" class="form-control radius" />
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-12">
-									<div class="form-group">
-										<label for="firstname" class="col-sm-2 control-label pl-0">微信号:</label>
-										<div class="col-sm-10">
-											<input type="text" class="form-control radius" />
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-12">
-									<div class="form-group">
-										<label for="firstname" class="col-sm-2 control-label pl-0">地址:</label>
-										<div class="col-sm-10">
-											<textarea cols="2" class="form-control radius"></textarea>
+								<div class="col-sm-6 ">
+									<label for="firstname" class="col-sm-4 control-label pr-0"></label>
+									<div class="col-sm-8 pad-0">
+										<div class="button">
+											<a href="javascript:void(0)" class="btn btn-add radius">提&nbsp;交</a>&nbsp;
+											<a href="javascript:void(0)" class="btn btn-default radius" data-dismiss="modal">取&nbsp;消</a>
 										</div>
 									</div>
 								</div>
 
-								<div class="col-sm-12">
-									<div class="form-group">
-										<label for="firstname" class="col-sm-2 control-label pl-0">是否为学生:</label>
-										<div class="col-sm-10">
-											<div class="radio-box">
-												<input type="radio" name="isStu" value="1" checked="checked" />
-												<label>是</label>
-											</div>
-											<div class="radio-box">
-												<input type="radio" name="isStu" value="2" />
-												<label>否</label>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="bottom text-center">
-								<button type="button" class="btn btn-add radius">提交</button>
 							</div>
 						</form>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!--   上传用户    -->
-		<div class="modal fade uploadUser" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
+		<div class="modal fade addTestPaper" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
 				<div class="modal-content radius">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-						<h4 class="modal-title">上传用户</h4>
+						<h4 class="modal-title">添加试卷</h4>
 					</div>
 					<div class="modal-body">
-						<form class="form-horizontal" role="form" enctype="multipart/form-data">
+						<form class="form-horizontal" role="form">
 							<div class="row">
-								<div class="col-sm-12">
+								<div class="col-sm-6">
+									<div class="input-group col-sm-12">
+										<div class="input-group-btn" style="width: 30%;">
+											<select name="" class="form-control radius-l">
+												<option value="">试卷名称</option>
+												<option value="">试卷编号</option>
+											</select>
+										</div>
+										<!-- /btn-group -->
+										<input type="text" class="form-control radius-r" aria-label="..." placeholder="请输入关键词">
+									</div>
+								</div>
+								<div class="col-sm-3 dis">
 									<div class="form-group">
-										<label for="firstname" class="col-sm-3 control-label">机构名称:</label>
-										<div class="col-sm-9">
-											<select name="" class="form-control radius">
-												<option value=""></option>
+										<div class="col-sm-12">
+											<select class="form-control radius">
+												<option>制造业</option>
+											</select>
+										</div>
+									</div>
+								</div> 
+								<div class="col-sm-3 dis">
+									<div class="form-group">
+										<div class="col-sm-12">
+											<select class="form-control radius">
+												<option>财务部</option>
 											</select>
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-12">
+								<div class="col-sm-3 dis">
 									<div class="form-group">
-										<label for="firstname" class="col-sm-3 control-label">是否为学生:</label>
-										<div class="col-sm-9">
-											<div class="radio-box">
-												<input type="radio" name="isStu" value="1" checked="checked" />
-												<label>是</label>
-											</div>
-											<div class="radio-box">
-												<input type="radio" name="isStu" value="2" />
-												<label>否</label>
-											</div>
+										<div class="col-sm-12">
+											<select class="form-control radius">
+												<option>出纳岗位</option>
+											</select>
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-12">
+								<div class="col-sm-3 dis">
 									<div class="form-group">
-										<label for="firstname" class="col-sm-3 control-label">excel表格:</label>
-										<div class="col-sm-9">
-											<input id="input-1a" type="file" class="file form-control  radius" data-show-preview="false">
+										<div class="col-sm-12">
+											<select class="form-control radius">
+												<option>出纳</option>
+											</select>
 										</div>
 									</div>
 								</div>
-							</div>
-							<div class="bottom text-center">
-								<button type="button" class="btn btn-add radius">提交</button>
+								<div class="col-sm-3">
+									<a href="javascript:void(0)" class="btn btn-add radius">查&nbsp;询</a>&nbsp;
+									<a href="javascript:void(0)" class="btn btn-default radius">重&nbsp;置</a>
+									&nbsp;
+									<a href="javascript:void(0)" class="spread"><span>展开</span><i class="iconfont icon-xiala"></i> </a>
+								</div>
 							</div>
 						</form>
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th width="100">序号</th>
+									<th>试卷编号</th>
+									<th>试卷名称</th>
+									<th width="80">试卷总分</th>
+									<th width="80">操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>1</td>
+									<td>于你，2012年的九月，那是我们认识的季节，</td>
+									<td>5</td>
+									<td>
+										<a href="javascript:void(0)">添加</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="page" id="page2"></div>
 					</div>
 				</div>
 			</div>
@@ -445,76 +435,38 @@
 <script src="/scripts/public.min.js"></script>
 
 
-		<script src="/scripts/lib/fileinput/js/fileinput.min.js"></script>
+		<script src="/scripts/lib/summernote/summernote.min.js"></script>
+		<script src="/scripts/lib/summernote/lang/summernote-zh-CN.min.js"></script>
 		<script>
-			function initFileInput(ctrlName, uploadUrl) {
-				var control = $('#' + ctrlName);
-				control.fileinput({
-					language: 'zh', //设置语言
-					uploadUrl: uploadUrl, //上传的地址
-					showUpload: false, //是否显示上传按钮
-					showCaption: true, //是否显示标题
-					browseClass: "btn btn-primary", //按钮样式             
-					previewFileIcon: "<i class='glyphicon glyphicon-king'></i>",
-				});
-			}
-			initFileInput("input-1a", '')
-
 			layui.use('laypage', function() {
 				var laypage = layui.laypage;
 				//执行一个laypage实例
 				laypage.render({
 					elem: 'page',
 					count: 10,
+					groups: 3,
+					layout: ['prev', 'page', 'next', 'limit', 'skip'],
+					jump: function(obj) {
+						//console.log(obj)
+					}
+				});
+				laypage.render({
+					elem: 'page2',
+					count: 10,
+					groups: 3,
 					layout: ['prev', 'page', 'next', 'limit', 'skip'],
 					jump: function(obj) {
 						//console.log(obj)
 					}
 				});
 			});
-
 			$(function() {
-
-				$('input[name="allSelect"]').click(function() {
-					if($(this).prop('checked')) {
-						$.each($('input[name="list_ch"]'), function(i, n) {
-							$(n).prop('checked', 'checked')
-						})
-					} else {
-						$.each($('input[name="list_ch"]'), function(i, n) {
-							$(n).prop('checked', '')
-						})
-					}
-				})
-			})
-
-			function del_role(id) {
-				swal({
-					title: "确定删除吗？",
-					text: "删除后将无法恢复！",
-					icon: "warning",
-					closeOnEsc: false,
-					buttons: {
-						cancel: {
-							text: "取消",
-							value: false,
-							visible: true,
-							className: "btn btn-default radius",
-						},
-						confirm: {
-							text: "确定",
-							className: "btn btn-add radius",
-							closeModal: false
-						}
-					},
-					dangerMode: true,
-				}).then(function(isCom) {
-					if(isCom) {
-						swal('删除！', '你的文件已经被删除。', 'success');
-					}
+				$('#summernote').summernote({
+					height: 400
 				});
-			}
+			})
 		</script>
+
 	</body>
 
 </html>
