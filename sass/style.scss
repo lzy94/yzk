@@ -23,6 +23,11 @@ a {
     display: none;
 }
 
+.inline {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 //NOtton
 .button {
     margin: 15px 0 5px 15px;
@@ -90,9 +95,16 @@ a {
 .mb-10 {
     margin-bottom: 10px;
 }
-.mr-30{margin-right: 30px !important;}
+
+.mr-30 {
+    margin-right: 30px !important;
+}
+
 .mb-20 {
     margin-bottom: 20px;
+}
+.mr-0{
+    margin-right: 0 !important;
 }
 
 .pad-0 {
@@ -122,12 +134,15 @@ a {
 .pt-20 {
     padding-top: 20px !important;
 }
-.pb-10{
-    padding-bottom: 10px ;
+
+.pb-10 {
+    padding-bottom: 10px;
 }
-.pb-20{
-    padding-bottom: 20px ;
+
+.pb-20 {
+    padding-bottom: 20px;
 }
+
 .pd-10 {
     padding: 10px;
 }
@@ -179,6 +194,15 @@ a {
     border-radius: 5px !important;
 }
 
+.radius-l {
+    border-top-left-radius: 5px !important;
+    border-bottom-left-radius: 5px !important;
+}
+.radius-r {
+    border-top-right-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+}
+
 .form-horizontal {
     .form-group {
         margin-bottom: 0;
@@ -198,7 +222,7 @@ a {
 
 //试题 
 .question {
-//  margin-bottom: 25px;
+    //  margin-bottom: 25px;
     >.title {
         font-size: 18px;
     }
@@ -223,16 +247,17 @@ a {
                     font-size: 15px;
                 }
             }
-            >.btn{
+            >.btn {
                 margin-left: 15px;
             }
         }
     }
 }
 
-.radio-box,.checkbox-box{
-     position: relative;
-     display: inline-block;
+.radio-box,
+.checkbox-box {
+    position: relative;
+    display: inline-block;
     margin-right: 10px;
     >label {
         font-weight: 500;
@@ -252,55 +277,54 @@ a {
         bottom: 10px;
         left: 0;
     }
-    >label:after{
+    >label:after {
         content: ' ';
         display: block;
-         position: absolute;
+        position: absolute;
         top: 14px;
         left: 4px;
     }
-    
 }
 
 .radio-box {
-    input[type=radio]{
+    input[type=radio] {
         position: absolute;
         z-index: 1;
-        opacity: 0;    
+        opacity: 0;
         width: 20px;
         height: 20px;
         top: 5px;
     }
-    
     >label:before {
         border-radius: 50%;
     }
-    >label:after{
+    >label:after {
         width: 12px;
         height: 12px;
         border-radius: 50%;
     }
-    >input:checked+label:after{
+    >input:checked+label:after {
         background: #1B8E94;
     }
 }
-.checkbox-box{
-    input[type=checkbox]{
+
+.checkbox-box {
+    input[type=checkbox] {
         position: absolute;
         z-index: 1;
-        opacity: 0;    
+        opacity: 0;
         width: 20px;
         height: 20px;
         top: 5px;
     }
-    
-    
 }
-.menu-three{
+
+.menu-three {
     padding-left: 50px !important;
 }
-.file-caption-main{
-    .btn{
+
+.file-caption-main {
+    .btn {
         padding: 6px 13px;
         margin-top: 0;
     }
