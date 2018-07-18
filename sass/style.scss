@@ -215,6 +215,15 @@ a {
                 span {
                     color: #0C9A9B;
                 }
+                
+                input{
+                    outline: none;
+                    border: none;
+                    background: transparent;
+                    text-indent: 5px;
+                    width:120px;
+                }
+                
             }
             >.answer-list {
                 padding: 10px 0 10px 20px;
@@ -226,6 +235,64 @@ a {
             >.btn{
                 margin-left: 15px;
             }
+            
+            
+            .carousel_box{
+                width: 80%;
+                margin: auto;
+                margin-top: 20px;
+                border: solid 1px #dedede;
+                
+                
+                .swiper-slide{
+                      display: -webkit-box;
+                      display: -ms-flexbox;
+                      display: -webkit-flex;
+                      display: flex;
+                      -webkit-box-pack: center;
+                      -ms-flex-pack: center;
+                      -webkit-justify-content: center;
+                      justify-content: center;
+                      -webkit-box-align: center;
+                      -ms-flex-align: center;
+                      -webkit-align-items: center;
+                      align-items: center;
+                }
+                
+                
+                img{
+                    width: 100%;
+                }
+            }
+            
+            .operation_box{
+                width: 100%;
+                min-height: 300px;
+                margin-top: 20px;
+                span{
+                    font-size: 18px;
+                }
+                .excel{
+                    width: 100%;
+                    min-height: 200px;
+                    margin:20px 0 20px 0;
+                    border: solid 1px #dedede;
+                }
+                .excel_operate{
+                    width: 100%;
+                    height: 80px;
+                    text-align: right;
+                    
+                    button{
+                        background: #08979D;
+                        color: #fff;
+                        outline: none;
+                    }
+                }
+            }
+            
+            
+            
         }
     }
 }
@@ -303,5 +370,72 @@ a {
     .btn{
         padding: 6px 13px;
         margin-top: 0;
+    }
+}
+
+
+// 实操表单
+.red{
+    color: red;
+}
+
+
+.textarea{
+    resize: none;
+}
+.imgbox{
+    float: left;
+    margin-right: 10px;
+}
+.clear{
+    display: block;
+    content: "";
+    clear: both;
+}
+//上传图片
+.fileinput-button {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    width: 80px;
+    height: 30px;
+    color: #fff;
+    background:#208E93;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 3px;
+    input{
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        opacity: 0;
+        -ms-filter: 'alpha(opacity=0)';
+        font-size: 200px;
+    }
+}
+.del-img{
+    margin-top: -15px;
+    margin-left: 5px;
+}
+.operate{
+    width: 100%;
+    min-height: 300px;
+    margin-top: 20px;
+    .operate-title{
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 5px;
+        border: solid 1px #F0F1F7;
+        border-left: solid 4px #0F99A1;
+        font-size: 20px;
+        text-indent: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .excel-box{
+        width: 100%;
+        min-height: 300px;
+        background: #F0F1F7;
     }
 }
