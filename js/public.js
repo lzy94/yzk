@@ -50,7 +50,10 @@ $(function() {
 	function getMenuOne(callback) {
 		var html = '';
 		$.each(menu, function(i, n) {
-			html += '<li class="head-menu" data-num="' + i + '"><a href="javascript:void(0)"><span class="icon iconfont ' + n.icon + '"></span> ' + n.title + '</a></li>'
+			html+= `<li class="head-menu" data-num="${i}">
+						<a href="javascript:void(0)"><span class="icon iconfont ${ n.icon }"></span>${n.title}</a>
+					</li>`;
+//			html += '<li class="head-menu" data-num="' + i + '"><a href="javascript:void(0)"><span class="icon iconfont ' + n.icon + '"></span> ' + n.title + '</a></li>'
 		});
 		$(html).insertBefore('.header-msg-num');
 		if(typeof callback === 'function') {
@@ -59,13 +62,13 @@ $(function() {
 	}
 	getMenuOne(function() {
 		var num = getParameter('num');
-		index = num ? num.split('-')[0] : 0;
-		readMenu(index)
+		var newNum = num ? num.split('-')[0] : 0;
+		readMenu(newNum)
 	});
 
 	$('.head-nav').on('click', '.head-menu', function() {
-		var index = $(this).data('num');
-		readMenu(index);
+		var num = $(this).data('num');
+		readMenu(num);
 	})
 	
 	

@@ -14,10 +14,12 @@ var uglify = require('gulp-uglify');
 
 var htmlmin = require('gulp-htmlmin'); //压缩html代码
 var sass = require('gulp-sass');
-var zip = require('gulp-zip');  // 打包发布
-var gutil  = require('gulp-util');
+var zip = require('gulp-zip'); // 打包发布
+var gutil = require('gulp-util');
 
 var uncss = require('gulp-uncss'); // 删除多余css  代码
+
+var babel = require("gulp-babel"); // ES6 转 ES5
 
 gulp.task('serve', function() {
 	browserSync.init({
@@ -35,7 +37,7 @@ gulp.task('serve', function() {
 	gulp.watch('img/**/*', ['images']);
 	gulp.watch('js/**/*', ['js']);
 	gulp.watch("dist/**/*.html").on("change", browserSync.reload);
-//	gulp.watch('css/**/*', ['uncss']);
+	//	gulp.watch('css/**/*', ['uncss']);
 	//	gulp.watch('dist/**/*', ['publish']);
 });
 
@@ -61,14 +63,15 @@ gulp.task('uncss', function() {
 });
 
 gulp.task('js', function() {
-	return gulp.src(['js/**/*.js','!js/lib/**.min.js'])
+	return gulp.src(['js/**/*.js', '!js/lib/**/*.min.js','!js/lib/**.*.js'])
 		.pipe(rename({
 			suffix: '.min'
 		}))
+		.pipe(babel())
 		.pipe(uglify())
-		.on('error', function (err) {
-                gutil.log(gutil.colors.red('[Error]'), err.toString());
-            })
+		.on('error', function(err) {
+			gutil.log(gutil.colors.red('[Error]'), err.toString());
+		})
 		.pipe(gulp.dest('dist/scripts'))
 		.pipe(browserSync.stream());
 });

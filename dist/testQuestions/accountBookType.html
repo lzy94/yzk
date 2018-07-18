@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<title>唯恩云智库-账本类型管理</title>
+		<!--描述：公共css -->
+<link rel="shortcut icon" href="/favicon.ico" />
+<!--<link rel="stylesheet" type="text/css" href="scripts/lib/bootstrap-3.3.7/css/bootstrap.min.css"/>-->
+<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<!--<link rel="stylesheet" type="text/css" href="styles/lib/css/animate.min.css"/>-->
+<link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<!--<link rel="stylesheet" type="text/css" href="styles/lib/css/font-awesome.min.css" />-->
+<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_745936_0zw86zfz7nw.css"/>
+<link rel="stylesheet" type="text/css" href="/styles/lib/css/admin.css" />
+<!--<link rel="stylesheet" type="text/css" href="styles/lib/css/blue.css" />-->
+<link rel="stylesheet" type="text/css" href="/scripts/lib/layui-v2.3.0/layui-v2.3.0/layui/css/layui.css"/>
+
+<link rel="stylesheet" type="text/css" href="/styles/table.css"/>
+
+<link rel="stylesheet" type="text/css" href="/styles/theme.css"/>
+<link rel="stylesheet" type="text/css" href="/styles/style.css" />
+<link rel="stylesheet" type="text/css" href="/styles/index.css" />
+	</head>
+
+	<body class="theme-black">
+		<div class="app-container expanded">
+			<div class="row content-container">
+				<!--描述：头部导航 -->
+<nav class="navbar navbar-default navbar-fixed-top navbar-top">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-expand-toggle">
+				<i class="fa iconfont big icon-zhankaicaidan"></i>
+			</button>
+			<button type="button" class="navbar-right-expand-toggle pull-right visible-xs">
+				<i class="iconfont icon-caidan icon"></i>
+			</button>
+		</div>
+		<ul class="nav navbar-nav navbar-right head-nav">
+			<button type="button" class="navbar-right-expand-toggle pull-right visible-xs">
+				<i class="iconfont icon-chacha icon"></i>
+			</button>
+			<li>
+				<a href="/">
+					<i class="icon iconfont icon-shouye"></i>首页
+				</a>
+			</li>
+
+			<li class="header-msg-num">
+				<a href="#">
+					<i class="iconfont icon-weibiaoti555 big"></i><span class="badge danger">2</span>
+				</a>
+			</li>
+			<li class="dropdown profile">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+					<div class="header-img">
+						<div class="img">
+							<img src="/images/test/profile-1.jpg" />
+						</div>
+					</div>
+					<span>这是啥</span>
+					<span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu1">
+					<li role="presentation">
+						<a role="menuitem" tabindex="-1" href="#">个人中心</a>
+					</li>
+					<li role="presentation" class="divider"></li>
+					<li role="presentation">
+						<a role="menuitem" tabindex="-1" href="#">退出</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</nav> <!--描述：左边导航-->
+<div class="side-menu sidebar-inverse">
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="side-menu-container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/">
+					<div class="icon iconfont icon-shuye big"></div>
+					<div class="title">唯恩云智库</div>
+				</a>
+				<button type="button" class="navbar-expand-toggle pull-right visible-xs">
+								<i class="iconfont icon-chacha icon"></i>
+							</button>
+			</div>
+			<ul class="nav navbar-nav left-menu">
+				<!--<li class="active">
+					<a href="/">
+						<span class="icon iconfont icon-shouye"></span>
+						<span class="title">首页</span>
+					</a>
+				</li>
+				<li class="panel panel-default dropdown">
+					<a href="/">
+						<span class="icon iconfont icon-yonghushezhi"></span>
+						<span class="title">用户系统</span>
+					</a>
+				</li>
+				<li class="panel panel-default dropdown">
+					<a data-toggle="collapse" href="#dropdown-tkxt">
+						<span class="icon iconfont icon-kaodianqingdan"></span>
+						<span class="title">题库系统</span>
+					</a>
+					<div id="dropdown-tkxt" class="panel-collapse collapse">
+						<div class="panel-body">
+							<ul class="nav navbar-nav">
+								<li>
+									<a data-toggle="collapse" href="#dropdown-tkjcxxgl"><span class="icon iconfont icon-kaodianqingdan">&nbsp;&nbsp;题库基础信息管理</a>
+									<div id="dropdown-tkjcxxgl" class="panel-collapse collapse">
+											<div class="panel-body">
+												<ul class="nav navbar-nav">
+													<li><a href="#">试题类型管理</a></li>
+													<li><a href="#">题目类型管理</a></li>
+													<li><a href="#">岗位管理</a></li>
+													<li><a href="jobManagement.html">职务管理</a></li>
+													<li><a href="#">实操键值管理</a></li>
+												</ul>
+											</div>
+										</div>
+								</li>
+								<li>
+									<a href="#"><span class="icon iconfont icon-kaodianqingdan">&nbsp;&nbsp;虚拟公司管理</a>
+								</li>
+								<li>
+									<a data-toggle="collapse" href="#dropdown-stgl"><span class="icon iconfont icon-kaodianqingdan">&nbsp;&nbsp;试题管理</a>
+										<div id="dropdown-stgl" class="panel-collapse collapse">
+											<div class="panel-body">
+												<ul class="nav navbar-nav">
+													<li><a href="#">试题信息管理</a></li>
+													<li><a href="choiceQuestion.html">选择题管理</a></li>
+													<li><a href="practicalExercises.html">实操题管理</a></li>
+												</ul>
+											</div>
+										</div>
+								</li>
+								<li>
+									<a href="examinationPaper.html"><span class="icon iconfont icon-kaodianqingdan">&nbsp;&nbsp;试卷管理</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li class="panel panel-default dropdown">
+					<a data-toggle="collapse" href="#dropdown-kdxt">
+						<span class="icon iconfont icon-shitiguanli"></span>
+						<span class="title">考点系统</span>
+					</a>
+					<div id="dropdown-kdxt" class="panel-collapse collapse">
+						<div class="panel-body">
+							<ul class="nav navbar-nav">
+								<li><a data-toggle="collapse" href="#dropdown-kdgl"><span class="icon iconfont icon-shitiguanli"></span>考点管理</a>
+									<div id="dropdown-kdgl" class="panel-collapse collapse">
+											<div class="panel-body menu-three">
+												<ul class="nav navbar-nav">
+													<li><a href="#">考点类型管理</a></li>
+													<li><a href="#">个人考点管理</a></li>
+													<li><a href="#">学校考点管理</a></li>
+													<li><a href="#">企业考点管理</a></li>
+													<li><a href="#">机构考点管理</a></li>
+													<li><a href="#">个人考生管理</a></li>
+													<li><a href="#">学校考生管理</a></li>
+													<li><a href="#">企业考生管理</a></li>
+													<li><a href="#">机构考生管理</a></li>
+												</ul>
+											</div>
+										</div>
+									
+									
+								</li>
+								<li><a href="#"><span class="icon iconfont icon-shitiguanli"></span>成绩管理</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li class="panel panel-default dropdown">
+					<a href="/">
+						<span class="icon iconfont icon-xitongguanli"></span>
+						<span class="title">系统管理</span>
+					</a>
+				</li>-->
+			</ul>
+		</div>
+	</nav>
+	</div>
+				<!-- Main Content -->
+				<div class="container-fluid pad-0">
+					<ol class="breadcrumb path-nav">
+						<li>
+							<a href="#">首页</a>
+						</li>
+						<li>
+							<a href="#">实操题账本管理</a>
+						</li>
+						<li class="active">账本类型管理</li>
+					</ol>
+				</div>
+
+				<div class="side-body pt-10">
+					<div class="panel">
+						<div class="button">
+							<a href="#" data-toggle="modal" data-target=".addModal" class="btn btn-add radius"> <span class="iconfont icon-plus"></span>添加账本类型</a>&nbsp;
+							<a href="javascript:void(0)" class="btn btn-default radius">批量删除</a>&nbsp;
+						</div>
+						<div class="table-tip radius mb-20">
+							<i class="iconfont icon-gantanhao3-hei"></i>&nbsp; 已选择3项，共有23132123项 ，<span>清空</span>
+						</div>
+						<div class="table-responsive">
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th width="40" class="text-center">
+											<input type="checkbox" id="num" hidden="hidden">
+											<label for="num" class="checkbox_label"></label>
+										</th>
+										<th>序号</th>
+										<th>表单名称</th>
+										<th>类型名称</th>
+										<th>操作</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="text-center"><input type="checkbox" id="1" hidden="hidden"><label for="1" class="checkbox_label"></label></td>
+										<td>1</td>
+										<td>四个选项一个正确答案四个选项一个正确答案四个选项一个正确答案</td>
+										<td>2018年7月14日</td>
+										<td>
+											<a href="javasript:void()" onclick="single_edit(1)">编辑</a> <span>|</span>
+											<a href="">删除</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="page pd-10" id="page"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--  添加类型  -->
+		<div class="modal fade addModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content radius">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+						<h4 class="modal-title">添加类型</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-horizontal" role="form">
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="firstname" class="col-sm-3 control-label">表单:</label>
+										<div class="col-sm-9">
+											<select name="" class="form-control radius">
+												<option value=""></option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="firstname" class="col-sm-3 control-label">账本类型名称:</label>
+										<div class="col-sm-9">
+											<input type="text" class="form-control radius" />
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6 ">
+									<label for="firstname" class="col-sm-4 control-label pr-0"></label>
+									<div class="col-sm-8 pad-0">
+										<div class="button">
+											<a href="javascript:void(0)" class="btn btn-add radius">提&nbsp;交</a>&nbsp;
+											<a href="javascript:void(0)" class="btn btn-default radius" data-dismiss="modal">取&nbsp;消</a>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--描述：公共js -->
+<!--<script src="scripts/lib/bootstrap-3.3.7/js/bootstrap.min.js" ></script>-->
+<script src="/scripts/lib/jquery-1.11.0/jquery-1.11.0.min.js"></script>
+<!-- CDN  -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="/scripts/lib/layui-v2.3.0/layui-v2.3.0/layui/layui.js"></script>
+<script src="/scripts/lib/echarts/echarts.min.js"></script>
+<!-- CDN  -->
+<script src="https://cdn.bootcss.com/sweetalert/2.1.0/sweetalert.min.js"></script>
+<script src="/scripts/lib/artTemplate-4.12.2/artTemplate.js"></script>
+<script src="/scripts/mock/menu.min.js"></script>
+<script src="/scripts/public.min.js"></script>
+
+		<script type="text/javascript">
+			layui.use('laypage', function() {
+				var laypage = layui.laypage;
+				//执行一个laypage实例
+				laypage.render({
+					elem: 'page',
+					count: 10,
+					groups: 3,
+					layout: ['prev', 'page', 'next', 'limit', 'skip'],
+					jump: function(obj) {
+						//console.log(obj)
+					}
+				});
+			});
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<title>唯恩云智库</title>
+		<!--描述：公共css -->
+<link rel="shortcut icon" href="/favicon.ico" />
+<!--<link rel="stylesheet" type="text/css" href="scripts/lib/bootstrap-3.3.7/css/bootstrap.min.css"/>-->
+<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<!--<link rel="stylesheet" type="text/css" href="styles/lib/css/animate.min.css"/>-->
+<link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<!--<link rel="stylesheet" type="text/css" href="styles/lib/css/font-awesome.min.css" />-->
+<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_745936_0zw86zfz7nw.css"/>
+<link rel="stylesheet" type="text/css" href="/styles/lib/css/admin.css" />
+<!--<link rel="stylesheet" type="text/css" href="styles/lib/css/blue.css" />-->
+<link rel="stylesheet" type="text/css" href="/scripts/lib/layui-v2.3.0/layui-v2.3.0/layui/css/layui.css"/>
+
+<link rel="stylesheet" type="text/css" href="/styles/table.css"/>
+
+<link rel="stylesheet" type="text/css" href="/styles/theme.css"/>
+<link rel="stylesheet" type="text/css" href="/styles/style.css" />
+<link rel="stylesheet" type="text/css" href="/styles/index.css" />
+	</head>
+<!--class="flat-blue"-->
+	<body class="theme-black">
+		<div class="app-container expanded">
+			<div class="row content-container">
+				<!--描述：头部导航 -->
+<nav class="navbar navbar-default navbar-fixed-top navbar-top">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-expand-toggle">
+				<i class="fa iconfont big icon-zhankaicaidan"></i>
+			</button>
+			<button type="button" class="navbar-right-expand-toggle pull-right visible-xs">
+				<i class="iconfont icon-caidan icon"></i>
+			</button>
+		</div>
+		<ul class="nav navbar-nav navbar-right head-nav">
+			<button type="button" class="navbar-right-expand-toggle pull-right visible-xs">
+				<i class="iconfont icon-chacha icon"></i>
+			</button>
+			<li>
+				<a href="/">
+					<i class="icon iconfont icon-shouye"></i>首页
+				</a>
+			</li>
+
+			<li class="header-msg-num">
+				<a href="#">
+					<i class="iconfont icon-weibiaoti555 big"></i><span class="badge danger">2</span>
+				</a>
+			</li>
+			<li class="dropdown profile">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+					<div class="header-img">
+						<div class="img">
+							<img src="/images/test/profile-1.jpg" />
+						</div>
+					</div>
+					<span>这是啥</span>
+					<span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu1">
+					<li role="presentation">
+						<a role="menuitem" tabindex="-1" href="#">个人中心</a>
+					</li>
+					<li role="presentation" class="divider"></li>
+					<li role="presentation">
+						<a role="menuitem" tabindex="-1" href="#">退出</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</nav> 
+				<!--描述：左边导航-->
+<div class="side-menu sidebar-inverse">
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="side-menu-container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/">
+					<div class="icon iconfont icon-shuye big"></div>
+					<div class="title">唯恩云智库</div>
+				</a>
+				<button type="button" class="navbar-expand-toggle pull-right visible-xs">
+								<i class="iconfont icon-chacha icon"></i>
+							</button>
+			</div>
+			<ul class="nav navbar-nav left-menu">
+				<!--<li class="active">
+					<a href="/">
+						<span class="icon iconfont icon-shouye"></span>
+						<span class="title">首页</span>
+					</a>
+				</li>
+				<li class="panel panel-default dropdown">
+					<a href="/">
+						<span class="icon iconfont icon-yonghushezhi"></span>
+						<span class="title">用户系统</span>
+					</a>
+				</li>
+				<li class="panel panel-default dropdown">
+					<a data-toggle="collapse" href="#dropdown-tkxt">
+						<span class="icon iconfont icon-kaodianqingdan"></span>
+						<span class="title">题库系统</span>
+					</a>
+					<div id="dropdown-tkxt" class="panel-collapse collapse">
+						<div class="panel-body">
+							<ul class="nav navbar-nav">
+								<li>
+									<a data-toggle="collapse" href="#dropdown-tkjcxxgl"><span class="icon iconfont icon-kaodianqingdan">&nbsp;&nbsp;题库基础信息管理</a>
+									<div id="dropdown-tkjcxxgl" class="panel-collapse collapse">
+											<div class="panel-body">
+												<ul class="nav navbar-nav">
+													<li><a href="#">试题类型管理</a></li>
+													<li><a href="#">题目类型管理</a></li>
+													<li><a href="#">岗位管理</a></li>
+													<li><a href="jobManagement.html">职务管理</a></li>
+													<li><a href="#">实操键值管理</a></li>
+												</ul>
+											</div>
+										</div>
+								</li>
+								<li>
+									<a href="#"><span class="icon iconfont icon-kaodianqingdan">&nbsp;&nbsp;虚拟公司管理</a>
+								</li>
+								<li>
+									<a data-toggle="collapse" href="#dropdown-stgl"><span class="icon iconfont icon-kaodianqingdan">&nbsp;&nbsp;试题管理</a>
+										<div id="dropdown-stgl" class="panel-collapse collapse">
+											<div class="panel-body">
+												<ul class="nav navbar-nav">
+													<li><a href="#">试题信息管理</a></li>
+													<li><a href="choiceQuestion.html">选择题管理</a></li>
+													<li><a href="practicalExercises.html">实操题管理</a></li>
+												</ul>
+											</div>
+										</div>
+								</li>
+								<li>
+									<a href="examinationPaper.html"><span class="icon iconfont icon-kaodianqingdan">&nbsp;&nbsp;试卷管理</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li class="panel panel-default dropdown">
+					<a data-toggle="collapse" href="#dropdown-kdxt">
+						<span class="icon iconfont icon-shitiguanli"></span>
+						<span class="title">考点系统</span>
+					</a>
+					<div id="dropdown-kdxt" class="panel-collapse collapse">
+						<div class="panel-body">
+							<ul class="nav navbar-nav">
+								<li><a data-toggle="collapse" href="#dropdown-kdgl"><span class="icon iconfont icon-shitiguanli"></span>考点管理</a>
+									<div id="dropdown-kdgl" class="panel-collapse collapse">
+											<div class="panel-body menu-three">
+												<ul class="nav navbar-nav">
+													<li><a href="#">考点类型管理</a></li>
+													<li><a href="#">个人考点管理</a></li>
+													<li><a href="#">学校考点管理</a></li>
+													<li><a href="#">企业考点管理</a></li>
+													<li><a href="#">机构考点管理</a></li>
+													<li><a href="#">个人考生管理</a></li>
+													<li><a href="#">学校考生管理</a></li>
+													<li><a href="#">企业考生管理</a></li>
+													<li><a href="#">机构考生管理</a></li>
+												</ul>
+											</div>
+										</div>
+									
+									
+								</li>
+								<li><a href="#"><span class="icon iconfont icon-shitiguanli"></span>成绩管理</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li class="panel panel-default dropdown">
+					<a href="/">
+						<span class="icon iconfont icon-xitongguanli"></span>
+						<span class="title">系统管理</span>
+					</a>
+				</li>-->
+			</ul>
+		</div>
+	</nav>
+	</div>
+				<!-- Main Content -->
+				<div class="container-fluid pad-0">
+					<ol class="breadcrumb path-nav">
+						<li>
+							<a href="#">首页</a>
+						</li>
+						<li class="active">考点类型管理</li>
+					</ol>
+					<div class="side-body pt-10">
+						<div class="panel">
+							<div class="button"><button type="button" class="btn btn-default add"> <span class="iconfont icon-plus"></span> 新建</button><button type="button" class="btn btn-default del">批量删除</button></div>
+							<table class="table table-hover">
+							  <thead>
+							    <tr>
+							      <th>
+							      	<input type="checkbox" id="num" hidden="hidden">
+								    <label for="num" class="checkbox_label">
+								    	序号
+								    </label>
+							      </th>
+							      <th>考点类型</th>
+							      <th>考点说明</th>
+							      <th>操作</th>
+							    </tr>
+							  </thead>
+							  <tbody>
+							    <tr>
+							      <td><input type="checkbox" id="1" hidden="hidden"><label for="1" class="checkbox_label"> 1</label></td>
+							      <td>个人考点</td>
+							      <td>针对个人定制的考点</td>
+							      <td><a href="">编辑</a> <span>|</span> <a href="">删除</a></td>
+							    </tr>
+							    <tr>
+							      <td><input type="checkbox" id="2" hidden="hidden"><label for="2" class="checkbox_label"> 2</label></td>
+							      <td>学校考点</td>
+							      <td>针对学校定制的考点</td>
+							      <td><a href="">编辑</a> <span>|</span> <a href="">删除</a></td>
+							    </tr>
+							     <tr>
+							      <td><input type="checkbox" id="3" hidden="hidden"><label for="1" class="checkbox_label"> 3</label></td>
+							      <td>企业考点</td>
+							      <td>针对企业定制的考点</td>
+							      <td><a href="">编辑</a> <span>|</span> <a href="">删除</a></td>
+							    </tr>
+							     <tr>
+							      <td><input type="checkbox" id="4" hidden="hidden"><label for="1" class="checkbox_label"> 4</label></td>
+							      <td>机构考点</td>
+							      <td>针对机构定制的考点</td>
+							      <td><a href="">编辑</a> <span>|</span> <a href="">删除</a></td>
+							    </tr>
+							  </tbody>
+							</table>
+                            
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer class="app-footer">
+	<div class="wrapper">
+		<p class="text-center">Copyright 2017四川唯恩梦耀网络科技有限公司技术部出品</p>
+	</div>
+</footer> 
+		</div>
+		
+		<!--描述：公共js -->
+<!--<script src="scripts/lib/bootstrap-3.3.7/js/bootstrap.min.js" ></script>-->
+<script src="/scripts/lib/jquery-1.11.0/jquery-1.11.0.min.js"></script>
+<!-- CDN  -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="/scripts/lib/layui-v2.3.0/layui-v2.3.0/layui/layui.js"></script>
+<script src="/scripts/lib/echarts/echarts.min.js"></script>
+<!-- CDN  -->
+<script src="https://cdn.bootcss.com/sweetalert/2.1.0/sweetalert.min.js"></script>
+<script src="/scripts/lib/artTemplate-4.12.2/artTemplate.js"></script>
+<script src="/scripts/mock/menu.min.js"></script>
+<script src="/scripts/public.min.js"></script>
+
+	
+	</body>
+
+</html>

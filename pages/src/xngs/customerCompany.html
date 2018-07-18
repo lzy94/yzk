@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<title>唯恩云智库-客户公司管理</title>
+		@@include('../../include/css.html')
+	</head>
+
+	<body class="theme-black">
+		<div class="app-container expanded">
+			<div class="row content-container">
+				@@include('../../include/header.html') @@include('../../include/menu.html')
+				<!-- Main Content -->
+				<div class="container-fluid pad-0">
+					<ol class="breadcrumb path-nav">
+						<li>
+							<a href="#">首页</a>
+						</li>
+						<li>
+							<a href="#">虚拟公司管理</a>
+						</li>
+						<li class="active">客户公司管理</li>
+					</ol>
+				</div>
+
+				<div class="side-body pt-10">
+					<div class="panel">
+						<form class="form-horizontal pd-15 pb-0" role="form">
+							<div class="row">
+								<div class="col-sm-2 pl-0">
+									<div class="form-group mar-0">
+										<select name="" class="form-control radius">
+											<option value=""> 公司名称 </option>
+										</select>
+									</div>
+								</div>
+								<div class="col-sm-2">
+									<div class="form-group">
+										<input type="text" class="form-control radius" placeholder="请输入名称">
+									</div>
+								</div>
+
+								<div class="col-sm-2">
+									<a href="javascript:void(0)" class="btn btn-add radius">查&nbsp;询</a>&nbsp;&nbsp;
+								</div>
+							</div>
+						</form>
+						<div class="button">
+							<a href="#" data-toggle="modal" data-target=".addModal" class="btn btn-add radius"> <span class="iconfont icon-plus"></span>添加公司</a>&nbsp;
+							<a href="javascript:void(0)" class="btn btn-default radius">批量删除</a>&nbsp;
+						</div>
+						<div class="table-tip radius mb-20">
+							<i class="iconfont icon-gantanhao3-hei"></i>&nbsp; 已选择3项，共有23132123项 ，<span>清空</span>
+						</div>
+						<div class="table-responsive">
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th width="40" class="text-center">
+											<input type="checkbox" id="num" hidden="hidden">
+											<label for="num" class="checkbox_label"></label>
+										</th>
+										<th>序号</th>
+										<th>名称</th>
+										<th>开户行</th>
+										<th>开户账号</th>
+										<th>税号</th>
+										<th>操作</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="text-center"><input type="checkbox" id="1" hidden="hidden"><label for="1" class="checkbox_label"></label></td>
+										<td>1</td>
+										<td>四个选项一个正确答案四个选项一个正确答案四个选项一个正确答案</td>
+										<td>2018年7月14日</td>
+										<td>2018年7月14日</td>
+										<td>2018年7月14日</td>
+										<td>
+											<a href="javasript:void()" onclick="single_edit(1)">编辑</a> <span>|</span>
+											<a href="">删除</a>
+										</td>
+									</tr>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="page pd-10" id="page"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--  添加公司  -->
+		<div class="modal fade addModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content radius">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+						<h4 class="modal-title">添加公司</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-horizontal" role="form">
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="firstname" class="col-sm-2 control-label">行业名称:</label>
+										<div class="col-sm-10">
+											<select name="" class="form-control radius">
+												<option value=""></option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="firstname" class="col-sm-2 control-label">公司名称:</label>
+										<div class="col-sm-10">
+											<input type="text" class="form-control radius" />
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="firstname" class="col-sm-2 control-label">地址:</label>
+										<div class="col-sm-10">
+											<textarea class="form-control radius"></textarea>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="firstname" class="col-sm-2 control-label">座机电话:</label>
+										<div class="col-sm-10">
+											<input type="tel" class="form-control radius" />
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="firstname" class="col-sm-2 control-label">开户行:</label>
+										<div class="col-sm-10">
+											<input type="text" class="form-control radius" />
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="firstname" class="col-sm-2 control-label">开户账号:</label>
+										<div class="col-sm-10">
+											<input type="text" class="form-control radius" />
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="firstname" class="col-sm-2 control-label">税号:</label>
+										<div class="col-sm-10">
+											<input type="text" class="form-control radius" />
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="firstname" class="col-sm-2 control-label">简介:</label>
+										<div class="col-sm-10">
+											<textarea class="form-control radius"></textarea>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="firstname" class="col-sm-2 control-label">采购员:</label>
+										<div class="col-sm-10">
+											<a href="javascript:void(0)" class="btn btn-add radius mb-10" id="addPersonnel">添加</a>
+											<div class="row " id="personnelList">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6 ">
+									<label for="firstname" class="col-sm-4 control-label pr-0"></label>
+									<div class="col-sm-8 pad-0">
+										<div class="button">
+											<a href="javascript:void(0)" class="btn btn-add radius">提&nbsp;交</a>&nbsp;
+											<a href="javascript:void(0)" class="btn btn-default radius" data-dismiss="modal">取&nbsp;消</a>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		@@include('../../include/js.html')
+		<script type="text/javascript">
+			layui.use('laypage', function() {
+				var laypage = layui.laypage;
+				//执行一个laypage实例
+				laypage.render({
+					elem: 'page',
+					count: 10,
+					groups: 3,
+					layout: ['prev', 'page', 'next', 'limit', 'skip'],
+					jump: function(obj) {
+						//console.log(obj)
+					}
+				});
+			});
+
+			$('#addPersonnel').click(function() {
+				var html='<div class="col-sm-12"><div class="col-sm-4"><div class="form-group"><label for="firstname" class="control-label pull-left">姓名:</label><div class="col-sm-9"><input type="text" class="form-control radius" /></div></div></div><div class="col-sm-6"><div class="form-group"><label for="firstname" class="control-label pull-left">联系电话:</label><div class="col-sm-9"><input type="tel" class="form-control radius" /></div></div></div><div class="col-sm-2"><a href="javascript:void(0)" class="btn btn-danger radius" onclick="del_persion(this)"> 删除 </a></div></div>'
+				$('#personnelList').append(html)
+
+			})
+			function del_persion(obj){
+				$(obj).parent('.col-sm-2').parent('.col-sm-12').remove()
+			}
+		</script>
+	</body>
+
+</html>
