@@ -53,9 +53,9 @@ $(function() {
 			html+= `<li class="head-menu" data-num="${i}">
 						<a href="javascript:void(0)"><span class="icon iconfont ${ n.icon }"></span>${n.title}</a>
 					</li>`;
-//			html += '<li class="head-menu" data-num="' + i + '"><a href="javascript:void(0)"><span class="icon iconfont ' + n.icon + '"></span> ' + n.title + '</a></li>'
 		});
-		$(html).insertBefore('.header-msg-num');
+		$(html).insertBefore('.header-msg-num'); 
+		
 		if(typeof callback === 'function') {
 			callback();
 		}
@@ -71,7 +71,6 @@ $(function() {
 		readMenu(num);
 	})
 	
-	
 	/**
 	 * 读取本地菜单
 	 * @param {Object} index
@@ -79,23 +78,26 @@ $(function() {
 	function readMenu(index) {
 		var html = '';
 		var child = menu[index];
-		if(child.childs) {
-			$.each(child.childs, function(i, n) {
+		var childs = child.childs;
+		if(childs) {
+			$.each(childs, function(i, n) {
 				var className = n.childs ? "panel panel-default dropdown" : "";
 				var href = '/';
 				if(n.path!='/'){
 					href = n.childs ? ("#" + n.path) : n.path + '?num=' + index + '-' + i;
 				}
 				var collapse = n.childs?"collapse":"";
-				html += '<li class="' + className + '"><a href="' + href + '" data-toggle="'+collapse +'"><span class="icon iconfont ' + n.icon + '"></span><span class="title"> ' + n.title + '</span></a>';
+				
+				html+=`<li class="${ className }"><a href=" ${ href } " data-toggle="${ collapse }"><span class="icon iconfont ${n.icon}"></span><span class="title">${ n.title }</span></a>`;
 				if(n.childs) {
-					html += '<div id="' + n.path + '" class="panel-collapse collapse"><div class="panel-body"><ul class="nav navbar-nav">';
+					
+					html+=`<div id="${n.path}" class="panel-collapse collapse"><div class="panel-body"><ul class="nav navbar-nav">`;
 					$.each(n.childs, function(j, m) {
-						html += '<li><a href="' + m.path + '?num=' + index + '-' + i + '-' + j + '">&nbsp;&nbsp;' + m.title + '</a></li>';
+						html+=`<li><a href="${m.path}?num=${index}-${i}-${j}">&nbsp;&nbsp;${m.title}</a></li>`
 					})
-					html += '</ul></div></div>';
+					html += `</ul></div></div>`;
 				}
-				html += '</li>';
+				html += `</li>`;
 			})
 		}
 		$('.left-menu').html(html);

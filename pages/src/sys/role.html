@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<title>唯恩云智库-角色管理</title>
+		<link rel="stylesheet" type="text/css" href="/scripts/lib/ztree/css/zTreeStyle/zTreeStyle.css"/>
+		@@include('../../include/css.html')
+	</head>
+
+	<body class="theme-black">
+		<div class="app-container expanded">
+			<div class="row content-container">
+				@@include('../../include/header.html') @@include('../../include/menu.html')
+				<!-- Main Content -->
+				<div class="container-fluid pad-0">
+
+					<ol class="breadcrumb path-nav">
+						<li>
+							<a href="#">首页</a>
+						</li>
+						<li>
+							<a href="#">系统管理</a>
+						</li>
+						<li class="active">角色管理</li>
+					</ol>
+					<div class="side-body  pt-10">
+						<div class="panel">
+							<div class="button">
+								<a href="#" data-toggle="modal" data-target=".addModal" class="btn btn-add radius"> <span class="iconfont icon-plus"></span>添加角色</a>&nbsp;
+								<a href="javascript:void(0)" class="btn btn-default radius">批量删除</a>
+							</div>
+							<div class="table-tip radius mb-20">
+								<i class="iconfont icon-gantanhao3-hei"></i>&nbsp; 已选择3项，共有23132123项 ，<span>清空</span>
+							</div>
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th width="40" class="text-center">
+											<input type="checkbox" id="num" name="allSelect" hidden="hidden">
+											<label for="num" class="checkbox_label"></label>
+										</th>
+										<th>序号</th>
+										<th>名称</th>
+										<th>备注</th>
+										<th>操作</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="text-center"><input type="checkbox" name="list_ch" id="1" hidden="hidden"><label for="1" class="checkbox_label"></label></td>
+										<td>1</td>
+										<td>2018年建设工程初级选拔考试</td>
+										<td>2017/7/8 15:00:00</td>
+										<td>
+											<a href="">编辑</a> <span>|</span>
+											<a href="javascript:void(0)" onclick="del_role(1)">删除</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="page pd-10" id="page"></div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- 描述：-->
+
+		<div class="modal fade addModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content radius">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+						<h4 class="modal-title">添加角色</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-horizontal" role="form">
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="firstname" class="col-sm-2 control-label">角色名称:</label>
+										<div class="col-sm-10">
+											<input type="text" class="form-control radius">
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="firstname" class="col-sm-2 control-label">备注:</label>
+										<div class="col-sm-10">
+											<textarea name="" class="form-control radius" rows="3"></textarea>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="firstname" class="col-sm-2 control-label">权限设置:</label>
+										<div class="col-sm-10">
+											<ul id="treeDemo" class="ztree"></ul>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6 ">
+									<label for="firstname" class="col-sm-4 control-label pr-0"></label>
+									<div class="col-sm-8 pad-0">
+										<div class="button">
+											<a href="javascript:void(0)" class="btn btn-add radius">提&nbsp;交</a>&nbsp;
+											<a href="javascript:void(0)" class="btn btn-default radius" data-dismiss="modal">取&nbsp;消</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		@@include('../../include/js.html')
+		<script src="/scripts/lib/ztree/js/jquery.ztree.all.min.js"></script>
+		<script>
+			layui.use('laypage', function() {
+				var laypage = layui.laypage;
+				//执行一个laypage实例
+				laypage.render({
+					elem: 'page',
+					count: 10,
+					layout: ['prev', 'page', 'next', 'limit', 'skip'],
+					jump: function(obj) {
+						//console.log(obj)
+					}
+				});
+			});
+
+			$(function() {
+
+				$('input[name="allSelect"]').click(function() {
+					if($(this).prop('checked')) {
+						$.each($('input[name="list_ch"]'), function(i, n) {
+							$(n).prop('checked', 'checked')
+						})
+					} else {
+						$.each($('input[name="list_ch"]'), function(i, n) {
+							$(n).prop('checked', '')
+						})
+					}
+				})
+			})
+
+			function del_role(id) {
+				swal({
+					title: "确定删除吗？",
+					text: "删除后将无法恢复！",
+					icon: "warning",
+					closeOnEsc: false,
+					buttons: {
+						cancel: {
+							text: "取消",
+							value: false,
+							visible: true,
+							className: "btn btn-default radius",
+						},
+						confirm: {
+							text: "确定",
+							className: "btn btn-add radius",
+							closeModal: false
+						}
+					},
+					dangerMode: true,
+				}).then(function(isCom) {
+					if(isCom) {
+						swal('删除！', '你的文件已经被删除。', 'success');
+					}
+				});
+			}
+		</script>
+		<script type="text/javascript">
+			var setting = {
+				check: {
+					enable: true
+				},
+				data: {
+					simpleData: {
+						enable: true
+					}
+				},
+				view: {
+				showIcon: false
+			},
+				
+			};
+
+			var zNodes = [{
+					id: 1,
+					pId: 0,
+					name: "can check 1",
+					open: true
+				},
+				{
+					id: 11,
+					pId: 1,
+					name: "can check 1-1",
+					open: true
+				},
+				{
+					id: 111,
+					pId: 11,
+					name: "can check 1-1-1"
+				},
+				{
+					id: 112,
+					pId: 11,
+					name: "can check 1-1-2"
+				},
+				{
+					id: 12,
+					pId: 1,
+					name: "can check 1-2",
+					open: true
+				},
+				{
+					id: 121,
+					pId: 12,
+					name: "can check 1-2-1"
+				},
+				{
+					id: 122,
+					pId: 12,
+					name: "can check 1-2-2"
+				},
+				{
+					id: 2,
+					pId: 0,
+					name: "can check 2",
+					checked: true,
+					open: true
+				},
+				{
+					id: 21,
+					pId: 2,
+					name: "can check 2-1"
+				},
+				{
+					id: 22,
+					pId: 2,
+					name: "can check 2-2",
+					open: true
+				},
+				{
+					id: 221,
+					pId: 22,
+					name: "can check 2-2-1",
+					checked: true
+				},
+				{
+					id: 222,
+					pId: 22,
+					name: "can check 2-2-2"
+				},
+				{
+					id: 23,
+					pId: 2,
+					name: "can check 2-3"
+				}
+			];
+
+			var code;
+
+			function setCheck() {
+				var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+					py = $("#py").attr("checked") ? "p" : "",
+					sy = $("#sy").attr("checked") ? "s" : "",
+					pn = $("#pn").attr("checked") ? "p" : "",
+					sn = $("#sn").attr("checked") ? "s" : "",
+					type = {
+						"Y": py + sy,
+						"N": pn + sn
+					};
+				zTree.setting.check.chkboxType = type;
+				showCode('setting.check.chkboxType = { "Y" : "' + type.Y + '", "N" : "' + type.N + '" };');
+			}
+
+			function showCode(str) {
+				if(!code) code = $("#code");
+				code.empty();
+				code.append("<li>" + str + "</li>");
+			}
+
+			$(document).ready(function() {
+				$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+				setCheck();
+				$("#py").bind("change", setCheck);
+				$("#sy").bind("change", setCheck);
+				$("#pn").bind("change", setCheck);
+				$("#sn").bind("change", setCheck);
+			});
+		</script>
+	</body>
+
+</html>

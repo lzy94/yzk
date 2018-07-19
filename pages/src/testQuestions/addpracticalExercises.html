@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<title>唯恩云智库-实操题管理</title>
+		@@include('../../include/css.html')
+	</head>
+	<!--class="flat-blue"-->
+
+	<body class="theme-black">
+		<div class="app-container expanded">
+			<div class="row content-container">
+				@@include('../../include/header.html') @@include('../../include/menu.html')
+				<!-- Main Content -->
+				<div class="container-fluid pad-0">
+					<ol class="breadcrumb path-nav">
+						<li>
+							<a href="#">首页</a>
+						</li>
+						<li>
+							<a href="#">试题管理</a>
+						</li>
+						<li class="active">实操题管理</li>
+					</ol>
+
+					<div class="side-body pt-10">
+						<div class="panel pd-20">
+							<form class="form-horizontal">
+
+								<div class="row">
+
+									
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label for="firstname" class="col-sm-4 control-label pr-0"><span class="red">*</span>试题状态:</label>
+											<div class="col-sm-8">
+												<select class="form-control radius">
+														<option>未审核</option>
+														<option>审核通过</option>
+														<option>审核不通过</option>
+														<option>废弃</option>
+													</select>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label for="firstname" class="col-sm-4 control-label pr-0"><span class="red">*</span>行业:</label>
+											<div class="col-sm-8">
+												<select class="form-control radius">
+													    <option>制造业</option>
+														<option>建筑业</option>
+														<option>旅游 业</option>
+													</select>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label for="firstname" class="col-sm-4 control-label pr-0">
+													<span class="red">*</span>部门:</label>
+											<div class="col-sm-8">
+												<select class="form-control radius">
+													<option>财务部</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label for="firstname" class="col-sm-4 control-label pr-0"><span class="red">*</span>岗位:</label>
+											<div class="col-sm-8">
+												<select class="form-control radius">
+													<option>出纳岗位</option>
+													<option>往来核算岗</option>
+													<option>资产管理岗</option>
+													<option>总账管理岗</option>
+													<option>成本收入岗</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label for="firstname" class="col-sm-4 control-label pr-0"><span class="red">*</span>职务:</label>
+											<div class="col-sm-8">
+												<select class="form-control radius">
+													<option>会计</option>
+												</select>
+											</div>
+										</div>
+									</div>
+
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label for="firstname" class="col-sm-4 control-label pr-0"><span class="red">*</span>题目:</label>
+											<div class="col-sm-8">
+												<input type="text" class="form-control radius">
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label for="firstname" class="col-sm-4 control-label pr-0"><span class="red">*</span>虚拟公司:</label>
+											<div class="col-sm-8">
+												<select class="form-control radius">
+													<option>东莞嘉诚电子科技有限公司</option>
+												</select>
+											</div>
+										</div>
+									</div>
+
+									<div class="col-sm-12">
+										<div class="form-group">
+											<label for="firstname" class="col-sm-2 control-label pr-0"><span class="red">*</span>错题解析:</label>
+											<div class="col-sm-4">
+												<textarea name="" rows="5" cols="" class="form-control radius textarea"></textarea>
+											</div>
+										</div>
+									</div>
+                                     <div class="col-sm-6">
+										<div class="form-group">
+											<label for="firstname" class="col-sm-4 control-label pr-0"><span class="red">*</span>是否练习题:</label>
+											<div class="col-sm-8">
+												<div class="radio-box">
+													<input type="radio" />
+													<label>是</label>
+												</div>
+												<div class="radio-box">
+													<input type="radio" />
+													<label>否</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-12">
+										<div class="form-group">
+											<label for="firstname" class="col-sm-2 control-label pr-0"><span class="red">*</span>上传图片:</label>
+											<div class="col-sm-10">
+												<button class="btn btn-add radius" id="add-img"><span class="iconfont icon-plus"></span>添加图片</button>
+												<div class="clear"></div>
+											</div>
+										</div>
+									</div>
+
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label for="firstname" class="col-sm-4 control-label pr-0"><span class="red">*</span>选择步骤:</label>
+											<div class="col-sm-8">
+												<select class="form-control radius" id="b-z">
+													<option value="记账凭证">记账凭证</option>
+													<option value="账簿">账簿</option>
+													<option value="辅助表单">辅助表单</option>
+													<option value="UFO表单">UFO表单</option>
+												</select>
+											</div>
+										</div>
+									</div>
+
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label for="firstname" class="col-sm-4 control-label pr-0"><span class="red">*</span>账本类型:</label>
+											<div class="col-sm-4">
+												<select class="form-control radius">
+													<option>单式凭证</option>
+													<option>复式凭证</option>
+													<option>单式记账凭证(底色)</option>
+													<option>复式记账凭证(底色)</option>
+													<option>单式记账凭证(一级科目)</option>
+													<option>复式记账凭证(一级科目)</option>
+												</select>
+											</div>
+											<div class="col-sm-1">
+												<button class="btn btn-add radius" id="add-operate"><span class="iconfont icon-plus"></span>添加</button>
+											</div>
+											<label class="col-sm-2 control-label"><span class="red small">实操题分数</span></label>
+											<div class="col-sm-1">
+												<input type="text" class="form-control radius" readonly="readonly" value="0">
+											</div>
+										</div>
+									</div>
+
+									<div class="col-sm-12 add-box operate-box" id="operate-box">
+										
+
+									</div>
+
+									<div class="col-sm-6 ">
+										<label for="firstname" class="col-sm-4 control-label pr-0"></label>
+										<div class="col-sm-8 pad-0">
+											<div class="button">
+												<a href="javascript:void(0)" class="btn btn-add radius">提&nbsp;交</a>&nbsp;
+												<a href="javascript:void(0)" class="btn btn-default radius" data-dismiss="modal">取&nbsp;消</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			@@include('../../include/footer.html')
+		</div>
+		@@include('../../include/js.html')
+		<!--试卷管理--实操题管理-->
+        <script src="/scripts/src/testQuestions/practical.min.js"></script>
+	</body>
+
+</html>

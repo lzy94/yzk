@@ -68,7 +68,7 @@ gulp.task('js', function() {
 			suffix: '.min'
 		}))
 		.pipe(babel())
-		.pipe(uglify())
+//		.pipe(uglify())
 		.on('error', function(err) {
 			gutil.log(gutil.colors.red('[Error]'), err.toString());
 		})

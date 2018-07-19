@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<title>唯恩云智库-账本表单管理</title>
+		@@include('../../include/css.html')
+	</head>
+
+	<body class="theme-black">
+		<div class="app-container expanded">
+			<div class="row content-container">
+				@@include('../../include/header.html') @@include('../../include/menu.html')
+				<!-- Main Content -->
+				<div class="container-fluid pad-0">
+					<ol class="breadcrumb path-nav">
+						<li>
+							<a href="#">首页</a>
+						</li>
+						<li>
+							<a href="#">实操题账本管理</a>
+						</li>
+						<li class="active">账本表单管理</li>
+					</ol>
+				</div>
+
+				<div class="side-body pt-10">
+					<div class="panel">
+						<div class="button">
+							<a href="#" data-toggle="modal" data-target=".addModal" class="btn btn-add radius"> <span class="iconfont icon-plus"></span>添加表单</a>&nbsp;
+							<a href="javascript:void(0)" class="btn btn-default radius">批量删除</a>&nbsp;
+						</div>
+						<div class="table-tip radius mb-20">
+							<i class="iconfont icon-gantanhao3-hei"></i>&nbsp; 已选择3项，共有23132123项 ，<span>清空</span>
+						</div>
+						<div class="table-responsive">
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th width="40" class="text-center">
+											<input type="checkbox" id="num" hidden="hidden">
+											<label for="num" class="checkbox_label"></label>
+										</th>
+										<th>序号</th>
+										<th>类型名称</th>
+										<th>名称</th>
+										<th>操作</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="text-center"><input type="checkbox" id="1" hidden="hidden"><label for="1" class="checkbox_label"></label></td>
+										<td>1</td>
+										<td>四个选项一个正确答案四个选项一个正确答案四个选项一个正确答案</td>
+										<td>2018年7月14日</td>
+										<td>
+											<a href="javasript:void()" onclick="single_edit(1)">编辑</a> <span>|</span>
+											<a href="">删除</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="page pd-10" id="page"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--  添加表单  -->
+		<div class="modal fade addModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content radius">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+						<h4 class="modal-title">添加表单</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-horizontal" role="form">
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="firstname" class="col-sm-2 control-label">账本大类:</label>
+										<div class="col-sm-10">
+											<select name="" class="form-control radius">
+												<option value=""></option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="firstname" class="col-sm-2 control-label">表单名称:</label>
+										<div class="col-sm-10">
+											<input type="text" class="form-control radius" />
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6 ">
+									<label for="firstname" class="col-sm-4 control-label pr-0"></label>
+									<div class="col-sm-8 pad-0">
+										<div class="button">
+											<a href="javascript:void(0)" class="btn btn-add radius">提&nbsp;交</a>&nbsp;
+											<a href="javascript:void(0)" class="btn btn-default radius" data-dismiss="modal">取&nbsp;消</a>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		@@include('../../include/js.html')
+		<script type="text/javascript">
+			layui.use('laypage', function() {
+				var laypage = layui.laypage;
+				//执行一个laypage实例
+				laypage.render({
+					elem: 'page',
+					count: 10,
+					groups: 3,
+					layout: ['prev', 'page', 'next', 'limit', 'skip'],
+					jump: function(obj) {
+						//console.log(obj)
+					}
+				});
+			});
+		</script>
+	</body>
+
+</html>

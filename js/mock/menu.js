@@ -16,7 +16,7 @@ var menu = [{
 	icon: 'icon-yonghushezhi',
 	childs: [{
 		title: '用户系统',
-		path: '/user/user.html',
+		path: '/src/user/user.html',
 		icon: 'icon-yonghushezhi',
 		childs: ''
 	}]
@@ -108,22 +108,22 @@ var menu = [{
 //		},
 		{
 			title: '选择题管理',
-			path: '/testQuestions/choiceQuestion.html',
+			path: '/src/testQuestions/choiceQuestion.html',
 			icon: 'icon-kaodianqingdan',
 			childs: ''
 		}, {
 			title: '判断题管理',
-			path: '/testQuestions/judgmentProblem.html',
+			path: '/src/testQuestions/judgmentProblem.html',
 			icon: 'icon-kaodianqingdan',
 			childs: ''
 		}, {
 			title: '简答题管理',
-			path: '/testQuestions/shortAnswer.html',
+			path: '/src/testQuestions/shortAnswer.html',
 			icon: 'icon-kaodianqingdan',
 			childs: ''
 		}, {
 			title: '实操题管理',
-			path: '/testQuestions/practicalExercises.html',
+			path: '/src/testQuestions/practicalExercises.html',
 			icon: 'icon-kaodianqingdan',
 			childs: ''
 		}]
@@ -133,24 +133,24 @@ var menu = [{
 		icon: 'icon-kaodianqingdan',
 		childs: [{
 			title: '账本表单管理',
-			path: '/testQuestions/accountBookForm.html',
+			path: '/src/testQuestions/accountBookForm.html',
 			icon: 'icon-kaodianqingdan',
 			childs: ''
 		}, {
 			title: '账本类型管理',
-			path: '/testQuestions/accountBookType.html',
+			path: '/src/testQuestions/accountBookType.html',
 			icon: 'icon-kaodianqingdan',
 			childs: ''
 		}, {
 			title: '账本管理',
-			path: '/testQuestions/accountBook.html',
+			path: '/src/testQuestions/accountBook.html',
 			icon: 'icon-kaodianqingdan',
 			childs: ''
 		}]
 
 	}, {
 		title: '试卷管理',
-		path: '/testQuestions/examinationPaper.html',
+		path: '/src/testQuestions/examinationPaper.html',
 		icon: 'icon-kaodianqingdan',
 		childs: ''
 	}]
@@ -164,12 +164,12 @@ var menu = [{
 		icon: 'icon-shitiguanli',
 		childs: [{
 				title: '考点类型管理',
-				path: '/kdsys/examinationPointType.html',
+				path: '/src/kdsys/examinationPointType.html',
 				icon: 'icon-shitiguanli',
 				childs: ''
 			}, {
 				title: '考点管理',
-				path: '/kdsys/examinationPoint.html',
+				path: '/src/kdsys/examinationPoint.html',
 				icon: 'icon-shitiguanli',
 				childs: ''
 			}
@@ -234,12 +234,12 @@ var menu = [{
 	icon: 'icon-xitongguanli',
 	childs: [{
 		title: '操作员管理',
-		path: '/sys/operator.html',
+		path: '/src/sys/operator.html',
 		icon: 'icon-xitongguanli',
 		childs: ''
 	}, {
 		title: '角色管理',
-		path: '/sys/role.html',
+		path: '/src/sys/role.html',
 		icon: 'icon-xitongguanli',
 		childs: ''
 	}, {
@@ -249,12 +249,12 @@ var menu = [{
 		icon: 'icon-xitongguanli',
 		childs: [{
 			title: '机构类型管理',
-			path: '/sys/institutionType.html',
+			path: '/src/sys/institutionType.html',
 			icon: 'icon-xitongguanli',
 			childs: ''
 		}, {
 			title: '机构管理',
-			path: '/sys/institution.html',
+			path: '/src/sys/institution.html',
 			icon: 'icon-xitongguanli',
 			childs: ''
 		}]

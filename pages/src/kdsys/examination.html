@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<title>唯恩云智库</title>
+		<link rel="stylesheet" type="text/css" href="/scripts/lib/summernote/summernote.css" /> @@include('../../include/css.html')
+	</head>
+	<!--class="flat-blue"-->
+
+	<body class="theme-black">
+		<div class="app-container expanded">
+			<div class="row content-container">
+				@@include('../../include/header.html') @@include('../../include/menu.html')
+				<!-- Main Content -->
+				<div class="container-fluid pad-0">
+					<ol class="breadcrumb path-nav">
+						<li>
+							<a href="#">首页</a>
+						</li>
+						<li>
+							<a href="#">考点管理</a>
+						</li>
+						<li class="active">考试管理</li>
+					</ol>
+					<div class="side-body pt-10">
+						<div class="panel">
+							<div class="button">
+								<a href="#" data-toggle="modal" data-target=".addModal" class="btn btn-add radius"> <span class="iconfont icon-plus"></span>添加考试</a>&nbsp;
+								<a href="javascript:void(0)" class="btn btn-default radius">批量删除</a>&nbsp;
+							</div>
+							<div class="table-tip radius mb-20">
+								<i class="iconfont icon-gantanhao3-hei"></i>&nbsp; 已选择3项，共有23132123项 ，<span>清空</span>
+							</div>
+							<div class="table-responsive">
+								<table class="table table-hover">
+									<thead>
+										<tr>
+											<th width="40" class="text-center">
+												<input type="checkbox" id="num" hidden="hidden">
+												<label for="num" class="checkbox_label"></label>
+											</th>
+											<th>序号</th>
+											<th>考点</th>
+											<th>考试名称</th>
+											<th>创建时间</th>
+											<th>考生管理</th>
+											<th>操作</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="text-center"><input type="checkbox" id="1" hidden="hidden"><label for="1" class="checkbox_label"></label></td>
+											<td>1</td>
+											<td>四个选项一个正确答案四个选项一个正确答案四个选项一个正确答案</td>
+											<td>大概</td>
+											<td>大概</td>
+											<td>
+												<a href="examinee.html?num=2-0-1" class="link">大概</a>
+											</td>
+											<td>
+												<a href="javasript:void()" onclick="single_edit(1)">编辑</a> <span>|</span>
+												<a href="">删除</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="page pd-10" id="page"></div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			@@include('../../include/footer.html')
+		</div>
+
+		<!--  添加考试  -->
+		<div class="modal fade addModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content radius">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+						<h4 class="modal-title">添加考试</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-horizontal" role="form">
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="firstname" class="col-sm-2 control-label">考点名称:</label>
+										<div class="col-sm-9">
+											<select name="" class="form-control radius">
+												<option value=""></option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="firstname" class="col-sm-2 control-label">考试名称:</label>
+										<div class="col-sm-9">
+											<input type="text" class="form-control radius" />
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="firstname" class="col-sm-2 control-label">添加试卷:</label>
+										<div class="col-sm-9">
+											<div class="col-sm-9 pl-0">
+												<input type="text" class="form-control radius" />
+											</div>
+											<div class="col-sm-3">
+												<a href="#" data-toggle="modal" data-target=".addTestPaper" class="btn btn-add radius">选择试卷</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="firstname" class="col-sm-2 control-label">考试须知:</label>
+										<div class="col-sm-9">
+											<textarea id="summernote" class="radius"></textarea>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6 ">
+									<label for="firstname" class="col-sm-4 control-label pr-0"></label>
+									<div class="col-sm-8 pad-0">
+										<div class="button">
+											<a href="javascript:void(0)" class="btn btn-add radius">提&nbsp;交</a>&nbsp;
+											<a href="javascript:void(0)" class="btn btn-default radius" data-dismiss="modal">取&nbsp;消</a>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade addTestPaper" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content radius">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+						<h4 class="modal-title">添加试卷</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-horizontal" role="form">
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="input-group col-sm-12">
+										<div class="input-group-btn" style="width: 30%;">
+											<select name="" class="form-control radius-l">
+												<option value="">试卷名称</option>
+												<option value="">试卷编号</option>
+											</select>
+										</div>
+										<!-- /btn-group -->
+										<input type="text" class="form-control radius-r" aria-label="..." placeholder="请输入关键词">
+									</div>
+								</div>
+								<div class="col-sm-3 dis">
+									<div class="form-group">
+										<div class="col-sm-12">
+											<select class="form-control radius">
+												<option>制造业</option>
+											</select>
+										</div>
+									</div>
+								</div> 
+								<div class="col-sm-3 dis">
+									<div class="form-group">
+										<div class="col-sm-12">
+											<select class="form-control radius">
+												<option>财务部</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3 dis">
+									<div class="form-group">
+										<div class="col-sm-12">
+											<select class="form-control radius">
+												<option>出纳岗位</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3 dis">
+									<div class="form-group">
+										<div class="col-sm-12">
+											<select class="form-control radius">
+												<option>出纳</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<a href="javascript:void(0)" class="btn btn-add radius">查&nbsp;询</a>&nbsp;
+									<a href="javascript:void(0)" class="btn btn-default radius">重&nbsp;置</a>
+									&nbsp;
+									<a href="javascript:void(0)" class="spread"><span>展开</span><i class="iconfont icon-xiala"></i> </a>
+								</div>
+							</div>
+						</form>
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th width="100">序号</th>
+									<th>试卷编号</th>
+									<th>试卷名称</th>
+									<th width="80">试卷总分</th>
+									<th width="80">操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>1</td>
+									<td>于你，2012年的九月，那是我们认识的季节，</td>
+									<td>5</td>
+									<td>
+										<a href="javascript:void(0)">添加</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="page" id="page2"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		@@include('../../include/js.html')
+		<script src="/scripts/lib/summernote/summernote.min.js"></script>
+		<script src="/scripts/lib/summernote/lang/summernote-zh-CN.min.js"></script>
+		<script>
+			layui.use('laypage', function() {
+				var laypage = layui.laypage;
+				//执行一个laypage实例
+				laypage.render({
+					elem: 'page',
+					count: 10,
+					groups: 3,
+					layout: ['prev', 'page', 'next', 'limit', 'skip'],
+					jump: function(obj) {
+						//console.log(obj)
+					}
+				});
+				laypage.render({
+					elem: 'page2',
+					count: 10,
+					groups: 3,
+					layout: ['prev', 'page', 'next', 'limit', 'skip'],
+					jump: function(obj) {
+						//console.log(obj)
+					}
+				});
+			});
+			$(function() {
+				$('#summernote').summernote({
+					height: 400
+				});
+			})
+		</script>
+
+	</body>
+
+</html>
