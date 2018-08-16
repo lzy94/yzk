@@ -103,7 +103,8 @@ a {
 .mb-20 {
     margin-bottom: 20px;
 }
-.mr-0{
+
+.mr-0 {
     margin-right: 0 !important;
 }
 
@@ -198,6 +199,7 @@ a {
     border-top-left-radius: 5px !important;
     border-bottom-left-radius: 5px !important;
 }
+
 .radius-r {
     border-top-right-radius: 5px !important;
     border-bottom-right-radius: 5px !important;
@@ -239,15 +241,13 @@ a {
                 span {
                     color: #0C9A9B;
                 }
-                
-                input{
+                input {
                     outline: none;
                     border: none;
                     background: transparent;
                     text-indent: 5px;
-                    width:120px;
+                    width: 120px;
                 }
-                
             }
             >.answer-list {
                 padding: 10px 0 10px 20px;
@@ -259,64 +259,53 @@ a {
             >.btn {
                 margin-left: 15px;
             }
-            
-            
-            .carousel_box{
+            .carousel_box {
                 width: 80%;
                 margin: auto;
                 margin-top: 20px;
                 border: solid 1px #dedede;
-                
-                
-                .swiper-slide{
-                      display: -webkit-box;
-                      display: -ms-flexbox;
-                      display: -webkit-flex;
-                      display: flex;
-                      -webkit-box-pack: center;
-                      -ms-flex-pack: center;
-                      -webkit-justify-content: center;
-                      justify-content: center;
-                      -webkit-box-align: center;
-                      -ms-flex-align: center;
-                      -webkit-align-items: center;
-                      align-items: center;
+                .swiper-slide {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: -webkit-flex;
+                    display: flex;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    -webkit-justify-content: center;
+                    justify-content: center;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    -webkit-align-items: center;
+                    align-items: center;
                 }
-                
-                
-                img{
+                img {
                     width: 100%;
                 }
             }
-            
-            .operation_box{
+            .operation_box {
                 width: 100%;
                 min-height: 300px;
                 margin-top: 20px;
-                span{
+                span {
                     font-size: 18px;
                 }
-                .excel{
+                .excel {
                     width: 100%;
                     min-height: 200px;
-                    margin:20px 0 20px 0;
+                    margin: 20px 0 20px 0;
                     border: solid 1px #dedede;
                 }
-                .excel_operate{
+                .excel_operate {
                     width: 100%;
                     height: 80px;
                     text-align: right;
-                    
-                    button{
+                    button {
                         background: #08979D;
                         color: #fff;
                         outline: none;
                     }
                 }
             }
-            
-            
-            
         }
     }
 }
@@ -397,27 +386,26 @@ a {
     }
 }
 
-
-
-
 // 实操表单
-.red{
+.red {
     color: red;
 }
 
-
-.textarea{
+.textarea {
     resize: none;
 }
-.imgbox{
+
+.imgbox {
     float: left;
     margin-right: 10px;
 }
-.clear{
+
+.clear {
     display: block;
     content: "";
     clear: both;
 }
+
 //上传图片
 .fileinput-button {
     position: relative;
@@ -426,11 +414,11 @@ a {
     width: 80px;
     height: 30px;
     color: #fff;
-    background:#208E93;
+    background: #208E93;
     text-align: center;
     line-height: 30px;
     border-radius: 3px;
-    input{
+    input {
         position: absolute;
         right: 0px;
         top: 0px;
@@ -439,15 +427,17 @@ a {
         font-size: 200px;
     }
 }
-.del-img{
+
+.del-img {
     margin-top: -15px;
     margin-left: 5px;
 }
-.operate{
+
+.operate {
     width: 100%;
     min-height: 300px;
     margin-top: 20px;
-    .operate-title{
+    .operate-title {
         width: 100%;
         height: 50px;
         line-height: 50px;
@@ -457,25 +447,88 @@ a {
         font-size: 20px;
         text-indent: 20px;
         margin-bottom: 30px;
-        button{
+        button {
             float: right;
             margin: 10px 20px 0 0;
         }
     }
-    
-    .excel-box{
+    .excel-box {
         width: 100%;
-        .excel-child{
-        min-height: 300px;
-        background: #F0F1F7;
+        .excel-child {
+            min-height: 300px;
+            background: #F0F1F7;
         }
     }
 }
 
-.add-box{
+.add-box {
     width: 100%;
-    >div{
+    >div {
         margin-bottom: 20px;
     }
-
 }
+
+.page-pagination {
+    padding: 5px;
+    display: inline-block;
+    line-height: 30px;
+    >li {
+        margin-right: 5px;
+        float: left;
+        color: #08979D;
+        >a {
+            position: relative;
+            padding: 6px 12px;
+            color: #08979D;
+            text-decoration: none;
+            background-color: #fff;
+            border: 1px solid #ddd;
+        }
+        &.active {
+            >a {
+                color: #fff;
+                background: #08979D;
+                border-color: #08979D;
+            }
+        }
+        >select,
+        >input,
+        >a.btn {
+            height: 30px;
+            border: 1px solid #ddd;
+        }
+        >input {
+            width: 80px;
+            padding-left: 5px;
+        }
+        >a.btn {
+            margin: 0;
+            //          padding: 4px 12px ;
+            font-size: 12px;
+        }
+        &.jump {
+            margin: 0 20px;
+        }
+        &.page-msg {
+            margin-left: 20px;
+            >a {
+                border: 0;
+            }
+        }
+    }
+}
+
+.contenteditable {
+    min-height: 150px;
+    overflow: auto;
+    input {
+        width: 50px;
+        display: inline-block;
+        vertical-align: bottom;
+        margin: 0 5px;
+        padding: 0;
+        border: 0;
+        border-bottom: 1px solid #ccc;
+    }
+}
+

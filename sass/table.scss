@@ -1,83 +1,81 @@
 $color:#858585;
 $color_:#08979D;
-thead tr{
+thead tr {
     font-weight: normal !important;
 }
-.table{
-    
+
+.table {
+    table-layout: fixed;
     width: 98%;
     margin: auto;
-    
-    thead{
-        background:#F6F6F6;
-        tr{
-            th{
-                border-bottom: 1px  solid #ddd;
+    thead {
+        background: #F6F6F6;
+        tr {
+            th {
+                border-bottom: 1px solid #ddd;
                 font-weight: normal;
             }
         }
     }
-    
-    
-    tbody{
+    tbody {
         color: $color;
-        a{
-        color: $color_;
-        span{
-            color: $color_ !important; 
-            font-size:12px ;
-           }
-        
+        a {
+            color: $color_;
+            span {
+                color: $color_ !important;
+                font-size: 12px;
+            }
         }
-        tr{
-            border-bottom: 1px  solid #ddd;
-            td{
+        tr {
+            border-bottom: 1px solid #ddd;
+            td {
                 padding: 10px;
                 line-height: 1.5;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                vertical-align: middle;
             }
-            
         }
-   }
-   
-   label{
-       font-weight: normal;
-   }
-   .link{
-       text-decoration: underline;
-   }
+    }
+    label {
+        font-weight: normal;
+    }
+    .link {
+        text-decoration: underline;
+    }
 }
 
 //.button{
 //  margin: 25px 0 25px 1%;
 //}
-
-
 //分页
-
-.page{
+.page {
     width: 100%;
     text-align: right;
     margin-top: 20px;
-//  padding-right: 18%;    
+    //  padding-right: 18%;    
 }
-.layui-laypage a, .layui-laypage span{
+
+.layui-laypage a,
+.layui-laypage span {
     border-radius: 3px;
     margin: 0 5px 5px 0;
 }
 
 .layui-laypage .layui-laypage-curr em {
-    color:#009688;
+    color: #009688;
 }
+
 .layui-laypage .layui-laypage-curr .layui-laypage-em {
     background: #fff;
-    border: solid 1px  #009688;
+    border: solid 1px #009688;
     padding: 0;
 }
 
 // checck
-
-input[type="checkbox"] + label::before {
-    content: "\a0"; 
+input[type="checkbox"]+label::before {
+    content: "\a0";
     display: inline-block;
     vertical-align: .2em;
     width: 1.1em;
@@ -85,33 +83,67 @@ input[type="checkbox"] + label::before {
     margin-right: .3em;
     border-radius: .2em;
     text-indent: .15em;
-    line-height: .65; 
+    line-height: .65;
     border: solid 1px #C1C1C1;
 }
-input[type="checkbox"]:checked + label::before {
+
+input[type="checkbox"]:checked+label::before {
     content: "\2713";
     background-color: #08979D;
     color: #fff;
 }
-.checkbox label{
+
+.checkbox label {
     margin-bottom: 0;
     padding: 0 !important;
 }
 
-.table-tip{
+.table-tip {
     margin-left: 15px;
     margin-right: 15px;
     padding: 5px;
     border: 1px solid #0F99A1;
     background: #CEEAEB;
     color: #2D373A;
-    >span{
+    >span {
         display: inline-block;
         color: #377C83;
         margin-left: 15px;
         cursor: pointer;
     }
-    >.iconfont{
+    >.iconfont {
         color: #377C83;
     }
+}
+
+table td .img {
+    border: 1px solid #eee;
+    border-radius: 3px;
+    overflow: hidden;
+    width: 80px;
+    height: 80px;
+    position: relative;
+}
+
+table td .img img {
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.showImg {
+    width: 450px;
+    height: auto;
+    position: absolute;
+    z-index: 5;
+    padding: 5px;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    background: #fff;
+}
+
+.showImg img {
+    width: 100%;
 }

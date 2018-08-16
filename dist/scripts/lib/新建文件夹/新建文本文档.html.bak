@@ -1,0 +1,66 @@
+<script src="/scripts/lib/bootstrapValidator-0.5.2/js/bootstrapValidator.min.js"></script>
+<script src="/scripts/lib/bootstrapValidator-0.5.2/js/language/zh_CN.js"></script>
+
+
+
+
+
+
+
+Ò»£¬
+id="collapse_${n.id}" data-pid="${n.pid}" data-val="${n.pid}-${n.id}"
+
+
+function getParameter(param) {
+		var query = window.location.search;
+		var iLen = param.length;
+		var iStart = query.indexOf(param);
+		if(iStart == -1)
+			return "";
+		iStart += iLen + 1;
+		var iEnd = query.indexOf("&", iStart);
+		if(iEnd == -1)
+			return query.substring(iStart);
+		return query.substring(iStart, iEnd);
+	}
+		
+	function menuActive(){
+		var nums = getParameter('num').split('-');
+		var pid = nums[0];
+		var id = nums[1];
+		if(pid!=0){
+			$('#collapse_'+pid).next('.collapse').addClass('in').attr('aria-expanded',"true");
+			$('#dropdown_'+id).addClass('active');
+		}else{
+			$('#collapse_'+id).parent('li').addClass('active');
+		}
+	}
+	
+
+
+¶þ¡¢
+function menuActive() {
+		//		//		var nums = getParameter('num').split('-');
+		var nums = localStorage.getItem('num').split('-');
+		console.log(nums)
+		var pid = nums[0];
+		var id = nums[1];
+		if(pid != 0 || !pid) {
+			$('#collapse_' + pid).children('.collapse').addClass('in').attr('aria-expanded', "true");
+			$('#dropdown_' + id).addClass('active');
+		} else {
+			$('#collapse_' + id).addClass('active');
+		}
+	}
+	$('.left-menu').on('click', 'a', function() {
+		console.log($(this).attr('data-toggle'))
+		if(!$(this).attr('data-toggle')) {
+			var val = $(this).parent().data('val');
+			console.log(val)
+			localStorage.setItem('num', val);
+
+			location.href = $(this).attr('href');
+			return false;
+		}
+
+	})

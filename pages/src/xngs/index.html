@@ -56,7 +56,7 @@
 						<div class="table-tip radius mb-20">
 							<i class="iconfont icon-gantanhao3-hei"></i>&nbsp; 已选择3项，共有23132123项 ，<span>清空</span>
 						</div>
-						<div class="table-responsive">
+						<!--<div class="table-responsive">-->
 							<table class="table table-hover">
 								<thead>
 									<tr>
@@ -84,12 +84,22 @@
 										<td>四个选项一个正确答案四个选项一个正确答案四个选项一个正确答案</td>
 										<td>2018年7月14日</td>
 										<td>2018年7月14日</td>
-										<td>2018年7月14日</td> 
-										<td><a href="customerManagement.html?num=1-1-0" class="link">客户管理</a></td>
-										<td><a href="supplierIndex.html?num=1-1-0" class="link">2018年7月14日</a></td>
-										<td><a href="rawMaterialindex.html?num=1-1-0" class="link">2018年7月14日</a></td>
-										<td><a href="fixedAssetsIndex.html?num=1-1-0" class="link">2018年7月14日</a></td>
-										<td><a href="stockProductIndex.html?num=1-1-0" class="link">2018年7月14日</a></td>
+										<td>2018年7月14日</td>
+										<td>
+											<a href="customerManagement.html?num=1-1-0" class="link">客户管理</a>
+										</td>
+										<td>
+											<a href="supplierIndex.html?num=1-1-0" class="link">2018年7月14日</a>
+										</td>
+										<td>
+											<a href="rawMaterialindex.html?num=1-1-0" class="link">2018年7月14日</a>
+										</td>
+										<td>
+											<a href="fixedAssetsIndex.html?num=1-1-0" class="link">2018年7月14日</a>
+										</td>
+										<td>
+											<a href="stockProductIndex.html?num=1-1-0" class="link">2018年7月14日</a>
+										</td>
 										<td>
 											<a href="javasript:void()" onclick="single_edit(1)">编辑</a> <span>|</span>
 											<a href="">删除</a>
@@ -98,7 +108,7 @@
 									</tr>
 								</tbody>
 							</table>
-						</div>
+						<!--</div>-->
 						<div class="page pd-10" id="page"></div>
 					</div>
 				</div>
@@ -202,7 +212,7 @@
 									<div class="form-group">
 										<label for="firstname" class="col-sm-2 control-label">主要用章:</label>
 										<div class="col-sm-9">
-											<input id="input-3"  multiple type="file" class="file form-control  radius" data-show-preview="true">
+											<input id="input-3" multiple type="file" class="file form-control  radius" data-show-preview="true">
 										</div>
 									</div>
 								</div>
@@ -252,29 +262,34 @@
 		<script src="/scripts/lib/fileinput/js/plugins/piexif.js"></script>
 		<script src="/scripts/lib/fileinput/js/locales/zh.js"></script>
 		<script type="text/javascript">
-			function initFileInput(ctrlName, uploadUrl) {
+			function initFileInput(ctrlName,arr, uploadUrl) {
 				var control = $('#' + ctrlName);
 				control.fileinput({
 					language: 'zh', //设置语言
 					uploadUrl: uploadUrl, //上传的地址
 					showUpload: true, //是否显示上传按钮
 					showCancel: false,
+					initialPreview: arr,
+					deleteUrl: 'www.baidu.com',
+					deleteExtraData: {
+						id: 5
+					},
 					showCaption: true, //是否显示标题
 					browseClass: "btn btn-primary", //按钮样式             
 					previewFileIcon: "<i class='glyphicon glyphicon-king'></i>",
 				});
 			}
-//			initFileInput("input-1", '');
-//			initFileInput("input-2", '');
-//			initFileInput("input-3", '');
-//			initFileInput("input-4", '');
-//			initFileInput("input-5", '');
-//			initFileInput("input-6", '');
-			$(function(){
-				
-				$.each($('.file'), function(i,n) {
-					initFileInput("input-"+(i+1), '');
-				});
+			initFileInput("input-1", []);
+			initFileInput("input-2", []);
+			initFileInput("input-3", []);
+			initFileInput("input-4", []);
+			initFileInput("input-5", []);
+			initFileInput("input-6", []);
+			$(function() {
+
+				//				$.each($('.file'), function(i,n) {
+				//					initFileInput("input-"+(i+1), '');
+				//				});
 			})
 
 			layui.use('laypage', function() {
@@ -290,6 +305,15 @@
 					}
 				});
 			});
+			var arr = [
+				'<img style="width:auto;height:auto;max-width:100%;max-height:100%;" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1532515706559&di=60f4348a728ebbd46fdfd22ab81ae726&imgtype=0&src=http%3A%2F%2Fa.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fb64543a98226cffceee78e5eb5014a90f703ea09.jpg" class="file-preview-image" />',
+				'<img style="width:auto;height:auto;max-width:100%;max-height:100%;" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1532515706558&di=bffd6a44e8699b8623a26f3f58833713&imgtype=0&src=http%3A%2F%2Fb.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F08f790529822720e45023d1277cb0a46f31fab0e.jpg" class="file-preview-image" />',
+				'<img style="width:auto;height:auto;max-width:100%;max-height:100%;" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1532515706556&di=dc00b5992d1879cb98b3f3e212b300a5&imgtype=0&src=http%3A%2F%2Fd.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fd53f8794a4c27d1e695f052817d5ad6edcc438e4.jpg" class="file-preview-image" />'
+			]
+			setTimeout(function() {
+				$('#input-3').fileinput('destroy');
+				initFileInput('input-3',arr,'');
+			}, 3000)
 		</script>
 	</body>
 
